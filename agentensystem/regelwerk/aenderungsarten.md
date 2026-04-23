@@ -1,10 +1,10 @@
-# Änderungstypen
+# Änderungsarten
 
 ## Zweck
 
 Diese Datei trennt methodisch verschiedene Arten von Änderungen, damit lokale Arbeitsschritte nicht mit kanonischer Strukturwirkung verwechselt werden.
 
-## Vorläufige Änderungstypen
+## Vorläufige Änderungsarten
 
 - `repo_änderung`
   Beschreibung: Änderung an Dateien, Regeln, Vorlagen oder Struktur innerhalb des Repositories
@@ -21,4 +21,4 @@ Diese Datei trennt methodisch verschiedene Arten von Änderungen, damit lokale A
 
 ## Anwendungshinweis
 
-Wenn unklar ist, welcher Änderungstyp vorliegt, zuerst die geringere Strukturwirkung annehmen und die Unsicherheit offen benennen.
+Wenn unklar ist, welche Änderungsart vorliegt, zuerst die geringere Strukturwirkung annehmen und die Unsicherheit offen benennen.
