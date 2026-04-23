@@ -1,5 +1,12 @@
 # Prompt: Governance-Entscheidung
 
+- Titel: Governance-Entscheidung
+- Zweck: Strukturrelevante Änderungen, Standards und Konfliktlagen verbindlich entscheiden.
+- Wann verwenden: Wenn Prüfung und Abgleich nicht ausreichen und eine belastbare Strukturentscheidung nötig ist.
+- Erwartete Eingabe: Änderungsvorschlag, Prüfergebnisse und betroffene Registerbereiche.
+- Erwartete Ausgabe: Ein YAML-`governance_entscheidung` mit Entscheidung, Auflagen und Wirksamkeit.
+- Nächster Schritt: `prompts/05_aktualisierung/registry_aktualisieren.md`
+
 ## Zweck
 
 Dieser Prompt bereitet eine belastbare Governance-Entscheidung vor, wenn eine Strukturänderung, ein neuer Standard, ein Ersatz bestehender Muster oder eine konfliktträchtige Einordnung entschieden werden muss.

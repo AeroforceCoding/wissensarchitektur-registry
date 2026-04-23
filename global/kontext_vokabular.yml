@@ -1,0 +1,73 @@
+version: 1
+stand: 2026-04-23
+kontexte:
+  - kontext_id: ctx_0001
+    titel: Berechtigungsprüfung
+    slug: berechtigungspruefung
+    beschreibung: Beschreibt eine Situation, in der Berechtigungen, Rollen oder Zugriffslogiken geprüft, nachvollzogen oder gegen ein erwartetes Verhalten abgeglichen werden.
+    typische_domänen:
+      - m365_sharepoint
+    typische_auslöser:
+      - Screenshot einer Rollen- oder Berechtigungsansicht
+      - Prüfschritt in einer Admin-Oberfläche
+      - Rückfrage zu Zugriff, Vererbung oder Gruppenlogik
+    empfohlene_schrittmuster:
+      - vorher
+      - pruefung
+      - fehlerbild
+      - ergebnis
+      - nachher
+    verwandte_repo_objekte:
+      - typ: knoten
+        ref: domänen/m365_sharepoint/kanonische_knoten.yml#sharepoint_berechtigungslogik
+      - typ: knoten
+        ref: domänen/m365_sharepoint/kanonische_knoten.yml#m365_tenant_basis
+    verwendungsregel: Verwenden, wenn der situative Hintergrund primär auf Rechte, Rollen, Vererbung oder Zugriffsnachweise zielt.
+    status: aktiv
+  - kontext_id: ctx_0002
+    titel: Strukturupdate
+    slug: strukturupdate
+    beschreibung: Beschreibt eine Situation, in der bestehende Wissens-, Knoten- oder Ordnungsstrukturen erweitert, umgehängt, neu eingeführt oder ersetzt werden.
+    typische_domänen:
+      - wissenssystem_thebrain
+      - m365_sharepoint
+    typische_auslöser:
+      - Vorher-Nachher-Screenshot einer Knotenstruktur
+      - Entscheidung über neue Haupt- oder Unterknoten
+      - dokumentierte Strukturabweichung im Zielsystem
+    empfohlene_schrittmuster:
+      - vorher
+      - planung
+      - pruefung
+      - umsetzung
+      - nachher
+    verwandte_repo_objekte:
+      - typ: knoten
+        ref: domänen/wissenssystem_thebrain/kanonische_knoten.yml#thebrain_wissensmodell_basis
+      - typ: knoten
+        ref: domänen/wissenssystem_thebrain/kanonische_knoten.yml#thebrain_update_statuslogik
+    verwendungsregel: Verwenden, wenn die Situation primär auf eine Veränderung oder Prüfung von Strukturmustern zielt.
+    status: aktiv
+  - kontext_id: ctx_0003
+    titel: Datenimport-Abgleich
+    slug: datenimport_abgleich
+    beschreibung: Beschreibt eine Situation, in der importierte, transformierte oder zusammengeführte Daten gegen ein erwartetes Modell oder Ergebnisbild abgeglichen werden.
+    typische_domänen:
+      - hr_data_hub
+    typische_auslöser:
+      - Screenshot eines Mapping- oder Transformationsergebnisses
+      - Vergleich zwischen Quelle und Zielstruktur
+      - Nachweis einer Datenabweichung oder Importkorrektur
+    empfohlene_schrittmuster:
+      - quelle
+      - mapping
+      - pruefung
+      - abweichung
+      - ergebnis
+    verwandte_repo_objekte:
+      - typ: knoten
+        ref: domänen/hr_data_hub/kanonische_knoten.yml#hr_datenquellen_integration
+      - typ: knoten
+        ref: domänen/hr_data_hub/kanonische_knoten.yml#hr_power_query_aufbereitung
+    verwendungsregel: Verwenden, wenn der situative Hintergrund primär auf Datenintegration, Transformation oder fachlichen Ergebnisabgleich zielt.
+    status: aktiv

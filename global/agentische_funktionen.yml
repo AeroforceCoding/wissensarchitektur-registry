@@ -1,0 +1,133 @@
+version: 1
+stand: 2026-04-23
+funktionen:
+  - funktions_id: agf_001
+    name: eingang_einordnen
+    titel: Eingang einordnen
+    zweck: Bestimmen, ob ein neuer Input als Chat, Artefakt, abgeschlossene Aufgabe, TheBrain-Aufgabe oder sonstiger Kandidat weiterverarbeitet werden soll.
+    typische_eingaben:
+      - neuer Chat
+      - Screenshot oder Bilddatei
+      - abgeschlossene Aufgabe
+      - THEBRAIN_TASK
+      - strukturierter Hinweis des Anwenders
+    agent_darf_autonom:
+      - Eingabetyp fachlich einordnen
+      - wahrscheinlich nächste Workflow-Stufe bestimmen
+      - Unsicherheiten offen kennzeichnen
+    agent_muss_transparent_machen:
+      - welche Einordnung gewählt wurde
+      - welche Annahmen dafür getroffen wurden
+      - welcher nächste Schritt empfohlen wird
+    bestätigung_erforderlich_bei:
+      - mehreren gleich plausiblen Einordnungen mit abweichenden Folgewirkungen
+      - Einordnung direkt in eine strukturverändernde Folgeaktion
+    nächster_typischer_schritt: artefakt_metadaten_erfassen oder chat_extraktion oder aufgabenabschluss_verdichten
+  - funktions_id: agf_002
+    name: artefakt_benennen_und_metadatieren
+    titel: Artefakt benennen und metadatieren
+    zweck: Screenshots und Bilddateien mit navigationsfähigem Dateinamen, Kontext und Referenzen versehen.
+    typische_eingaben:
+      - Screenshot aus laufender Aufgabe
+      - Bilddatei als Nachweis
+      - externer Dateiverweis
+    agent_darf_autonom:
+      - Domäne aus bestehender Zuordnungslogik ableiten
+      - Kontext-Slug und Schritt-Slug vorschlagen
+      - Dateiname nach kanonischem Schema erzeugen
+      - Artefakt-Metadaten als Registereintrag vorbereiten
+    agent_muss_transparent_machen:
+      - vorgeschlagenen Dateinamen
+      - verwendete Domäne und Kontextzuordnung
+      - erkannte Zeichenkürzungen oder ID-Ersetzungen
+    bestätigung_erforderlich_bei:
+      - tatsächlichem Umbenennen oder Verschieben externer Dateien
+      - unsicherer Domänen- oder Kontextzuordnung
+      - potenziell irreführender Kürzung eines Dateinamens
+    nächster_typischer_schritt: kontext_zuordnen_oder_vorschlagen
+  - funktions_id: agf_003
+    name: kontext_zuordnen_oder_vorschlagen
+    titel: Kontext zuordnen oder vorschlagen
+    zweck: Prüfen, ob ein situativer Hintergrund bereits im Kontextvokabular existiert oder neu vorgeschlagen werden sollte.
+    typische_eingaben:
+      - Artefakt-Metadaten
+      - Aufgabenkontext
+      - situative Beschreibung
+    agent_darf_autonom:
+      - gegen bestehendes Kontextvokabular abgleichen
+      - ähnliche Kontexte benennen
+      - neuen Kontextvorschlag entwerfen
+    agent_muss_transparent_machen:
+      - verwendeten oder vorgeschlagenen Kontext
+      - Ähnlichkeiten zu bestehenden Kontexten
+      - betroffene Repo-Objekte oder Domänen
+    bestätigung_erforderlich_bei:
+      - Anlage eines neuen kanonischen Kontexts
+      - Zusammenführung oder Ersetzung bestehender Kontexte
+    nächster_typischer_schritt: aufgabenabschluss_verdichten oder artefakt_als_referenz_führen
+  - funktions_id: agf_004
+    name: aufgabenabschluss_verdichten
+    titel: Aufgabenabschluss verdichten
+    zweck: Einen erfolgreich abgeschlossenen Arbeitsverlauf mit Evidenz zu einem validierbaren Informationsblock zusammenführen.
+    typische_eingaben:
+      - abgeschlossene Aufgabe
+      - Ergebniszusammenfassung
+      - Artefakt-Referenzen
+      - Screenshots und Nachweise
+    agent_darf_autonom:
+      - gesicherte Befunde, Interpretationen und Hypothesen trennen
+      - Artefakte referenzieren
+      - Informationsblock-Entwurf erzeugen
+      - möglichen nächsten Workflow-Schritt bestimmen
+    agent_muss_transparent_machen:
+      - welche Aussagen als gesichert gelten
+      - welche Aussagen nur Interpretation oder Hypothese sind
+      - ob der Informationsblock bereits validiert oder nur vorgeschlagen ist
+    bestätigung_erforderlich_bei:
+      - widersprüchlichen Nachweisen
+      - unklarem Aufgabenerfolg
+      - direkter Ableitung einer strukturrelevanten Registry-Änderung
+    nächster_typischer_schritt: domänen_zuordnung oder registry_abgleich
+  - funktions_id: agf_005
+    name: nächsten_workflow_schritt_bestimmen
+    titel: Nächsten Workflow-Schritt bestimmen
+    zweck: Nach einem validierten Zwischenstand den logisch nächsten Verarbeitungsschritt belastbar auswählen.
+    typische_eingaben:
+      - Chat-Extrakt
+      - Artefakt-Eintrag
+      - Informationsblock
+      - Prüfergebnis
+    agent_darf_autonom:
+      - nächste Workflow-Stufe ableiten
+      - alternative Folgepfade mit Begründung nennen
+      - fehlende Vorbedingungen benennen
+    agent_muss_transparent_machen:
+      - warum dieser Schritt als nächster folgt
+      - welche Unsicherheiten bestehen
+      - ob eine Bestätigung vor Folgeaktionen nötig ist
+    bestätigung_erforderlich_bei:
+      - mehreren gleich plausiblen Folgepfaden
+      - Eintritt in Governance oder externe Zielsystemänderung
+    nächster_typischer_schritt: abhängig_vom_eingang
+  - funktions_id: agf_006
+    name: registry_oder_thebrain_änderung_vorbereiten
+    titel: Registry- oder TheBrain-Änderung vorbereiten
+    zweck: Bestätigte Inhalte in konkrete Änderungsentwürfe für Registry oder TheBrain übersetzen.
+    typische_eingaben:
+      - validierter Informationsblock
+      - bestätigtes Prüfergebnis
+      - Governance-Entscheidung
+    agent_darf_autonom:
+      - Änderungsentwürfe formulieren
+      - betroffene Dateien oder Zieläste benennen
+      - Logs und Folgeartefakte synchron vorbereiten
+    agent_muss_transparent_machen:
+      - betroffene Dateien oder Zielsysteme
+      - Strukturwirkung der Änderung
+      - offene Restunsicherheiten
+    bestätigung_erforderlich_bei:
+      - echter Strukturänderung
+      - neuer Domäne
+      - Zielzuordnung in TheBrain mit geringer Sicherheit
+      - externer Umsetzungsaktion außerhalb des Repositories
+    nächster_typischer_schritt: registry_aktualisieren oder thebrain_update_vorbereiten

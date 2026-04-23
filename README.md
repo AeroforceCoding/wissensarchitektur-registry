@@ -24,7 +24,9 @@ GitHub ist der versionierte Speicher- und Prüfkontext für diese Architektur. H
 
 ### Codex
 
-Codex unterstützt die operative Verarbeitung von Chatinhalten anhand der hier hinterlegten Prompts, Regeln und Register. Dazu gehören insbesondere Extraktion, Domänenzuordnung, Registry-Abgleich, semantische Prüfung, Vorbereitung von Governance-Entscheidungen und die strukturierte Aufbereitung von Änderungsentwürfen.
+Codex unterstützt die operative Verarbeitung von Chatinhalten anhand der hier hinterlegten Prompts, Regeln und Register. Dazu gehören insbesondere Extraktion, Domänenzuordnung, Registry-Abgleich, semantische Prüfung, Vorbereitung von Governance-Entscheidungen, die strukturierte Aufbereitung von Änderungsentwürfen sowie agentisches Handeln mit hoher Transparenz und klaren Bestätigungspflichten.
+
+Für projektverankerte Analysearbeit existiert zusätzlich eine erste Agentenschicht mit `AGENTS.md`, spezialisierten Skills unter `.agents/skills/` und einer methodischen Arbeitsstruktur unter `agentensystem/`. Diese Schicht ergänzt die Wissensarchitektur, ersetzt sie aber nicht.
 
 ### TheBrain
 
@@ -36,26 +38,30 @@ Die globale Ebene enthält die allgemeinen Steuerungsregeln der Wissensarchitekt
 
 Die domänenspezifischen Bereiche enthalten dagegen die fachliche Ausprägung einzelner Themenräume. Dort liegen kanonische Knoten, domänenspezifische Beziehungen, semantische Zuordnungen, Quellen, Verlaufsänderungen, Klassifikationsentscheidungen und vorbereitete TheBrain-Updates. So bleibt die globale Steuerung stabil, während sich Fachdomänen unabhängig weiterentwickeln können.
 
+Zwischen laufender Aufgabenbearbeitung und kanonischer Registry-Integration entsteht zusätzlich eine leichte Evidenz- und Kontextschicht. Dort werden Kontexte, Artefaktstatus und Vorlagen für validierte Informationsblöcke definiert, damit Screenshots, Bilddateien und andere Nachweise erst nach erfolgreicher Verdichtung in die eigentliche Wissensarchitektur einfließen.
+
+Ergänzend dazu existiert eine agentische Steuerungsschicht. Sie definiert, welche vorbereitenden Schritte der Agent autonom ausführen darf, welche Annahmen er offenlegen muss und in welchen Fällen der Anwender ausdrücklich bestätigen soll.
+
 ## Operative Prompt-Reihenfolge
 
-Die Prompts in `prompts/` bilden eine logische Verarbeitungskette:
+Die kanonische Prompt-Bibliothek liegt unter `prompts/`. Eine schnelle Übersicht bietet `prompts/prompt_index.md`. Die Prompts sind dort phasenbezogen organisiert und bilden folgende logische Verarbeitungskette:
 
-1. `chat_extraktion.md`
+1. `prompts/01_eingang/chat_extraktion.md`
    Extrahiert aus einem Chat die relevanten Wissenselemente, Aussagen, Entscheidungen, Prüfbedarfe und offenen Punkte.
-2. `domänen_zuordnung.md`
+2. `prompts/02_zuordnung/domänen_zuordnung.md`
    Ordnet die extrahierten Wissenselemente einer bestehenden Domäne oder einem begründeten neuen Domänenkandidaten zu.
-3. `registry_abgleich.md`
+3. `prompts/03_prüfung/registry_abgleich.md`
    Prüft innerhalb der Ziel-Domäne, ob bereits passende kanonische Knoten, Beziehungen oder Registereinträge existieren.
-4. `semantische_prüfung.md`
+4. `prompts/03_prüfung/semantische_prüfung.md`
    Wird nur dann genutzt, wenn Bedeutungsnähe, Mehrdeutigkeit, Dublettengefahr oder mögliche Widersprüche vorliegen.
-5. `governance_entscheidung.md`
+5. `prompts/04_entscheidung/governance_entscheidung.md`
    Wird nur dann aufgerufen, wenn eine echte Strukturänderung, ein neuer Standard oder eine konfliktträchtige Einordnung entschieden werden muss.
-6. `registry_aktualisieren.md`
+6. `prompts/05_aktualisierung/registry_aktualisieren.md`
    Überführt bestätigte Ergebnisse in konkrete Registry-Änderungen.
-7. `thebrain_update_vorbereiten.md`
+7. `prompts/06_thebrain/thebrain_update_vorbereiten.md`
    Formuliert daraus umsetzbare, aber noch getrennt nachverfolgbare Änderungen für TheBrain.
 
-Ergänzend dazu steuern die Prompts `thebrain_task_erfassen.md`, `thebrain_task_prüfen.md` und `aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
+Ergänzend dazu steuern `prompts/06_thebrain/thebrain_task_erfassen.md`, `prompts/06_thebrain/thebrain_task_prüfen.md` und `prompts/05_aktualisierung/aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
 
 ## Nutzen des Repositories
 
@@ -68,3 +74,5 @@ Der Nutzen dieser Registry liegt in drei Kernwirkungen:
 ## Grundsatz für die Pflege
 
 Neue Inhalte sollten zuerst als strukturierte Extrakte oder Kandidaten erfasst, dann domänenspezifisch geprüft und erst nach bestätigter Einordnung in Register oder vorbereitete TheBrain-Updates übernommen werden. Dadurch bleibt die Wissensarchitektur lernfähig, aber kontrolliert.
+
+Für aufgabenbasierte Erkenntnisse gilt ergänzend: Rohartefakte und Nachweise werden zunächst benannt, kontextualisiert und bei Bedarf zu einem validierten Informationsblock verdichtet. Erst dieser Block wird anschließend in die reguläre Workflow-Kette der Registry überführt.

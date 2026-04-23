@@ -1,0 +1,74 @@
+version: 1
+stand: 2026-04-23
+bestätigungsregeln:
+  - regel_id: bst_001
+    name: neue_kanonische_struktur
+    bedingung: Ein neuer Knoten, Kontext, Standard, Beziehungstyp oder eine neue Domäne soll kanonisch angelegt oder ersetzt werden.
+    agent_darf_ohne_bestätigung: false
+    agent_muss_dem_user_zeigen:
+      - betroffene Struktur
+      - vorgeschlagene neue Form
+      - erwartete Folgewirkung
+    standardreaktion: Änderung nur vorbereiten und auf Freigabe warten.
+  - regel_id: bst_002
+    name: externe_dateiaktion
+    bedingung: Eine Datei außerhalb des Repositories soll umbenannt, verschoben, gelöscht oder auf einem externen Speicherort abgelegt werden.
+    agent_darf_ohne_bestätigung: false
+    agent_muss_dem_user_zeigen:
+      - betroffene Datei
+      - vorgeschlagener neuer Name oder Zielpfad
+      - Begründung der Aktion
+    standardreaktion: Nur Vorschlag und Metadaten erzeugen, keine externe Aktion ausführen.
+  - regel_id: bst_003
+    name: unsichere_domänenzuordnung
+    bedingung: Für einen Input bestehen mehrere plausible Domänen oder Folgepfade mit spürbar unterschiedlichen Konsequenzen.
+    agent_darf_ohne_bestätigung: true
+    agent_muss_dem_user_zeigen:
+      - führende Option
+      - Alternativen
+      - Unsicherheitsgrund
+    standardreaktion: Empfehlung aussprechen und bei strukturrelevanter Folge auf Bestätigung warten.
+  - regel_id: bst_004
+    name: unklarer_aufgabenerfolg
+    bedingung: Eine laufende oder angeblich abgeschlossene Aufgabe liefert widersprüchliche Nachweise oder kein belastbares Ergebnisbild.
+    agent_darf_ohne_bestätigung: false
+    agent_muss_dem_user_zeigen:
+      - widersprüchliche Evidenz
+      - offene Punkte
+      - warum noch kein validierter Informationsblock erzeugt werden sollte
+    standardreaktion: Stoppen, offenen Punkt markieren und Bestätigung oder zusätzliche Evidenz einholen.
+  - regel_id: bst_005
+    name: verwerfen_oder_zusammenführen
+    bedingung: Ein Artefakt, Kontext, Task oder Registereintrag soll verworfen, ersetzt oder zusammengeführt werden.
+    agent_darf_ohne_bestätigung: false
+    agent_muss_dem_user_zeigen:
+      - betroffene Einträge
+      - Grund für Verwerfung oder Zusammenführung
+      - Risiko für Informationsverlust
+    standardreaktion: Nur Prüf- oder Zusammenführungsvorschlag dokumentieren.
+  - regel_id: bst_006
+    name: thebrain_ziel_unter_unsicherheit
+    bedingung: Ein TheBrain-Zielast oder Ziel-Brain ist nicht belastbar bestimmbar.
+    agent_darf_ohne_bestätigung: true
+    agent_muss_dem_user_zeigen:
+      - vorgeschlagenes Ziel
+      - Alternativen
+      - Unsicherheitsgrad
+    standardreaktion: Aufgabe als vorgeschlagen oder geprüft belassen und keine Umsetzungsaktion auslösen.
+  - regel_id: bst_007
+    name: destruktive_repo_aktion
+    bedingung: Eine vorhandene Datei oder ein bestehender Inhalt im Repository müsste überschrieben, entfernt oder stark umgebaut werden.
+    agent_darf_ohne_bestätigung: false
+    agent_muss_dem_user_zeigen:
+      - betroffene Datei
+      - Art der Änderung
+      - Grund für die Notwendigkeit
+    standardreaktion: Änderung nur als Vorschlag oder Patch-Entwurf vorbereiten.
+  - regel_id: bst_008
+    name: autonome_standardhandlung
+    bedingung: Die Handlung ist reversibel, strukturarm, transparent und betrifft nur Vorschläge, Vorlagen, Metadatenableitungen oder nicht-destruktive Entwürfe.
+    agent_darf_ohne_bestätigung: true
+    agent_muss_dem_user_zeigen:
+      - was vorbereitet wurde
+      - welche Annahmen verwendet wurden
+    standardreaktion: Handlung autonom ausführen und Ergebnis offen dokumentieren.

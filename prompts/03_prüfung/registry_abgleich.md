@@ -1,5 +1,12 @@
 # Prompt: Registry-Abgleich
 
+- Titel: Registry-Abgleich
+- Zweck: Neue Wissenselemente gegen bestehende Domänenregister prüfen und Dubletten vermeiden.
+- Wann verwenden: Nach der Domänen-Zuordnung, sobald eine Ziel-Domäne feststeht.
+- Erwartete Eingabe: Wissenselemente, Ziel-Domäne und relevante Domänendateien.
+- Erwartete Ausgabe: Ein YAML-`registry_abgleich` mit Trefferlage, Folgeaktionen und Prüfbedarf.
+- Nächster Schritt: `prompts/03_prüfung/semantische_prüfung.md` oder `prompts/05_aktualisierung/registry_aktualisieren.md`
+
 ## Zweck
 
 Dieser Prompt prüft, ob ein neues Wissenselement innerhalb einer Ziel-Domäne bereits durch vorhandene Knoten, Beziehungen, semantische Zuordnungen oder Quellen abgedeckt ist. Er dient der Dublettenkontrolle und der geordneten Weiterentwicklung bestehender Register.

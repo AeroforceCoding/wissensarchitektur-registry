@@ -1,5 +1,12 @@
 # Prompt: TheBrain-Update vorbereiten
 
+- Titel: TheBrain-Update vorbereiten
+- Zweck: Bestätigte Registry-Änderungen in konkrete, getrennt nachverfolgbare TheBrain-Updates überführen.
+- Wann verwenden: Nach der Registry-Aktualisierung, wenn aus bestätigten Ergebnissen operative TheBrain-Änderungen folgen.
+- Erwartete Eingabe: Registry-Änderungen, Ziel-Domäne und TheBrain-Zielkontext.
+- Erwartete Ausgabe: Ein YAML-`thebrain_update_vorbereitung` mit Update-Liste und Umsetzungsnotizen.
+- Nächster Schritt: Eintrag in `thebrain/umsetzungsprotokoll.yml` oder manuelle Umsetzung in TheBrain
+
 ## Zweck
 
 Dieser Prompt erstellt aus bestätigten Registry-Änderungen eine umsetzbare, aber getrennt nachverfolgbare Liste von TheBrain-Anpassungen. Er bereitet die operative Umsetzung vor, ohne Registry und Zielsystem gleichzusetzen.

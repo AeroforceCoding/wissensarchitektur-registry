@@ -1,5 +1,12 @@
 # Prompt: Registry aktualisieren
 
+- Titel: Registry aktualisieren
+- Zweck: Bestätigte Ergebnisse in konkrete Änderungen der Registry-Dateien übersetzen.
+- Wann verwenden: Nach abgeschlossenem Abgleich, optionaler semantischer Prüfung und gegebenenfalls Governance-Entscheidung.
+- Erwartete Eingabe: Bestätigte Ergebnisse, Ziel-Domäne und betroffene Registerdateien.
+- Erwartete Ausgabe: Ein YAML-`registry_aktualisierung` mit Dateiänderungen und Folgehinweisen.
+- Nächster Schritt: `prompts/06_thebrain/thebrain_update_vorbereiten.md`
+
 ## Zweck
 
 Dieser Prompt übersetzt bestätigte Ergebnisse in konkrete Änderungen an den relevanten Registry-Dateien. Er bündelt, welche Knoten, Beziehungen, Quellen, Logs und Verlaufsdateien angepasst werden sollen.

@@ -1,5 +1,12 @@
 # Prompt: THEBRAIN_TASK erfassen
 
+- Titel: THEBRAIN_TASK erfassen
+- Zweck: Neue TheBrain-Aufgaben oder abgeschlossene Fälle in das Aufgabenregister überführen.
+- Wann verwenden: Wenn ein THEBRAIN_TASK-Block oder eine sonstige TheBrain-relevante Aufgabe erstmals strukturiert erfasst werden soll.
+- Erwartete Eingabe: THEBRAIN_TASK-Block oder Aufgabenbeschreibung sowie Status- und Zielregister.
+- Erwartete Ausgabe: Ein YAML-`aufgabenregister_eintrag` für `thebrain/aufgabenregister.yml`.
+- Nächster Schritt: `prompts/06_thebrain/thebrain_task_prüfen.md`
+
 ## Zweck
 
 Dieser Prompt überführt einen THEBRAIN_TASK-Block oder eine bereits abgeschlossene Aufgabe in einen strukturierten Eintrag für `thebrain/aufgabenregister.yml`. Ziel ist eine konsistente, nachvollziehbare Erfassung mit Ziel-Brain, Zielast, Status und Strukturwirkung.

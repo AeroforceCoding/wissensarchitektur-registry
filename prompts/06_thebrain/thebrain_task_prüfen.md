@@ -1,5 +1,12 @@
 # Prompt: THEBRAIN_TASK prüfen
 
+- Titel: THEBRAIN_TASK prüfen
+- Zweck: Neue TheBrain-Aufgaben gegen bestehende Einträge prüfen und dedupliziert zuordnen.
+- Wann verwenden: Nach der Erfassung eines neuen TheBrain-Tasks und vor einer endgültigen Registerfortschreibung.
+- Erwartete Eingabe: Neuer Task, Aufgabenregister und optional bisherige Zuordnungsprüfungen.
+- Erwartete Ausgabe: Ein YAML-`task_prüfung` mit Ähnlichkeitsbewertung und Zuordnungsempfehlung.
+- Nächster Schritt: Aufgabenregister ergänzen, Zuordnungsprüfung dokumentieren oder Aufgabe verwerfen
+
 ## Zweck
 
 Dieser Prompt prüft einen neuen THEBRAIN_TASK gegen das bestehende TheBrain-Aufgabenregister und bewertet, ob die Aufgabe bereits vorhanden, nur ähnlich, ergänzend oder tatsächlich neu ist.

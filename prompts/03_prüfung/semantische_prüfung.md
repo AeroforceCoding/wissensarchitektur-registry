@@ -1,5 +1,12 @@
 # Prompt: Semantische Prüfung
 
+- Titel: Semantische Prüfung
+- Zweck: Bedeutungsnähe, Abgrenzung und mögliche Konflikte zwischen Wissenselementen klären.
+- Wann verwenden: Wenn der Registry-Abgleich keine eindeutige Einordnung erlaubt oder Dublettengefahr besteht.
+- Erwartete Eingabe: Prüfgegenstand und fachlich ähnliche Registereinträge.
+- Erwartete Ausgabe: Ein YAML-`semantische_prüfung` mit Bewertung, Sicherheit und Folgeempfehlung.
+- Nächster Schritt: `prompts/04_entscheidung/governance_entscheidung.md` oder `prompts/05_aktualisierung/registry_aktualisieren.md`
+
 ## Zweck
 
 Dieser Prompt klärt Bedeutungsnähe, Abgrenzung, mögliche Widersprüche und Dubletten. Er wird nur eingesetzt, wenn der Registry-Abgleich keine eindeutige Entscheidung erlaubt.

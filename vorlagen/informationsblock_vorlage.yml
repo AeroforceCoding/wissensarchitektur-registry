@@ -1,0 +1,41 @@
+vorlage:
+  informationsblock_id: ib_2026_0001
+  titel: Berechtigungsproblem im Teams Admin Center fachlich verdichtet
+  herkunft_typ: abgeschlossene_aufgabe
+  herkunft_ref: tb_task_0042
+  führende_domäne: m365_sharepoint
+  domänenhinweise:
+    - domäne: m365_sharepoint
+      confidence: hoch
+      begründung: Die Aufgabe betrifft Rollen- und Berechtigungslogik im Microsoft-365-Kontext.
+  kontext_refs:
+    - ctx_0001
+  kurzbeschreibung: Validierter Informationsblock aus einer erfolgreich abgeschlossenen Aufgabe mit Artefaktnachweisen und belastbarer Folgebewertung.
+  gesicherte_befunde:
+    - befund_id: bef_0001
+      inhalt: Die Rollenansicht zeigt eine fehlende erwartete Berechtigung.
+      artefakt_refs:
+        - art_2026_0001
+  interpretationen:
+    - interpretation_id: int_0001
+      inhalt: Die fehlende Berechtigung hängt wahrscheinlich mit der Gruppen- oder Vererbungslogik zusammen.
+      confidence: mittel
+  hypothesen:
+    - hypothese_id: hyp_0001
+      inhalt: Die betroffene Rolle wurde nicht über die erwartete Gruppenstruktur zugewiesen.
+      confidence: mittel
+  offene_punkte:
+    - open_id: open_0001
+      inhalt: Es bleibt zu prüfen, ob eine abweichende Ausnahmeberechtigung gesetzt wurde.
+      empfohlener_nächster_schritt: Registry-Abgleich gegen bestehende Berechtigungslogik durchführen.
+  artefakt_refs:
+    - art_2026_0001
+  verwandte_repo_objekte:
+    - typ: knoten
+      ref: domänen/m365_sharepoint/kanonische_knoten.yml#sharepoint_berechtigungslogik
+  empfohlener_nächster_workflow_schritt: registry_abgleich
+  strukturrelevanz: mittel
+  validierungsstand: geprüft
+  erstellt_am: 2026-04-23
+  zuletzt_geändert: 2026-04-23
+  notizen: Der Informationsblock dient als Übergabeformat zwischen erfolgreicher Aufgabe und eigentlicher Repo-Integration.

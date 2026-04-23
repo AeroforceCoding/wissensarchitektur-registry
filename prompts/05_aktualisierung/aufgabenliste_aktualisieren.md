@@ -1,5 +1,12 @@
 # Prompt: Aufgabenliste aktualisieren
 
+- Titel: Aufgabenliste aktualisieren
+- Zweck: Aus Aufgabenregister und Protokollen eine übersichtliche Arbeitsliste für TheBrain-Aufgaben ableiten.
+- Wann verwenden: Wenn eine aktuelle Sicht auf offene, umsetzungsreife oder dublettenverdächtige Aufgaben benötigt wird.
+- Erwartete Eingabe: `thebrain/aufgabenregister.yml`, `thebrain/umsetzungsprotokoll.yml` und optional `thebrain/zuordnungsprüfungen.yml`.
+- Erwartete Ausgabe: Ein YAML-`aufgabenliste` mit offenen Aufgaben, Umsetzungsfällen und Prüfhilfen.
+- Nächster Schritt: Operative Bearbeitung, Priorisierung oder manuelle TheBrain-Umsetzung
+
 ## Zweck
 
 Dieser Prompt leitet aus dem TheBrain-Aufgabenregister und dem Umsetzungsprotokoll eine übersichtliche, priorisierbare Aufgabenliste ab. Er hilft dabei, offene Aufgaben, umsetzungsbereite Einträge, bereits umgesetzte Fälle, bestätigungsbedürftige Änderungen und potenzielle Dubletten sichtbar zu machen.

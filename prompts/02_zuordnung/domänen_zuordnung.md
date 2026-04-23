@@ -1,5 +1,12 @@
 # Prompt: Domänen-Zuordnung
 
+- Titel: Domänen-Zuordnung
+- Zweck: Extrahierte Wissenselemente einer fachlich führenden Domäne zuordnen.
+- Wann verwenden: Direkt nach der Chat-Extraktion und vor dem domänenspezifischen Registerabgleich.
+- Erwartete Eingabe: Strukturierter Chat-Extrakt und `global/domänenregister.yml`.
+- Erwartete Ausgabe: Ein YAML-`domänen_zuordnung` mit führender Domäne, Alternativen und Zuordnungssicherheit.
+- Nächster Schritt: `prompts/03_prüfung/registry_abgleich.md`
+
 ## Zweck
 
 Dieser Prompt ordnet extrahierte Wissenselemente der fachlich passendsten Domäne zu. Er dient der gezielten Weiterleitung in das richtige Register und vermeidet vorschnelle Mehrfachablagen.

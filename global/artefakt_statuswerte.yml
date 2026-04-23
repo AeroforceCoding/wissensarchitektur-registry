@@ -1,0 +1,31 @@
+version: 1
+stand: 2026-04-23
+statuswerte:
+  - name: roh_erfasst
+    bedeutung: Das Artefakt liegt vor, ist aber noch nicht konsistent benannt oder beschrieben.
+    wann_verwenden: Direkt nach Eingang eines Screenshots oder einer Bilddatei aus einer laufenden Aufgabe.
+    nächster_typischer_schritt: Dateiname und Grundmetadaten festlegen.
+  - name: benannt
+    bedeutung: Das Artefakt hat einen navigationsfähigen Dateinamen nach dem kanonischen Benennungsschema erhalten.
+    wann_verwenden: Verwenden, sobald Domäne, Kontext und grundlegender Bezug im Dateinamen abgebildet sind.
+    nächster_typischer_schritt: Metadaten und Kontextbezug ergänzen.
+  - name: metadatiert
+    bedeutung: Kontext, Bezug, Schlagworte und Kurzbeschreibung sind strukturiert erfasst.
+    wann_verwenden: Verwenden, wenn das Artefakt inhaltlich ausreichend beschrieben und referenzierbar ist.
+    nächster_typischer_schritt: Kontextbezug prüfen oder Informationsblockbezug herstellen.
+  - name: kontext_geprüft
+    bedeutung: Der Artefaktkontext wurde gegen das Kontextvokabular geprüft oder fachlich zugeordnet.
+    wann_verwenden: Verwenden, wenn der situative Hintergrund des Artefakts belastbar eingeordnet ist.
+    nächster_typischer_schritt: In Informationsblock referenzieren oder nur als Nachweis halten.
+  - name: in_informationsblock_referenziert
+    bedeutung: Das Artefakt ist Teil eines validierten oder in Validierung befindlichen Informationsblocks.
+    wann_verwenden: Verwenden, wenn das Artefakt aktiv zur Verdichtung eines abgeschlossenen Falls beiträgt.
+    nächster_typischer_schritt: Informationsblock validieren und Folgeworkflow bestimmen.
+  - name: nur_referenz
+    bedeutung: Das Artefakt bleibt als Nachweis erhalten, wird aber nicht in die Wissensstruktur überführt.
+    wann_verwenden: Verwenden, wenn das Artefakt als Evidenz nützlich bleibt, jedoch keine direkte Strukturwirkung entfaltet.
+    nächster_typischer_schritt: Referenz bestehen lassen und keine weitere Verdichtung vornehmen.
+  - name: verworfen
+    bedeutung: Das Artefakt ist für die Wissensarchitektur nicht relevant oder ungeeignet.
+    wann_verwenden: Verwenden, wenn das Artefakt redundant, fachlich unklar oder nicht brauchbar ist.
+    nächster_typischer_schritt: Verwerfungsgrund dokumentieren und keine weitere Verwendung ableiten.
