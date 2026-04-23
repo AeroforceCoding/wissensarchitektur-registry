@@ -1,0 +1,7 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+änderungen:
+  - datum: 2026-04-23
+    änderungstyp: initialisierung
+    ziel: domänen/wissenssystem_thebrain
+    beschreibung: Startstruktur der Domäne für Zielmodell, Typisierungslogik und Update-Statusführung angelegt.

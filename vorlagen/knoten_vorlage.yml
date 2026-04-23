@@ -1,0 +1,15 @@
+vorlage:
+  id: beispiel_knoten_id
+  titel: Beispiel Knoten
+  typ: Struktur
+  icon: "[S]"
+  status: entwurf
+  beschreibung: Beschreibt einen stabilen Wissensknoten mit klarer fachlicher Bedeutung.
+  etiketten:
+    - Wissenssystem
+    - Governance
+  synonyme:
+    - Alternativer Fachbegriff
+  thebrain_pfad: Wissensarchitektur/Beispieldomäne/Beispiel Knoten
+  quellen_ids:
+    - q_beispiel_001

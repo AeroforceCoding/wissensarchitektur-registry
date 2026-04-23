@@ -1,0 +1,9 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+klassifikationsentscheidungen:
+  - datum: 2026-04-23
+    eingang: Grundlegende Tenant- und SharePoint-Strukturthemen
+    zugeordnete_domäne: m365_sharepoint
+    kanonischer_knoten_id: m365_tenant_basis
+    sicherheit: hoch
+    begründung: Tenantnahe Strukturthemen bilden den Schwerpunkt der Domäne und verweisen auf den Basisknoten.

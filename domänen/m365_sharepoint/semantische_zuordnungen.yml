@@ -1,0 +1,15 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+zuordnungen:
+  - eingangsausdruck: Tenant Grundstruktur in Microsoft 365
+    kanonischer_knoten_id: m365_tenant_basis
+    sicherheit: hoch
+    begründung: Die Formulierung beschreibt die gleiche Grundebene wie der kanonische Tenant-Basisknoten.
+  - eingangsausdruck: SharePoint Strukturgrundlage
+    kanonischer_knoten_id: sharepoint_informationsarchitektur_basis
+    sicherheit: hoch
+    begründung: Die Formulierung verweist auf die grundlegende Ordnungslogik in SharePoint.
+  - eingangsausdruck: SharePoint Berechtigungsmodell
+    kanonischer_knoten_id: sharepoint_berechtigungslogik
+    sicherheit: mittel
+    begründung: Der Ausdruck wird als inhaltlich gleichwertig zur grundlegenden Berechtigungslogik behandelt.

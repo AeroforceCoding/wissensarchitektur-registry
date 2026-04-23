@@ -1,0 +1,9 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+klassifikationsentscheidungen:
+  - datum: 2026-04-23
+    eingang: Aufbau eines HR-bezogenen Datenmodells mit Integrations- und Transformationsschritten
+    zugeordnete_domäne: hr_data_hub
+    kanonischer_knoten_id: hr_data_hub_kernmodell
+    sicherheit: hoch
+    begründung: Der Schwerpunkt liegt auf HR-Datenstruktur und deren geordneter Verarbeitung.

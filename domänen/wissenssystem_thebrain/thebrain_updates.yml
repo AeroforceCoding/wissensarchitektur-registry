@@ -1,0 +1,19 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+updates:
+  - id: tb_sys_001
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/Wissenssystem TheBrain
+    aktion: knoten_anlegen
+    bezug_knoten_id: thebrain_wissensmodell_basis
+    beschreibung: Basisknoten für das Zielmodell des Wissenssystems in TheBrain anlegen.
+    manuelle_prüfung_erforderlich: true
+  - id: tb_sys_002
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/Wissenssystem TheBrain
+    aktion: beziehung_anlegen
+    bezug_knoten_id: thebrain_update_statuslogik
+    beschreibung: Update-Statuslogik als Erweiterung des Wissensmodells in TheBrain verknüpfen.
+    manuelle_prüfung_erforderlich: true

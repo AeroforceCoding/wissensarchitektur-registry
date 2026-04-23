@@ -1,0 +1,48 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+knoten:
+  - id: thebrain_wissensmodell_basis
+    titel: TheBrain Wissensmodell Basis
+    typ: Struktur
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die grundlegende Modelllogik für Knoten, Beziehungen und Hauptäste im Wissenssystem TheBrain.
+    etiketten:
+      - Wissenssystem
+      - TheBrain
+      - Informationsarchitektur
+    synonyme:
+      - TheBrain Zielmodell
+    thebrain_pfad: Wissensarchitektur/Wissenssystem TheBrain/TheBrain Wissensmodell Basis
+    quellen_ids:
+      - q_tb_001
+  - id: thebrain_knotentypisierung
+    titel: TheBrain Knotentypisierung
+    typ: Standard
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die Zuordnung von Knotentypen, Etiketten und stabilen Benennungsregeln für TheBrain.
+    etiketten:
+      - Wissenssystem
+      - TheBrain
+      - Governance
+    synonyme:
+      - Typisierung der TheBrain-Knoten
+    thebrain_pfad: Wissensarchitektur/Wissenssystem TheBrain/TheBrain Knotentypisierung
+    quellen_ids:
+      - q_tb_001
+  - id: thebrain_update_statuslogik
+    titel: TheBrain Update-Statuslogik
+    typ: Prozess
+    icon: "[P]"
+    status: aktiv
+    beschreibung: Beschreibt die getrennte Nachverfolgung vorbereiteter, geprüfter und umgesetzter TheBrain-Änderungen.
+    etiketten:
+      - Wissenssystem
+      - TheBrain
+      - Governance
+    synonyme:
+      - Umsetzungsstatus TheBrain
+    thebrain_pfad: Wissensarchitektur/Wissenssystem TheBrain/TheBrain Update-Statuslogik
+    quellen_ids:
+      - q_tb_001

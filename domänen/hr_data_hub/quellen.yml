@@ -1,0 +1,9 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+quellen:
+  - id: q_hr_001
+    quellentyp: Registry-Initialisierung
+    titel: Startbefüllung der Domäne HR Data Hub
+    datum: 2026-04-23
+    status: referenziert
+    beschreibung: Quelle für die erste Anlage fachlicher Knoten und Beziehungen der Domäne.

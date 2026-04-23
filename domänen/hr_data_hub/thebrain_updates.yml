@@ -1,0 +1,19 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+updates:
+  - id: tb_hr_001
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/HR Data Hub
+    aktion: knoten_anlegen
+    bezug_knoten_id: hr_data_hub_kernmodell
+    beschreibung: Basisknoten des HR Data Hub im Zielast anlegen.
+    manuelle_prüfung_erforderlich: true
+  - id: tb_hr_002
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/HR Data Hub
+    aktion: beziehung_anlegen
+    bezug_knoten_id: hr_power_query_aufbereitung
+    beschreibung: Power-Query-Aufbereitung unterhalb der Datenquellen-Integration verknüpfen.
+    manuelle_prüfung_erforderlich: true

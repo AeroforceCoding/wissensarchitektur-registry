@@ -1,0 +1,48 @@
+version: 1
+stand: 2026-04-23
+etiketten:
+  - schlüssel: microsoft_365
+    titel: Microsoft 365
+    beschreibung: Sammeletikett für tenantweite, produktübergreifende oder plattformnahe Inhalte rund um Microsoft 365.
+  - schlüssel: entra_id
+    titel: Entra ID
+    beschreibung: Kennzeichnet Inhalte zu Identitäten, Verzeichnissen, Authentifizierung und Verzeichnisobjekten.
+  - schlüssel: sharepoint
+    titel: SharePoint
+    beschreibung: Kennzeichnet Inhalte zu Informationsräumen, Sites, Berechtigungslogik und SharePoint-Strukturen.
+  - schlüssel: hr_data_hub
+    titel: HR Data Hub
+    beschreibung: Kennzeichnet Inhalte zur HR-bezogenen Datenlogik, Datenversorgung und strukturierten Auswertung.
+  - schlüssel: migration
+    titel: Migration
+    beschreibung: Kennzeichnet Inhalte zu Übergängen, Ablösungen, Überführungen und Migrationspfaden.
+  - schlüssel: sicherheit
+    titel: Sicherheit
+    beschreibung: Kennzeichnet Inhalte mit Bezug zu Schutzbedarf, Sicherheitsmaßnahmen, Zugriffsschutz oder Risiken.
+  - schlüssel: berechtigungen
+    titel: Berechtigungen
+    beschreibung: Kennzeichnet Inhalte zur Vergabe, Vererbung, Prüfung oder Dokumentation von Zugriffsrechten.
+  - schlüssel: rollen
+    titel: Rollen
+    beschreibung: Kennzeichnet Inhalte zu Verantwortlichkeiten, Funktionsrollen und organisatorischen Zuordnungen.
+  - schlüssel: governance
+    titel: Governance
+    beschreibung: Kennzeichnet Inhalte zu Steuerung, Entscheidungslogik, Standards und kontrollierter Weiterentwicklung.
+  - schlüssel: power_query
+    titel: Power Query
+    beschreibung: Kennzeichnet Inhalte zu Datenaufbereitung, Transformation und Abfrageketten in Power Query.
+  - schlüssel: teams
+    titel: Teams
+    beschreibung: Kennzeichnet Inhalte zu Microsoft Teams, Teamräumen, Kollaborationsmustern und angrenzenden Strukturen.
+  - schlüssel: informationsarchitektur
+    titel: Informationsarchitektur
+    beschreibung: Kennzeichnet Inhalte zu Ordnungssystemen, Navigationslogik, Strukturprinzipien und Wissensmodellen.
+  - schlüssel: it_übergabe
+    titel: IT Übergabe
+    beschreibung: Kennzeichnet Inhalte zu Übergabeprozessen, Betriebsreife, Dokumentationspaketen und Verantwortungswechseln.
+  - schlüssel: wissenssystem
+    titel: Wissenssystem
+    beschreibung: Kennzeichnet Inhalte zur Architektur, Pflege und Weiterentwicklung eines Wissenssystems.
+  - schlüssel: thebrain
+    titel: TheBrain
+    beschreibung: Kennzeichnet Inhalte, die auf Modellierung, Vorbereitung oder Umsetzung im Zielsystem TheBrain zielen.

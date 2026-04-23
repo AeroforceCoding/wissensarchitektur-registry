@@ -1,0 +1,45 @@
+version: 1
+stand: 2026-04-23
+routing_regeln:
+  - reihenfolge: 1
+    schritt: chat_extraktion
+    bedingung: Ein neuer Chat oder ein neuer Gesprächsausschnitt liegt als unstrukturierte Eingabe vor.
+    nächste_aktion: domänen_zuordnung
+    zweck: Relevante Wissenselemente, Aussagen, Entscheidungen, Risiken und offene Punkte aus der Rohkommunikation herauslösen.
+    erwarteter_output: Strukturierter Chat-Extrakt mit identifizierten Wissenselementen und erstem Klassifikationshinweis.
+  - reihenfolge: 2
+    schritt: domänen_zuordnung
+    bedingung: Ein strukturierter Chat-Extrakt liegt vor und muss fachlich verortet werden.
+    nächste_aktion: registry_abgleich
+    zweck: Bestimmen, welche bestehende Domäne für die Weiterverarbeitung federführend ist oder ob ein Domänenkandidat entstehen sollte.
+    erwarteter_output: Zuordnung zu einer Ziel-Domäne oder begründeter Vorschlag für einen neuen Domänenkandidaten.
+  - reihenfolge: 3
+    schritt: registry_abgleich
+    bedingung: Eine Ziel-Domäne wurde festgelegt und vorhandene Registereinträge müssen geprüft werden.
+    nächste_aktion: semantische_prüfung
+    zweck: Prüfen, ob bereits passende kanonische Knoten, Beziehungen, Etiketten oder Quellenstrukturen vorhanden sind.
+    erwarteter_output: Abgleichsergebnis mit Treffer, Erweiterungsbedarf, Dublettengefahr oder offener semantischer Unsicherheit.
+  - reihenfolge: 4
+    schritt: semantische_prüfung
+    bedingung: Der Registry-Abgleich zeigt Unschärfen, Überschneidungen, mögliche Widersprüche oder Dubletten.
+    nächste_aktion: governance_entscheidung
+    zweck: Bedeutungsnähe, Abgrenzung und Konsistenz eines neuen oder veränderten Wissenselements prüfen.
+    erwarteter_output: Semantische Bewertung mit Empfehlung zur Zusammenführung, Abgrenzung, Ergänzung oder Ablehnung.
+  - reihenfolge: 5
+    schritt: governance_entscheidung
+    bedingung: Eine echte Strukturänderung, ein neuer Standard oder ein konfliktbehafteter Eingriff muss entschieden werden.
+    nächste_aktion: registry_aktualisieren
+    zweck: Fachlich und strukturell belastbare Entscheidungen dokumentieren, bevor Register geändert werden.
+    erwarteter_output: Dokumentierte Governance-Entscheidung mit Freigabe, Auflagen oder Ablehnung.
+  - reihenfolge: 6
+    schritt: registry_aktualisieren
+    bedingung: Abgleich, semantische Prüfung und gegebenenfalls Governance-Entscheidung sind abgeschlossen.
+    nächste_aktion: thebrain_update_vorbereiten
+    zweck: Bestätigte Inhalte in die relevanten Register, Logs und Domänendateien überführen.
+    erwarteter_output: Konkrete Registry-Änderungen mit aktualisierten Knoten-, Beziehungs-, Quellen- und Verlaufsdaten.
+  - reihenfolge: 7
+    schritt: thebrain_update_vorbereiten
+    bedingung: Die Registry ist aktualisiert und daraus ableitbare Änderungen für TheBrain sollen vorbereitet werden.
+    nächste_aktion: abgeschlossene_vorbereitung
+    zweck: Umsetzbare TheBrain-Änderungen getrennt von der Registry dokumentieren und mit eigenem Status versehen.
+    erwarteter_output: Nachverfolgbare TheBrain-Update-Liste mit Aktion, Zielast, Status und fachlicher Begründung.

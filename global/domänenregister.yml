@@ -1,0 +1,57 @@
+version: 1
+stand: 2026-04-23
+domänen:
+  - name: m365_sharepoint
+    titel: Microsoft 365 und SharePoint
+    beschreibung: Domäne für tenantnahe, kollaborative und informationsarchitektonische Inhalte rund um Microsoft 365, SharePoint und angrenzende Governance-Themen.
+    typische_themen:
+      - Tenant-Grundlagen
+      - SharePoint-Strukturen
+      - Berechtigungsmodelle
+      - Informationsarchitektur
+      - Kollaborationsräume
+    typische_schlüsselbegriffe:
+      - Microsoft 365
+      - SharePoint
+      - Tenant
+      - Site Collection
+      - Berechtigungen
+      - Teams
+    standardpfad: domänen/m365_sharepoint
+    thebrain_hauptast: Wissensarchitektur/Microsoft 365 SharePoint
+  - name: hr_data_hub
+    titel: HR Data Hub
+    beschreibung: Domäne für HR-bezogene Datenflüsse, Datenmodelle, Auswertungslogik, Übergaben und semantische Strukturierung von HR-Datenwissen.
+    typische_themen:
+      - HR-Datenmodell
+      - Datenintegration
+      - Power Query
+      - Rollen und Übergaben
+      - Datenqualitätslogik
+    typische_schlüsselbegriffe:
+      - HR Data Hub
+      - Personaldaten
+      - Power Query
+      - Datenquelle
+      - Rollen
+      - IT Übergabe
+    standardpfad: domänen/hr_data_hub
+    thebrain_hauptast: Wissensarchitektur/HR Data Hub
+  - name: wissenssystem_thebrain
+    titel: Wissenssystem TheBrain
+    beschreibung: Domäne für das Zielmodell, die Pflegeprinzipien, Knotenlogik und Weiterentwicklung des Wissenssystems in TheBrain.
+    typische_themen:
+      - Wissensmodell
+      - Knotenlogik
+      - Beziehungsmuster
+      - Pflegeprinzipien
+      - Visualisierungsstruktur
+    typische_schlüsselbegriffe:
+      - TheBrain
+      - Wissenssystem
+      - Knoten
+      - Beziehung
+      - semantische Ordnung
+      - Registry
+    standardpfad: domänen/wissenssystem_thebrain
+    thebrain_hauptast: Wissensarchitektur/Wissenssystem TheBrain

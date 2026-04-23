@@ -1,0 +1,43 @@
+version: 1
+stand: 2026-04-23
+typen:
+  - schlüssel: kontext
+    titel: Kontext
+    beschreibung: Beschreibt Rahmenbedingungen, Hintergründe, Ausgangslagen oder fachliche Einbettungen.
+    verwendungsregel: Verwenden, wenn ein Knoten Orientierung gibt, ohne selbst eine operative Struktur oder Entscheidung zu sein.
+  - schlüssel: struktur
+    titel: Struktur
+    beschreibung: Beschreibt stabile Elemente einer Zielarchitektur, eines Modells oder eines Ordnungssystems.
+    verwendungsregel: Verwenden für dauerhafte Bausteine, Hauptknoten, Registerelemente oder tragende Wissensstrukturen.
+  - schlüssel: prozess
+    titel: Prozess
+    beschreibung: Beschreibt Abläufe, Verarbeitungsschritte, Zuständigkeiten oder wiederholbare Vorgehensweisen.
+    verwendungsregel: Verwenden, wenn ein Inhalt auf eine zeitliche oder logische Abfolge von Handlungen zielt.
+  - schlüssel: standard
+    titel: Standard
+    beschreibung: Beschreibt verbindliche oder empfohlene Regeln, Muster, Konventionen und Soll-Zustände.
+    verwendungsregel: Verwenden für festgelegte Vorgaben, wiederkehrende Konfigurationen oder normierende Leitplanken.
+  - schlüssel: entscheidung
+    titel: Entscheidung
+    beschreibung: Beschreibt beschlossene Abwägungen, Richtungsentscheidungen oder freigegebene Strukturänderungen.
+    verwendungsregel: Verwenden nur für tatsächlich entschiedene Inhalte, nicht für Vorschläge oder offene Diskussionen.
+  - schlüssel: prüfung
+    titel: Prüfung
+    beschreibung: Beschreibt Kontrollpunkte, Validierungen, Qualitätssicherungen oder zu klärende Bewertungsfragen.
+    verwendungsregel: Verwenden, wenn ein Inhalt primär der Verifikation, Freigabe oder semantischen Absicherung dient.
+  - schlüssel: offener_punkt
+    titel: Offener Punkt
+    beschreibung: Beschreibt ungeklärte Fragestellungen, fehlende Entscheidungen oder noch nicht belastbare Annahmen.
+    verwendungsregel: Verwenden für temporäre Wissenselemente, die aktiv nachverfolgt und später aufgelöst werden müssen.
+  - schlüssel: artefakt
+    titel: Artefakt
+    beschreibung: Beschreibt konkrete Dokumente, Dateien, Listen, Modelle, Systeme oder erzeugte Ergebnisse.
+    verwendungsregel: Verwenden, wenn ein Inhalt ein greifbares Arbeitsergebnis oder Referenzobjekt repräsentiert.
+  - schlüssel: eingabe
+    titel: Eingabe
+    beschreibung: Beschreibt eingehende Informationen wie Chatinhalte, Anforderungen, Hinweise oder Rohmaterial.
+    verwendungsregel: Verwenden für Quellinhalte, die noch nicht vollständig klassifiziert oder kanonisiert wurden.
+  - schlüssel: referenz
+    titel: Referenz
+    beschreibung: Beschreibt Verweise auf externe Quellen, Normen, Systeme oder frühere Wissenselemente.
+    verwendungsregel: Verwenden für unterstützende Nachweise und Bezugspunkte, nicht als Ersatz für fachliche Kernknoten.

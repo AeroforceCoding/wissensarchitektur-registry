@@ -1,0 +1,9 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+quellen:
+  - id: q_m365_001
+    quellentyp: Registry-Initialisierung
+    titel: Startbefüllung der Domäne Microsoft 365 und SharePoint
+    datum: 2026-04-23
+    status: referenziert
+    beschreibung: Quelle für die initiale Anlage der Domänenstruktur im Registry-Repository.

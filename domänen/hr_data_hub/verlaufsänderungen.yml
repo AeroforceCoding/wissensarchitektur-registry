@@ -1,0 +1,7 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+änderungen:
+  - datum: 2026-04-23
+    änderungstyp: initialisierung
+    ziel: domänen/hr_data_hub
+    beschreibung: Startstruktur der Domäne mit Kernmodell, Integrationslogik und vorbereiteten Zielsystemänderungen angelegt.

@@ -1,0 +1,33 @@
+version: 1
+stand: 2026-04-23
+beziehungstypen:
+  - schlüssel: ist_teil_von
+    titel: ist_teil_von
+    beschreibung: Verknüpft ein Element mit einer übergeordneten Struktur, zu der es dauerhaft gehört.
+  - schlüssel: gehört_zu
+    titel: gehört_zu
+    beschreibung: Verknüpft ein Element mit einer fachlichen oder organisatorischen Zugehörigkeit.
+  - schlüssel: konkretisiert
+    titel: konkretisiert
+    beschreibung: Verknüpft einen allgemeineren Knoten mit einer präziseren, fachlich engeren Ausprägung.
+  - schlüssel: verweist_auf
+    titel: verweist_auf
+    beschreibung: Verknüpft einen Inhalt mit einem relevanten Bezugspunkt oder einer unterstützenden Referenz.
+  - schlüssel: hängt_ab_von
+    titel: hängt_ab_von
+    beschreibung: Beschreibt eine fachliche, technische oder logische Abhängigkeit zwischen zwei Elementen.
+  - schlüssel: belegt
+    titel: belegt
+    beschreibung: Verknüpft einen Nachweis, eine Quelle oder ein Artefakt mit dem Wissenselement, das dadurch gestützt wird.
+  - schlüssel: erweitert
+    titel: erweitert
+    beschreibung: Beschreibt eine inhaltliche Ergänzung eines bestehenden Knotens oder einer bestehenden Struktur.
+  - schlüssel: ersetzt
+    titel: ersetzt
+    beschreibung: Beschreibt, dass ein Element ein früheres Muster, einen Knoten oder eine Struktur ablöst.
+  - schlüssel: widerspricht_möglicherweise
+    titel: widerspricht_möglicherweise
+    beschreibung: Kennzeichnet eine noch zu prüfende semantische oder fachliche Spannung zwischen zwei Elementen.
+  - schlüssel: ist_vorbedingung_für
+    titel: ist_vorbedingung_für
+    beschreibung: Beschreibt, dass ein Element erfüllt oder vorhanden sein muss, bevor ein anderes sinnvoll umgesetzt werden kann.

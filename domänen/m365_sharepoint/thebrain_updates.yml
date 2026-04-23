@@ -1,0 +1,19 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+updates:
+  - id: tb_m365_001
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/Microsoft 365 SharePoint
+    aktion: knoten_anlegen
+    bezug_knoten_id: m365_tenant_basis
+    beschreibung: Basisknoten für die tenantweite Microsoft-365-Struktur im Hauptast anlegen.
+    manuelle_prüfung_erforderlich: true
+  - id: tb_m365_002
+    datum: 2026-04-23
+    status: vorbereitet
+    ziel_ast: Wissensarchitektur/Microsoft 365 SharePoint
+    aktion: beziehung_anlegen
+    bezug_knoten_id: sharepoint_informationsarchitektur_basis
+    beschreibung: SharePoint Informationsarchitektur Basis als Teil der Tenant-Basis einhängen.
+    manuelle_prüfung_erforderlich: true

@@ -1,0 +1,15 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+beziehungen:
+  - id: rel_hr_001
+    quelle_knoten_id: hr_datenquellen_integration
+    beziehungstyp: ist_teil_von
+    ziel_knoten_id: hr_data_hub_kernmodell
+    status: aktiv
+    beschreibung: Die Integration der Datenquellen ist ein tragender Teil des Kernmodells.
+  - id: rel_hr_002
+    quelle_knoten_id: hr_power_query_aufbereitung
+    beziehungstyp: konkretisiert
+    ziel_knoten_id: hr_datenquellen_integration
+    status: aktiv
+    beschreibung: Die Power-Query-Aufbereitung konkretisiert einen Teil der Datenintegrationslogik.

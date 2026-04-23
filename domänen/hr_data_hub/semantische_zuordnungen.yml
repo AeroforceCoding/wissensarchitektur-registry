@@ -1,0 +1,15 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+zuordnungen:
+  - eingangsausdruck: HR Datenmodell
+    kanonischer_knoten_id: hr_data_hub_kernmodell
+    sicherheit: hoch
+    begründung: Die Formulierung verweist auf die zentrale Struktur des HR Data Hub.
+  - eingangsausdruck: Zusammenführung der HR Quellen
+    kanonischer_knoten_id: hr_datenquellen_integration
+    sicherheit: hoch
+    begründung: Die Beschreibung passt direkt auf die Integrationslogik der Domäne.
+  - eingangsausdruck: Power Query Transformationsstrecke
+    kanonischer_knoten_id: hr_power_query_aufbereitung
+    sicherheit: hoch
+    begründung: Die Formulierung benennt dieselbe operative Aufbereitungsschicht.

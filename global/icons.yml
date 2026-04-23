@@ -1,0 +1,27 @@
+version: 1
+stand: 2026-04-23
+icons:
+  - symbol: "[K]"
+    bedeutung: Kontext oder fachlicher Rahmen
+    empfohlene_verwendung: Für einordnende Hintergrundknoten, Ausgangslagen oder Orientierungswissen verwenden.
+    nicht_verwenden_für: Nicht für Entscheidungen, Prüfungen oder konkrete Arbeitsartefakte verwenden.
+  - symbol: "[S]"
+    bedeutung: Struktur oder stabiles Architekturelement
+    empfohlene_verwendung: Für kanonische Knoten, dauerhafte Registerelemente und Hauptstrukturen verwenden.
+    nicht_verwenden_für: Nicht für temporäre Notizen, offene Punkte oder reine Quellenhinweise verwenden.
+  - symbol: "[P]"
+    bedeutung: Prozess oder Ablauf
+    empfohlene_verwendung: Für Verarbeitungslogiken, Workflows und wiederkehrende Vorgehensweisen verwenden.
+    nicht_verwenden_für: Nicht für statische Standards oder rein beschreibende Kontextknoten verwenden.
+  - symbol: "[E]"
+    bedeutung: Entscheidung oder verbindliche Festlegung
+    empfohlene_verwendung: Für beschlossene Governance- oder Strukturentscheidungen verwenden.
+    nicht_verwenden_für: Nicht für Diskussionsstände, Hypothesen oder unbestätigte Vorschläge verwenden.
+  - symbol: "[Q]"
+    bedeutung: Prüfung oder Qualitätssicherung
+    empfohlene_verwendung: Für semantische Prüfungen, Review-Knoten und Kontrollschritte verwenden.
+    nicht_verwenden_für: Nicht für reguläre Fachknoten oder dauerhafte Architekturbausteine verwenden.
+  - symbol: "[?]"
+    bedeutung: Offener Punkt oder Klärungsbedarf
+    empfohlene_verwendung: Für aktiv nachzuverfolgende Unsicherheiten, Restfragen und Prüfbedarfe verwenden.
+    nicht_verwenden_für: Nicht für bestätigte Inhalte oder abgeschlossene Entscheidungen verwenden.

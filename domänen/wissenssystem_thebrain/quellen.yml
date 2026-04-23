@@ -1,0 +1,9 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+quellen:
+  - id: q_tb_001
+    quellentyp: Registry-Initialisierung
+    titel: Startbefüllung der Domäne Wissenssystem TheBrain
+    datum: 2026-04-23
+    status: referenziert
+    beschreibung: Quelle für die initiale Anlage des Zielmodells und seiner begleitenden Steuerlogik.

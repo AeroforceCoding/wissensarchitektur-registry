@@ -1,0 +1,7 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+änderungen:
+  - datum: 2026-04-23
+    änderungstyp: initialisierung
+    ziel: domänen/m365_sharepoint
+    beschreibung: Startstruktur der Domäne mit Basis-Knoten, Beziehungen, Quellen und vorbereiteten TheBrain-Updates angelegt.

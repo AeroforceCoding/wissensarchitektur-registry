@@ -1,0 +1,50 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+knoten:
+  - id: m365_tenant_basis
+    titel: Microsoft 365 Tenant Basis
+    typ: Struktur
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die tenantweite Grundstruktur, auf der Dienste, Governance und bereichsspezifische Informationsräume aufbauen.
+    etiketten:
+      - Microsoft 365
+      - SharePoint
+      - Informationsarchitektur
+    synonyme:
+      - Tenant Basis
+      - Microsoft 365 Grundstruktur
+    thebrain_pfad: Wissensarchitektur/Microsoft 365 SharePoint/Microsoft 365 Tenant Basis
+    quellen_ids:
+      - q_m365_001
+  - id: sharepoint_informationsarchitektur_basis
+    titel: SharePoint Informationsarchitektur Basis
+    typ: Standard
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die grundlegenden Strukturprinzipien für Sites, Inhalte, Navigation und Ordnung in SharePoint.
+    etiketten:
+      - SharePoint
+      - Informationsarchitektur
+      - Governance
+    synonyme:
+      - SharePoint Strukturgrundlage
+    thebrain_pfad: Wissensarchitektur/Microsoft 365 SharePoint/SharePoint Informationsarchitektur Basis
+    quellen_ids:
+      - q_m365_001
+  - id: sharepoint_berechtigungslogik
+    titel: SharePoint Berechtigungslogik
+    typ: Standard
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die grundlegende Logik von Rollen, Gruppen und Berechtigungsvererbung im SharePoint-Kontext.
+    etiketten:
+      - SharePoint
+      - Berechtigungen
+      - Rollen
+      - Governance
+    synonyme:
+      - Berechtigungsmodell SharePoint
+    thebrain_pfad: Wissensarchitektur/Microsoft 365 SharePoint/SharePoint Berechtigungslogik
+    quellen_ids:
+      - q_m365_001

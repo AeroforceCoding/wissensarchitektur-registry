@@ -1,0 +1,15 @@
+domäne: m365_sharepoint
+stand: 2026-04-23
+beziehungen:
+  - id: rel_m365_001
+    quelle_knoten_id: sharepoint_informationsarchitektur_basis
+    beziehungstyp: ist_teil_von
+    ziel_knoten_id: m365_tenant_basis
+    status: aktiv
+    beschreibung: Die SharePoint-Informationsarchitektur ist Teil der tenantweiten Grundstruktur.
+  - id: rel_m365_002
+    quelle_knoten_id: sharepoint_berechtigungslogik
+    beziehungstyp: hängt_ab_von
+    ziel_knoten_id: m365_tenant_basis
+    status: aktiv
+    beschreibung: Die Berechtigungslogik baut auf der allgemeinen Tenant-Basis und deren organisatorischen Rahmenbedingungen auf.

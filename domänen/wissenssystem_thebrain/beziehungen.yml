@@ -1,0 +1,15 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+beziehungen:
+  - id: rel_tb_001
+    quelle_knoten_id: thebrain_knotentypisierung
+    beziehungstyp: ist_teil_von
+    ziel_knoten_id: thebrain_wissensmodell_basis
+    status: aktiv
+    beschreibung: Die Knotentypisierung ist Teil des grundlegenden Wissensmodells.
+  - id: rel_tb_002
+    quelle_knoten_id: thebrain_update_statuslogik
+    beziehungstyp: erweitert
+    ziel_knoten_id: thebrain_wissensmodell_basis
+    status: aktiv
+    beschreibung: Die Statuslogik erweitert das Wissensmodell um eine nachvollziehbare Umsetzungssteuerung.

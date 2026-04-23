@@ -1,0 +1,9 @@
+domäne: wissenssystem_thebrain
+stand: 2026-04-23
+klassifikationsentscheidungen:
+  - datum: 2026-04-23
+    eingang: Aufbau einer eigenständigen Wissensmodell- und Update-Logik für TheBrain
+    zugeordnete_domäne: wissenssystem_thebrain
+    kanonischer_knoten_id: thebrain_wissensmodell_basis
+    sicherheit: hoch
+    begründung: Der Schwerpunkt liegt auf der Zielsystem- und Modelllogik von TheBrain selbst.

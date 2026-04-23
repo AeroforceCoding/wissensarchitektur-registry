@@ -1,0 +1,48 @@
+domäne: hr_data_hub
+stand: 2026-04-23
+knoten:
+  - id: hr_data_hub_kernmodell
+    titel: HR Data Hub Kernmodell
+    typ: Struktur
+    icon: "[S]"
+    status: aktiv
+    beschreibung: Beschreibt die grundlegende Datenstruktur des HR Data Hub mit Fokus auf stabile Kernobjekte und deren fachliche Bedeutung.
+    etiketten:
+      - HR Data Hub
+      - Informationsarchitektur
+      - Governance
+    synonyme:
+      - Kernmodell HR Data Hub
+      - HR Datenkern
+    thebrain_pfad: Wissensarchitektur/HR Data Hub/HR Data Hub Kernmodell
+    quellen_ids:
+      - q_hr_001
+  - id: hr_datenquellen_integration
+    titel: HR Datenquellen Integration
+    typ: Prozess
+    icon: "[P]"
+    status: aktiv
+    beschreibung: Beschreibt die geordnete Aufnahme und Zusammenführung unterschiedlicher HR-Datenquellen in den Data Hub.
+    etiketten:
+      - HR Data Hub
+      - Migration
+      - IT Übergabe
+    synonyme:
+      - HR Datenintegration
+    thebrain_pfad: Wissensarchitektur/HR Data Hub/HR Datenquellen Integration
+    quellen_ids:
+      - q_hr_001
+  - id: hr_power_query_aufbereitung
+    titel: HR Power Query Aufbereitung
+    typ: Prozess
+    icon: "[P]"
+    status: aktiv
+    beschreibung: Beschreibt die Transformations- und Aufbereitungsschritte von HR-Daten mit Power Query vor der weiteren Nutzung.
+    etiketten:
+      - HR Data Hub
+      - Power Query
+    synonyme:
+      - Power Query Transformationsstrecke
+    thebrain_pfad: Wissensarchitektur/HR Data Hub/HR Power Query Aufbereitung
+    quellen_ids:
+      - q_hr_001
