@@ -1,0 +1,48 @@
+version: 1
+stand: 2026-04-23
+ziele:
+  - brain_id: wissensarchitektur_hauptbrain
+    brain_titel: Wissensarchitektur Hauptbrain
+    beschreibung: Zentrales Ziel-Brain für die strukturierte Abbildung der Wissensarchitektur, ihrer Domänen und ihrer Steuerlogik.
+    typische_domänen:
+      - wissenssystem_thebrain
+      - m365_sharepoint
+      - hr_data_hub
+    hauptäste:
+      - name: Wissenssystem / TheBrain
+        beschreibung: Zielast für Modelllogik, Knotenprinzipien, Statuslogik und operative TheBrain-Steuerung.
+      - name: M365 / SharePoint / HR Data Hub
+        beschreibung: Zielast für fachliche Domänenknoten und deren Beziehungen.
+      - name: Architektur / Governance
+        beschreibung: Zielast für Standards, Entscheidungslogik, Prüfpfade und Steuerungsprinzipien.
+      - name: Offene Punkte / Entscheidungen
+        beschreibung: Zielast für nachzuverfolgende Klärungen, Prüfbedarfe und dokumentierte Entscheidungen.
+      - name: Abgeschlossene Aufgaben
+        beschreibung: Zielast für bestätigte und abgeschlossene Aufgaben mit historischem Charakter.
+    verwendungsregel: Verwenden, wenn Aufgaben oder vorbereitete Änderungen der zentralen Wissensarchitektur übergreifend in TheBrain verortet werden sollen.
+  - brain_id: m365_fachbrain
+    brain_titel: M365 und SharePoint Fachbrain
+    beschreibung: Ziel-Brain für tenantnahe, strukturbezogene und governance-relevante Inhalte rund um Microsoft 365 und SharePoint.
+    typische_domänen:
+      - m365_sharepoint
+    hauptäste:
+      - name: M365 / SharePoint / HR Data Hub
+        beschreibung: Fachlicher Hauptast für tenantbezogene Struktur-, Berechtigungs- und Informationsarchitekturthemen.
+      - name: Offene Punkte / Entscheidungen
+        beschreibung: Ast für noch nicht abschließend geklärte Fach- und Umsetzungsfragen.
+      - name: Abgeschlossene Aufgaben
+        beschreibung: Ast für erledigte Maßnahmen und dokumentierte Umsetzungsergebnisse.
+    verwendungsregel: Verwenden, wenn eine Aufgabe eindeutig dem Microsoft-365- oder SharePoint-Kontext zugeordnet werden kann und nicht im zentralen Hauptbrain verbleiben soll.
+  - brain_id: hr_data_hub_fachbrain
+    brain_titel: HR Data Hub Fachbrain
+    beschreibung: Ziel-Brain für Datenmodell-, Integrations- und Übergabethemen im HR-Umfeld.
+    typische_domänen:
+      - hr_data_hub
+    hauptäste:
+      - name: M365 / SharePoint / HR Data Hub
+        beschreibung: Fachlicher Hauptast für Datenmodell, Integrationslogik und Transformationsstrecken.
+      - name: Architektur / Governance
+        beschreibung: Ast für verbindliche Modell- und Steuerungsentscheidungen.
+      - name: Abgeschlossene Aufgaben
+        beschreibung: Ast für bestätigte, erledigte und historisierte Aufgaben.
+    verwendungsregel: Verwenden, wenn eine Aufgabe primär den HR Data Hub weiterentwickelt oder dessen Struktur in TheBrain abbildet.

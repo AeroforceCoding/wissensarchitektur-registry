@@ -1,0 +1,24 @@
+stand: 2026-04-23
+aufgaben:
+  - task_id: tb_task_0001
+    titel: Initialisierung der Wissensarchitektur-Registry im zentralen Wissenssystem dokumentieren
+    typ: abgeschlossene_aufgabe
+    status: erledigt
+    target_brain: wissensarchitektur_hauptbrain
+    target_hauptast: Wissenssystem / TheBrain
+    target_unterast: Wissensarchitektur-Registry
+    quelle_typ: Repository-Initialisierung
+    quelle_ref: changelog/änderungen.md
+    zusammenfassung: Die initiale Struktur der Wissensarchitektur-Registry wurde angelegt und als Ausgangspunkt für die spätere TheBrain-Abbildung festgehalten.
+    auswirkung: Schafft eine stabile Referenz für die spätere Überführung von Registry-Struktur, Domänen und Steuerlogik nach TheBrain.
+    wiederholbar: false
+    struktur_update: true
+    neue_strukturknoten:
+      - Wissensarchitektur-Registry
+      - Globale Steuerung
+      - Domänenspezifische Register
+    duplikatprüfung_status: nicht_erforderlich
+    umsetzungsstatus_thebrain: bestätigt
+    erstellt_am: 2026-04-23
+    zuletzt_geändert: 2026-04-23
+    notizen: Beispiel-Eintrag für eine bereits abgeschlossene Aufgabe mit bestätigter TheBrain-Relevanz.

@@ -1,0 +1,11 @@
+stand: 2026-04-23
+prüfungen:
+  - prüfung_id: zup_0001
+    eingangs_task_ref: tb_task_0001
+    bestehende_task_ref: null
+    prüfungsergebnis: neue_aufgabe
+    ähnlichkeitstyp: neue_aufgabe
+    begründung: Der Eintrag beschreibt die erstmalige Initialisierung der Wissensarchitektur-Registry und hat im Startbestand keinen bestehenden Aufgabenbezug.
+    confidence: hoch
+    entscheidung: Als eigenständige Aufgabe im Aufgabenregister führen.
+    timestamp: 2026-04-23T09:00:00+02:00

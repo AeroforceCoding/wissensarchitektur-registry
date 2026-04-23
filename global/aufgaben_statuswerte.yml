@@ -1,0 +1,17 @@
+version: 1
+stand: 2026-04-23
+statuswerte:
+  - name: neu
+    beschreibung: Die Aufgabe wurde erfasst, aber noch nicht inhaltlich oder strukturell geprüft.
+  - name: in_prüfung
+    beschreibung: Die Aufgabe wird aktuell auf Zielzuordnung, Dubletten und fachliche Passung geprüft.
+  - name: geplant
+    beschreibung: Die Aufgabe ist eingeordnet und für die spätere Bearbeitung vorgesehen.
+  - name: in_arbeit
+    beschreibung: Die Aufgabe wird aktiv bearbeitet oder für die TheBrain-Umsetzung vorbereitet.
+  - name: blockiert
+    beschreibung: Die Aufgabe kann wegen offener Entscheidungen, fehlender Informationen oder Abhängigkeiten nicht fortgeführt werden.
+  - name: erledigt
+    beschreibung: Die Aufgabe ist intern abgeschlossen und benötigt keine weitere operative Bearbeitung.
+  - name: verworfen
+    beschreibung: Die Aufgabe wurde bewusst nicht weiterverfolgt oder als unpassend eingestuft.

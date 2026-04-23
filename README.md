@@ -14,6 +14,8 @@ Ziel ist eine belastbare Steuerungsschicht zwischen eingehenden Chatinhalten und
 
 Das Repository ist damit kein operatives Fachsystem, sondern das versionierte Regel- und Registry-System, das die Qualität und Nachvollziehbarkeit der Wissenspflege absichert.
 
+Zusätzlich enthält das Repository nun eine eigene TheBrain-Schicht unter `thebrain/`, in der THEBRAIN_TASK-Blöcke, Aufgabenstatus, Ziel-Brains, Dublettenprüfungen und Umsetzungsprotokolle getrennt von den fachlichen Domänenregistern geführt werden.
+
 ## Rolle von GitHub, Codex und TheBrain
 
 ### GitHub
@@ -52,6 +54,8 @@ Die Prompts in `prompts/` bilden eine logische Verarbeitungskette:
    Überführt bestätigte Ergebnisse in konkrete Registry-Änderungen.
 7. `thebrain_update_vorbereiten.md`
    Formuliert daraus umsetzbare, aber noch getrennt nachverfolgbare Änderungen für TheBrain.
+
+Ergänzend dazu steuern die Prompts `thebrain_task_erfassen.md`, `thebrain_task_prüfen.md` und `aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
 
 ## Nutzen des Repositories
 

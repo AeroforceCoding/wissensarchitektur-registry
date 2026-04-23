@@ -16,6 +16,8 @@ Die Registry ist damit die bestätigte Wissensbasis und nicht die Ablage für un
 
 TheBrain ist ein eigenes Zielsystem mit eigener Umsetzungsebene. Aus bestätigten Registry-Änderungen werden dort ableitbare Knoten-, Beziehungs- oder Etikettenänderungen vorbereitet, aber nicht automatisch als erledigt betrachtet.
 
+Für explizite Arbeitsaufträge oder aus Chats abgeleitete THEBRAIN_TASK-Blöcke existiert zusätzlich eine eigene Aufgabenlogik unter `thebrain/`. Dort werden Ziel-Brains, Aufgabenstatus, Dublettenprüfungen und Umsetzungsprotokolle geführt, bevor oder während konkrete Änderungen in TheBrain nachverfolgt werden.
+
 Jedes TheBrain-Update erhält daher einen eigenen Umsetzungsstatus, zum Beispiel:
 
 - `vorbereitet`

@@ -1,0 +1,27 @@
+version: 1
+stand: 2026-04-23
+statuswerte:
+  - name: vorgeschlagen
+    bedeutung: Die TheBrain-Änderung wurde fachlich identifiziert, aber noch nicht geprüft oder freigegeben.
+    wann_verwenden: Verwenden direkt nach der Erfassung einer neuen Aufgabe oder eines neuen THEBRAIN_TASK-Blocks.
+    nächster_typischer_schritt: Inhaltlich prüfen und gegen bestehende Aufgaben oder Zieläste abgleichen.
+  - name: geprüft
+    bedeutung: Die Änderung wurde fachlich und strukturell geprüft und ist hinreichend eingeordnet.
+    wann_verwenden: Verwenden, wenn Duplikatprüfung, Zielzuordnung und inhaltliche Plausibilisierung abgeschlossen sind.
+    nächster_typischer_schritt: Für die Umsetzung priorisieren oder in einen umsetzungsbereiten Zustand überführen.
+  - name: zur_umsetzung
+    bedeutung: Die Änderung ist vorbereitet und kann in TheBrain umgesetzt werden.
+    wann_verwenden: Verwenden, wenn Ziel-Brain, Hauptast und Unterast feststehen und keine offenen Prüfauflagen mehr bestehen.
+    nächster_typischer_schritt: Änderung in TheBrain umsetzen und im Protokoll dokumentieren.
+  - name: umgesetzt
+    bedeutung: Die Änderung wurde in TheBrain vorgenommen, aber noch nicht abschließend bestätigt.
+    wann_verwenden: Verwenden direkt nach der operativen Umsetzung im Zielsystem.
+    nächster_typischer_schritt: Umsetzung fachlich bestätigen oder bei Abweichung nacharbeiten.
+  - name: bestätigt
+    bedeutung: Die Umsetzung in TheBrain wurde geprüft und als korrekt bestätigt.
+    wann_verwenden: Verwenden, wenn die Änderung im Zielast sichtbar, korrekt verknüpft und fachlich akzeptiert ist.
+    nächster_typischer_schritt: Aufgabe historisieren oder als abgeschlossen fortführen.
+  - name: verworfen
+    bedeutung: Die vorgeschlagene Änderung wird nicht weiterverfolgt oder bewusst nicht umgesetzt.
+    wann_verwenden: Verwenden, wenn eine Aufgabe redundant, fachlich unpassend oder nicht mehr erforderlich ist.
+    nächster_typischer_schritt: Verwerfungsgrund dokumentieren und keine weitere Umsetzung vorbereiten.

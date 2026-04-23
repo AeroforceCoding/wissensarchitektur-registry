@@ -1,0 +1,12 @@
+stand: 2026-04-23
+protokolleinträge:
+  - protokoll_id: tbp_0001
+    task_ref: tb_task_0001
+    ziel_brain: wissensarchitektur_hauptbrain
+    ziel_hauptast: Wissenssystem / TheBrain
+    ziel_unterast: Wissensarchitektur-Registry
+    alter_status: zur_umsetzung
+    neuer_status: bestätigt
+    geändert_am: 2026-04-23T09:15:00+02:00
+    bestätigt_durch: Registry-Initialisierung
+    bemerkung: Die Aufgabe gilt als fachlich abgeschlossen und als bestätigte Ausgangsreferenz für spätere TheBrain-Umsetzungen.
