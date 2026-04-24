@@ -27,7 +27,7 @@ Innerhalb von `registry_workflow/` bleibt die fachliche Prozesslogik nach Phasen
 
 ### `registry_workflow/01_eingang`
 
-Prompts für die Aufnahme und Erststrukturierung neuer Inhalte, insbesondere die Chat-Extraktion, Artefakt-Metadaten und die Verdichtung abgeschlossener Aufgaben.
+Prompts für die Aufnahme und Erststrukturierung neuer Inhalte, insbesondere die Chat-Extraktion, Artefakt-Metadaten, die Verdichtung abgeschlossener Aufgaben und die parallele Erfassung offener Problemspuren aus nicht abgeschlossenen Sessions.
 
 ### `registry_workflow/02_zuordnung`
 

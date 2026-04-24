@@ -1,0 +1,41 @@
+vorlage:
+  problemspur_id: ps_2026_0001
+  titel: Offenes Problem aus nicht abgeschlossener Session
+  herkunft:
+    typ: chat_session
+    herkunft_ref: ""
+    datum: 2026-04-24
+  session_kontext:
+    ziel_der_session: ""
+    abschlussstatus: nicht_abgeschlossen
+    betroffene_repos: []
+    betroffene_dateien: []
+    betroffene_systeme: []
+    vermutete_domänen: []
+  problemkern:
+    beschreibung: ""
+    problemtyp: unbekannt
+    auswirkung: ""
+    dringlichkeit: unklar
+    wiederholungsrisiko: unklar
+  beobachtungen: []
+  fehlversuche: []
+  hypothesen: []
+  offene_punkte: []
+  vorhandenes_wissen_prüfen:
+    prüfung_empfohlen: true
+    mögliche_quellen: []
+    erwarteter_nutzen: ""
+  zweckdienlichkeitsprüfung:
+    lösung_zweckdienlich: unklar
+    begründung: ""
+    nutzen_für_aktuelle_arbeit: unklar
+    nutzen_für_wiederverwendung: unklar
+    kosten_oder_aufwand: unklar
+    risiko_bei_nichtbearbeitung: unklar
+  empfohlener_folgepfad:
+    aktion: später_prüfen
+    begründung: ""
+    blockiert_erfolgsworkflow: false
+  mögliche_aufgaben: []
+  notizen: ""

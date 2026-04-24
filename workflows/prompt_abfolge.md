@@ -31,6 +31,19 @@ Wenn Wissen nicht aus einem Chat, sondern aus einer erfolgreich abgeschlossenen 
 2. `prompts/registry_workflow/01_eingang/aufgabenabschluss_verdichten.md`
 3. danach `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md` oder direkt `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
 
+## Paralleler Problempfad für nicht abgeschlossene Sessions
+
+Wenn eine Session, Aufgabe oder Untersuchung nicht abgeschlossen wurde, soll das offene Problem nicht automatisch in den Erfolgsworkflow gedrückt werden. Stattdessen kann parallel eine Problemspur erfasst werden:
+
+1. `prompts/registry_workflow/01_eingang/session_problemspur_erfassen.md`
+2. danach zweckdienlichkeitsabhängig:
+   - vorhandenes Wissen im betroffenen Repo oder in der passenden Domäne abgleichen,
+   - eine Untersuchung starten,
+   - eine Aufgabe ableiten,
+   - bewusst keine Aktion auslösen.
+
+Dieser Pfad ist nicht blockierend. Er dient dazu, offene Probleme sichtbar und später prüfbar zu machen, ohne erfolgreiche Ergebnisse oder abgeschlossene Wissensblöcke zu überlagern.
+
 ## Typische Anwendungsfälle
 
 ### Neuer Chat
@@ -40,6 +53,10 @@ Ein neuer Chat wird zuerst extrahiert, dann einer Domäne zugeordnet und anschli
 ### Abgeschlossene Aufgabe mit Evidenz
 
 Wenn ein Arbeitsverlauf erfolgreich abgeschlossen wurde und Screenshots oder Bilddateien als Nachweise vorliegen, werden diese zuerst als Artefakte erfasst. Danach wird der Aufgabenabschluss zu einem validierten Informationsblock verdichtet, bevor die reguläre Registry-Verarbeitung beginnt.
+
+### Nicht abgeschlossene Session
+
+Wenn eine Aufgabe nicht abgeschlossen wurde, wird kein Informationsblock für einen erfolgreichen Abschluss erzeugt. Stattdessen kann eine Problemspur erfasst werden, die Blockaden, Fehlversuche, Hypothesen und Zweckdienlichkeit einer späteren Lösung dokumentiert.
 
 ### Unklarer thematischer Bezug
 
