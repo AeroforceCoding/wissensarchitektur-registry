@@ -3,8 +3,8 @@
 - Titel: Chat-Extraktion
 - Zweck: Neue Chatinhalte oder externe Übergabeblöcke in einen strukturierten Wissensextrakt für die weitere Registry-Verarbeitung überführen.
 - Wann verwenden: Immer dann, wenn ein Chat, Gesprächsausschnitt oder ein extern erzeugter Übergabeblock erstmals in die Wissensarchitektur aufgenommen werden soll.
-- Erwartete Eingabe: Ein Chatinhalt, Gesprächsausschnitt oder YAML-`wissensarchitektur_uebergabe` mit optionalem Kontext.
-- Erwartete Ausgabe: Ein YAML-`chat_extrakt` mit Aussagen, Entitäten, Entscheidungen, offenen Punkten, Aufgaben- und TheBrain-Hinweisen.
+- Erwartete Eingabe: Ein Chatinhalt, Gesprächsausschnitt oder JSON-`wissensarchitektur_uebergabe` mit optionalem Kontext.
+- Erwartete Ausgabe: Ein JSON-`chat_extrakt` mit Aussagen, Entitäten, Entscheidungen, offenen Punkten, Aufgaben- und TheBrain-Hinweisen.
 - Nächster Schritt: `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`
 
 ## Kanonischer Prompttext
@@ -15,7 +15,7 @@ Analysiere den folgenden Chatinhalt oder Übergabeblock und überführe ihn in e
 Ziel:
 Der Chat soll nicht nur zusammengefasst, sondern in klar unterscheidbare Wissenselemente zerlegt werden, damit anschließend Domänenzuordnung, Registry-Abgleich, semantische Prüfung, Governance-Entscheidung und TheBrain-Update-Vorbereitung möglich werden.
 
-Wenn die Eingabe bereits als YAML-`wissensarchitektur_uebergabe` vorliegt, behandle diesen Block als verdichteten Ausschnitt eines längeren externen Chats. Übernimm seine Inhalte nicht ungeprüft als Registry-Wahrheit, sondern wandle sie in den kanonischen `chat_extrakt` um und kennzeichne Unsicherheiten weiterhin ausdrücklich.
+Wenn die Eingabe bereits als JSON-`wissensarchitektur_uebergabe` vorliegt, behandle diesen Block als verdichteten Ausschnitt eines längeren externen Chats. Übernimm seine Inhalte nicht ungeprüft als Registry-Wahrheit, sondern wandle sie in den kanonischen `chat_extrakt` um und kennzeichne Unsicherheiten weiterhin ausdrücklich.
 
 Wichtige Regeln:
 - Antworte auf Deutsch.
@@ -23,7 +23,7 @@ Wichtige Regeln:
 - Erfinde nichts hinzu.
 - Wenn etwas unklar ist, kennzeichne es als unklar statt es zu glätten.
 - Fasse nicht nur zusammen, sondern extrahiere strukturierte Einheiten.
-- Formuliere so, dass die Ausgabe später in YAML-Dateien oder Prüfprozessen weiterverwendet werden kann.
+- Formuliere so, dass die Ausgabe später in JSON-Dateien oder Prüfprozessen weiterverwendet werden kann.
 - Unterscheide bei Übergabeblöcken zwischen dem extern berichteten Chatstand und tatsächlich bestätigten Registry- oder TheBrain-Änderungen.
 
 Analysiere den Chat nach folgenden Kategorien:
@@ -107,35 +107,31 @@ Am Ende:
 - worin_der_hauptnutzen_des_chats_liegt
 - welche_folgeschritte_logisch_sind
 
-Gib das Ergebnis in genau dieser YAML-Struktur zurück:
+Gib das Ergebnis in genau dieser JSON-Struktur zurück:
 
-chat_extrakt:
-  metadaten:
-    titel: ""
-    schwerpunkt: ""
-    zeitlicher_kontext: ""
-    systeme_und_werkzeuge: []
-
-  kernaussagen: []
-
-  entitäten_und_objekte: []
-
-  entscheidungen: []
-
-  offene_punkte: []
-
-  aufgabenhinweise: []
-
-  thebrain_hinweise: []
-
-  domänenhinweise: []
-
-  artefakte_und_nachweise: []
-
-  gesamteinordnung:
-    kurzbeschreibung: ""
-    hauptnutzen: ""
-    logische_folgeschritte: []
+{
+  "chat_extrakt": {
+    "metadaten": {
+      "titel": "",
+      "schwerpunkt": "",
+      "zeitlicher_kontext": "",
+      "systeme_und_werkzeuge": []
+    },
+    "kernaussagen": [],
+    "entitäten_und_objekte": [],
+    "entscheidungen": [],
+    "offene_punkte": [],
+    "aufgabenhinweise": [],
+    "thebrain_hinweise": [],
+    "domänenhinweise": [],
+    "artefakte_und_nachweise": [],
+    "gesamteinordnung": {
+      "kurzbeschreibung": "",
+      "hauptnutzen": "",
+      "logische_folgeschritte": []
+    }
+  }
+}
 
 Hier ist der zu analysierende Chatinhalt oder Übergabeblock:
 [CHAT ODER ÜBERGABEBLOCK HIER EINFÜGEN]

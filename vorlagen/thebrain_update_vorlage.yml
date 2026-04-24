@@ -1,9 +1,0 @@
-vorlage:
-  id: tb_beispiel_001
-  datum: 2026-04-23
-  status: vorbereitet
-  ziel_ast: Wissensarchitektur/Beispieldomäne
-  aktion: knoten_anlegen
-  bezug_knoten_id: beispiel_knoten_id
-  beschreibung: Beschreibt die vorbereitete Änderung für TheBrain in umsetzbarer Form.
-  manuelle_prüfung_erforderlich: true

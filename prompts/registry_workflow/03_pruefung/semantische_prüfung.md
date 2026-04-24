@@ -4,7 +4,7 @@
 - Zweck: Bedeutungsnähe, Abgrenzung und mögliche Konflikte zwischen Wissenselementen klären.
 - Wann verwenden: Wenn der Registry-Abgleich keine eindeutige Einordnung erlaubt oder Dublettengefahr besteht.
 - Erwartete Eingabe: Prüfgegenstand und fachlich ähnliche Registereinträge.
-- Erwartete Ausgabe: Ein YAML-`semantische_prüfung` mit Bewertung, Sicherheit und Folgeempfehlung.
+- Erwartete Ausgabe: Ein JSON-`semantische_prüfung` mit Bewertung, Sicherheit und Folgeempfehlung.
 - Nächster Schritt: `prompts/registry_workflow/04_entscheidung/governance_entscheidung.md` oder `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
@@ -24,19 +24,25 @@ Erwartet werden ein strittiges oder unklar zuordenbares Wissenselement sowie die
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-semantische_prüfung:
-  prüfgegenstand: Prägnanter Titel
-  bewertung: abgrenzen
-  sicherheit: mittel
-  begründung: Fachliche Einschätzung in knapper Form
-  betroffene_knoten:
-    - id: bestehender_knoten
-      rolle: ähnlicher_knoten
-  empfohlene_aktion: neuen_knoten_mit_klarer_abgrenzung_anlegen
-  governance_erforderlich: false
+```json
+{
+  "semantische_prüfung": {
+    "prüfgegenstand": "Prägnanter Titel",
+    "bewertung": "abgrenzen",
+    "sicherheit": "mittel",
+    "begründung": "Fachliche Einschätzung in knapper Form",
+    "betroffene_knoten": [
+      {
+        "id": "bestehender_knoten",
+        "rolle": "ähnlicher_knoten"
+      }
+    ],
+    "empfohlene_aktion": "neuen_knoten_mit_klarer_abgrenzung_anlegen",
+    "governance_erforderlich": false
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -48,11 +54,16 @@ Arbeite mit folgenden Regeln:
 - Begründe die Entscheidung fachlich und nicht nur sprachlich.
 - Bevorzuge stabile, langfristig verständliche Abgrenzungen.
 - Fordere Governance nur dann an, wenn die Entscheidung strukturelle Tragweite hat.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-prüfgegenstand: {}
-ähnliche_registereinträge: []
+```json
+{
+  "prüfgegenstand": {
+  },
+  "ähnliche_registereinträge": [
+
+  ]
+}
 ```

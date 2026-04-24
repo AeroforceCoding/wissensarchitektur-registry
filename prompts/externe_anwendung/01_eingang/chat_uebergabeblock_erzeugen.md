@@ -4,14 +4,14 @@
 - Zweck: Einen langen oder fortgeschrittenen Arbeitschat in einen kompakten, übergabefähigen Block für die spätere Registry-Verarbeitung verdichten.
 - Wann verwenden: Wenn der vollständige Chatverlauf zu umfangreich ist, um ihn direkt in die Chat-Extraktion zu kopieren.
 - Erwartete Eingabe: Laufender Chatkontext, Abschlussmarker oder Aufforderung des Anwenders, relevante Erkenntnisse für die Wissensarchitektur zu verdichten.
-- Erwartete Ausgabe: Ein YAML-`wissensarchitektur_uebergabe` als kompakter Übergabeblock.
+- Erwartete Ausgabe: Ein JSON-`wissensarchitektur_uebergabe` als kompakter Übergabeblock.
 - Nächster Schritt: `prompts/registry_workflow/01_eingang/chat_extraktion.md`
 
 ## Zweck
 
 Dieser Prompt ist für die Anwendung in einem externen oder laufenden Chat gedacht. Er ersetzt nicht die kanonische Chat-Extraktion im Repository, sondern bereitet ihr eine kompakte Eingabe vor, wenn der vollständige Chatverlauf nicht sinnvoll kopiert werden kann.
 
-Der externe Chat soll seinen eigenen Verlauf auswerten und daraus einen übergabefähigen Block erzeugen. Dieser Block kann anschließend im Repository mit `prompts/registry_workflow/01_eingang/chat_extraktion.md` in einen kanonischen YAML-`chat_extrakt` überführt werden.
+Der externe Chat soll seinen eigenen Verlauf auswerten und daraus einen übergabefähigen Block erzeugen. Dieser Block kann anschließend im Repository mit `prompts/registry_workflow/01_eingang/chat_extraktion.md` in einen kanonischen JSON-`chat_extrakt` überführt werden.
 
 ## Direkt verwendbarer Prompt
 
@@ -37,63 +37,77 @@ Aktuell bekannte Domänen:
 - `hr_data_hub`
 - `wissenssystem_thebrain`
 
-Gib ausschließlich gültiges YAML in folgender Struktur zurück:
+Gib ausschließlich gültiges JSON in folgender Struktur zurück:
 
-wissensarchitektur_uebergabe:
-  marker: WISSENSARCHITEKTUR_EXTRAKTION_BEREIT
-  metadaten:
-    titel: ""
-    thema: ""
-    zeitlicher_kontext: ""
-    ausloeser_der_uebergabe: ""
-    chatstand: abgeschlossen | zwischenstand | unklar
-
-  kurzkontext: ""
-
-  gesicherte_befunde: []
-
-  interpretationen: []
-
-  hypothesen: []
-
-  entscheidungen:
-    - inhalt: ""
-      status: getroffen | vorgeschlagen | verworfen | unklar
-      begruendung: ""
-
-  offene_punkte:
-    - inhalt: ""
-      warum_offen: ""
-      empfohlener_naechster_schritt: ""
-
-  aufgabenhinweise:
-    - titel: ""
-      beschreibung: ""
-      aufgabentyp: umsetzung | pruefung | dokumentation | entscheidung | review
-      status_hinweis: neu | in_pruefung | geplant | abgeschlossen | unklar
-
-  thebrain_hinweise:
-    - titel: ""
-      moegliche_einordnung: ""
-      status_hinweis: hinweis | vorzubereiten | umgesetzt_unbestaetigt | unklar
-      begruendung: ""
-
-  domaenenhinweise:
-    - domaene: ""
-      sicherheit: hoch | mittel | niedrig
-      begruendung: ""
-
-  artefakte_und_nachweise:
-    - typ: ""
-      bezeichnung: ""
-      rolle_im_chat: ""
-
-  repo_bezuege:
-    - pfad_oder_objekt: ""
-      rolle: ""
-
-  empfohlene_folgeschritte:
-    - chat_extraktion
+{
+  "wissensarchitektur_uebergabe": {
+    "marker": "WISSENSARCHITEKTUR_EXTRAKTION_BEREIT",
+    "metadaten": {
+      "titel": "",
+      "thema": "",
+      "zeitlicher_kontext": "",
+      "ausloeser_der_uebergabe": "",
+      "chatstand": "abgeschlossen | zwischenstand | unklar"
+    },
+    "kurzkontext": "",
+    "gesicherte_befunde": [],
+    "interpretationen": [],
+    "hypothesen": [],
+    "entscheidungen": [
+      {
+        "inhalt": "",
+        "status": "getroffen | vorgeschlagen | verworfen | unklar",
+        "begruendung": ""
+      }
+    ],
+    "offene_punkte": [
+      {
+        "inhalt": "",
+        "warum_offen": "",
+        "empfohlener_naechster_schritt": ""
+      }
+    ],
+    "aufgabenhinweise": [
+      {
+        "titel": "",
+        "beschreibung": "",
+        "aufgabentyp": "umsetzung | pruefung | dokumentation | entscheidung | review",
+        "status_hinweis": "neu | in_pruefung | geplant | abgeschlossen | unklar"
+      }
+    ],
+    "thebrain_hinweise": [
+      {
+        "titel": "",
+        "moegliche_einordnung": "",
+        "status_hinweis": "hinweis | vorzubereiten | umgesetzt_unbestaetigt | unklar",
+        "begruendung": ""
+      }
+    ],
+    "domaenenhinweise": [
+      {
+        "domaene": "",
+        "sicherheit": "hoch | mittel | niedrig",
+        "begruendung": ""
+      }
+    ],
+    "artefakte_und_nachweise": [
+      {
+        "typ": "",
+        "bezeichnung": "",
+        "rolle_im_chat": ""
+      }
+    ],
+    "repo_bezuege": [
+      {
+        "pfad_oder_objekt": "",
+        "rolle": ""
+      }
+    ],
+    "empfohlene_folgeschritte": [
+      "chat_extraktion"
+    ]
+  }
+}
 ```
 
 ## Hinweise zur Weiterverarbeitung

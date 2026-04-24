@@ -1,0 +1,8 @@
+{
+  "vorlage": {
+    "eingangsausdruck": "Alternativer Ausdruck aus einem Chat",
+    "kanonischer_knoten_id": "beispiel_knoten_id",
+    "sicherheit": "mittel",
+    "begründung": "Beschreibt, warum der Ausdruck auf diesen kanonischen Knoten gemappt wird."
+  }
+}

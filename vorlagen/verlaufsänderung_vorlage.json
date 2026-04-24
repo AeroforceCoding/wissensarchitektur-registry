@@ -1,0 +1,8 @@
+{
+  "vorlage": {
+    "datum": "2026-04-23",
+    "änderungstyp": "ergänzung",
+    "ziel": "domänen/beispieldomäne/kanonische_knoten.yml",
+    "beschreibung": "Beschreibt kurz und nachvollziehbar, welche fachliche Änderung vorgenommen wurde."
+  }
+}

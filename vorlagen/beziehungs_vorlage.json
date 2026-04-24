@@ -1,0 +1,10 @@
+{
+  "vorlage": {
+    "id": "rel_beispiel_001",
+    "quelle_knoten_id": "beispiel_knoten_id",
+    "beziehungstyp": "konkretisiert",
+    "ziel_knoten_id": "ziel_knoten_id",
+    "status": "entwurf",
+    "beschreibung": "Beschreibt die fachliche oder strukturelle Beziehung zwischen zwei kanonischen Knoten."
+  }
+}

@@ -70,6 +70,12 @@ Neue Prompts sollen immer:
 - möglichst an bestehende Register, Statuswerte und Workflows anschließen,
 - keine fachlichen Doppelstrukturen erzeugen, wenn bereits ein Prompt mit gleichem Zweck vorhanden ist.
 
+## Ausgabeformate
+
+Prompt-Metadaten und steuernde Promptbeschreibungen werden als Markdown gepflegt. Die datenorientierten Ausgaben der Registry-Workflow-Prompts sollen gemäß `agentensystem/regelwerk/formatlogik.md` als JSON formuliert werden, damit Extrakte, Entscheidungen, Nachweise, Problemspuren und Aufgabenobjekte später stabil validiert, exportiert und maschinell weiterverarbeitet werden können.
+
+YAML bleibt für steuernde Konfigurationen, Agentenregeln und menschlich gepflegte Metadaten zulässig. Neue Prompts sollen bewusst kennzeichnen, ob ihre Ausgabe ein stabil zu speicherndes JSON/JSONL-Datenobjekt, ein Übergabeformat oder nur ein menschlich lesbarer Entwurf ist.
+
 ## Navigation
 
 Für die schnelle Übersicht dient `prompts/prompt_index.md`. Die eigentlichen kanonischen Inhalte liegen in den jeweiligen Verwendungsordnern und sind dort die maßgebliche Arbeitsfassung.

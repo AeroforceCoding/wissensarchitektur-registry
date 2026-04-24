@@ -4,7 +4,7 @@
 - Zweck: Einen Screenshot oder eine Bilddatei aus einer laufenden oder abgeschlossenen Aufgabe in einen referenzierbaren Artefaktdatensatz überführen.
 - Wann verwenden: Wenn ein Screenshot, Bildnachweis oder ähnliches Artefakt erstmals benannt, beschrieben und dem Repo-Kontext zugeordnet werden soll.
 - Erwartete Eingabe: Artefaktbeschreibung, optional Dateiverweis, Aufgabenkontext, Domänenregister, Kontextvokabular und Artefaktstatuswerte.
-- Erwartete Ausgabe: Ein YAML-`artefakt_eintrag` mit Dateiname, Kontext, Bezug und Status.
+- Erwartete Ausgabe: Ein JSON-`artefakt_eintrag` mit Dateiname, Kontext, Bezug und Status.
 - Nächster Schritt: `prompts/registry_workflow/01_eingang/aufgabenabschluss_verdichten.md` oder Referenz als Evidenz belassen
 
 ## Zweck
@@ -31,30 +31,38 @@ Erwartet werden:
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-artefakt_eintrag:
-  artefakt_id: art_2026_0001
-  artefakt_typ: screenshot
-  dateiname: m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png
-  dateiname_schema_version: 1
-  speicherort_system: synology_nas
-  speicherort_ref: screenshots/m365_sharepoint/m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png
-  domäne: m365_sharepoint
-  kontext_id: ctx_0001
-  kontext_slug: berechtigungspruefung
-  bezug_ref: tb_task_0042
-  schritt_slug: fehlerbild
-  kurztitel: Teams Admin Center Rollenansicht
-  kurzbeschreibung: Kurzbeschreibung des Nachweises
-  schlagworte:
-    - domäne|m365_sharepoint
-  status: metadatiert
-  validierungsstand: unvalidiert
-  bezug_objekte: []
-  informationsblock_refs: []
-  notizen: ""
+```json
+{
+  "artefakt_eintrag": {
+    "artefakt_id": "art_2026_0001",
+    "artefakt_typ": "screenshot",
+    "dateiname": "m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png",
+    "dateiname_schema_version": 1,
+    "speicherort_system": "synology_nas",
+    "speicherort_ref": "screenshots/m365_sharepoint/m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png",
+    "domäne": "m365_sharepoint",
+    "kontext_id": "ctx_0001",
+    "kontext_slug": "berechtigungspruefung",
+    "bezug_ref": "tb_task_0042",
+    "schritt_slug": "fehlerbild",
+    "kurztitel": "Teams Admin Center Rollenansicht",
+    "kurzbeschreibung": "Kurzbeschreibung des Nachweises",
+    "schlagworte": [
+      "domäne|m365_sharepoint"
+    ],
+    "status": "metadatiert",
+    "validierungsstand": "unvalidiert",
+    "bezug_objekte": [
+
+    ],
+    "informationsblock_refs": [
+
+    ],
+    "notizen": ""
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -67,14 +75,21 @@ Arbeite mit folgenden Regeln:
 - Verwende einen kurzen, navigationsfähigen Dateinamen nach dem Muster `domäne__kontext__bezug__schritt__kurztitel.ext`.
 - Verwende IDs nur dort, wo sie Zeichen sparen und die Explorer-Navigation nicht verschlechtern.
 - Ordne möglichst einen bestehenden Kontext aus dem Kontextvokabular zu; schlage nur bei Bedarf einen neuen Kontext vor.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-artefakt_hinweis: {}
-aufgabenkontext: {}
-domänenregister: {}
-kontext_vokabular: {}
-artefakt_statuswerte: {}
+```json
+{
+  "artefakt_hinweis": {
+  },
+  "aufgabenkontext": {
+  },
+  "domänenregister": {
+  },
+  "kontext_vokabular": {
+  },
+  "artefakt_statuswerte": {
+  }
+}
 ```

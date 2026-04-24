@@ -4,7 +4,7 @@
 - Zweck: Strukturrelevante Änderungen, Standards und Konfliktlagen verbindlich entscheiden.
 - Wann verwenden: Wenn Prüfung und Abgleich nicht ausreichen und eine belastbare Strukturentscheidung nötig ist.
 - Erwartete Eingabe: Änderungsvorschlag, Prüfergebnisse und betroffene Registerbereiche.
-- Erwartete Ausgabe: Ein YAML-`governance_entscheidung` mit Entscheidung, Auflagen und Wirksamkeit.
+- Erwartete Ausgabe: Ein JSON-`governance_entscheidung` mit Entscheidung, Auflagen und Wirksamkeit.
 - Nächster Schritt: `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
@@ -24,19 +24,24 @@ Erwartet werden die vorgeschlagene Änderung, das Ergebnis aus Registry-Abgleich
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-governance_entscheidung:
-  entscheidungsgegenstand: Kurztitel der Strukturfrage
-  entscheidung: freigeben
-  auflagen:
-    - Betroffene Dokumentation mitpflegen
-  begründung: Knappe, nachvollziehbare Entscheidungslogik
-  betroffene_bereiche:
-    - global/beziehungstypen.yml
-    - domänen/m365_sharepoint/kanonische_knoten.yml
-  wirksam_ab: 2026-04-23
+```json
+{
+  "governance_entscheidung": {
+    "entscheidungsgegenstand": "Kurztitel der Strukturfrage",
+    "entscheidung": "freigeben",
+    "auflagen": [
+      "Betroffene Dokumentation mitpflegen"
+    ],
+    "begründung": "Knappe, nachvollziehbare Entscheidungslogik",
+    "betroffene_bereiche": [
+      "global/beziehungstypen.yml",
+      "domänen/m365_sharepoint/kanonische_knoten.yml"
+    ],
+    "wirksam_ab": "2026-04-23"
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -48,11 +53,15 @@ Arbeite mit folgenden Regeln:
 - Benenne Auswirkungen auf Register, Domänen und Folgearbeit klar.
 - Formuliere Auflagen nur dann, wenn sie wirklich nötig sind.
 - Triff keine Entscheidung auf Basis bloßer Vermutungen.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-änderungsvorschlag: {}
-prüfergebnisse: {}
+```json
+{
+  "änderungsvorschlag": {
+  },
+  "prüfergebnisse": {
+  }
+}
 ```

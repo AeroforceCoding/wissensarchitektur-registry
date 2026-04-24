@@ -1,7 +1,0 @@
-vorlage:
-  datum: 2026-04-23
-  eingang: Kurzbeschreibung des eingehenden Wissenselements
-  zugeordnete_domäne: beispieldomäne
-  kanonischer_knoten_id: beispiel_knoten_id
-  sicherheit: mittel
-  begründung: Erklärt die fachliche Grundlage der Zuordnung.

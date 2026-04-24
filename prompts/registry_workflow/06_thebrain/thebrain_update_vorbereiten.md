@@ -4,7 +4,7 @@
 - Zweck: Bestätigte Registry-Änderungen in konkrete, getrennt nachverfolgbare TheBrain-Updates überführen.
 - Wann verwenden: Nach der Registry-Aktualisierung, wenn aus bestätigten Ergebnissen operative TheBrain-Änderungen folgen.
 - Erwartete Eingabe: Registry-Änderungen, Ziel-Domäne und TheBrain-Zielkontext.
-- Erwartete Ausgabe: Ein YAML-`thebrain_update_vorbereitung` mit Update-Liste und Umsetzungsnotizen.
+- Erwartete Ausgabe: Ein JSON-`thebrain_update_vorbereitung` mit Update-Liste und Umsetzungsnotizen.
 - Nächster Schritt: Eintrag in `thebrain/umsetzungsprotokoll.yml` oder manuelle Umsetzung in TheBrain
 
 ## Zweck
@@ -24,21 +24,28 @@ Erwartet werden die bestätigten Registry-Änderungen, die Ziel-Domäne, der vor
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-thebrain_update_vorbereitung:
-  domäne: m365_sharepoint
-  ziel_ast: Wissensarchitektur/Microsoft 365 SharePoint
-  updates:
-    - id: tb_m365_002
-      status: vorbereitet
-      aktion: knoten_anlegen
-      bezug_knoten_id: beispiel_knoten
-      beschreibung: Knoten im Zielast anlegen und mit bestehender Struktur verbinden
-      manuelle_prüfung_erforderlich: true
-  umsetzungsnotizen:
-    - Reihenfolge der manuellen Umsetzung beachten
+```json
+{
+  "thebrain_update_vorbereitung": {
+    "domäne": "m365_sharepoint",
+    "ziel_ast": "Wissensarchitektur/Microsoft 365 SharePoint",
+    "updates": [
+      {
+        "id": "tb_m365_002",
+        "status": "vorbereitet",
+        "aktion": "knoten_anlegen",
+        "bezug_knoten_id": "beispiel_knoten",
+        "beschreibung": "Knoten im Zielast anlegen und mit bestehender Struktur verbinden",
+        "manuelle_prüfung_erforderlich": true
+      }
+    ],
+    "umsetzungsnotizen": [
+      "Reihenfolge der manuellen Umsetzung beachten"
+    ]
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -50,11 +57,14 @@ Arbeite mit folgenden Regeln:
 - Verwende einen klaren Umsetzungsstatus pro Update.
 - Beschreibe die Aktion so, dass sie später manuell oder halbautomatisiert umsetzbar ist.
 - Vermische keine noch unentschiedenen Strukturfragen mit vorbereiteten Updates.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-registry_änderungen: {}
-ziel_domäne: m365_sharepoint
+```json
+{
+  "registry_änderungen": {
+  },
+  "ziel_domäne": "m365_sharepoint"
+}
 ```

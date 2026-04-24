@@ -16,6 +16,12 @@ Der Bereich trennt bewusst zwischen:
 - Regelwerk
 - Vorlagen
 
+## Formatlogik
+
+Für neue strukturierte Artefakte gilt die Formatentscheidung aus `agentensystem/regelwerk/formatlogik.md`: JSON oder JSONL für stabile maschinenlesbare Datenobjekte, YAML für menschlich lesbare Konfigurationen, Agentenregeln und steuernde Metadaten.
+
+Bestehende YAML-Register bleiben gültig, bis eine eigene Migrationsentscheidung getroffen wurde. Die Formatlogik dient zunächst der Benennungsklarheit und der Orientierung für neue Registry-Daten, Exporte und agentische Verarbeitung.
+
 ## Wichtige Grenze
 
 Bestätigte Erkenntnisse dürfen nicht mit Arbeitsannahmen vermischt werden. Persistente Gedächtnisdateien sind Hilfsstrukturen des Agenten und keine kanonische Primärwahrheit des Repositories.

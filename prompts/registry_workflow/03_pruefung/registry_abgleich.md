@@ -4,7 +4,7 @@
 - Zweck: Neue Wissenselemente gegen bestehende Domänenregister prüfen und Dubletten vermeiden.
 - Wann verwenden: Nach der Domänen-Zuordnung, sobald eine Ziel-Domäne feststeht.
 - Erwartete Eingabe: Wissenselemente, Ziel-Domäne und relevante Domänendateien.
-- Erwartete Ausgabe: Ein YAML-`registry_abgleich` mit Trefferlage, Folgeaktionen und Prüfbedarf.
+- Erwartete Ausgabe: Ein JSON-`registry_abgleich` mit Trefferlage, Folgeaktionen und Prüfbedarf.
 - Nächster Schritt: `prompts/registry_workflow/03_pruefung/semantische_prüfung.md` oder `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
@@ -28,20 +28,27 @@ Erwartet werden:
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-registry_abgleich:
-  domäne: m365_sharepoint
-  ergebnisse:
-    - wissenselement: Prägnanter Titel
-      status: bestehender_treffer
-      vorhandener_knoten_id: beispiel_knoten
-      begründung: Warum der Treffer passt
-      empfohlene_folgeaktion: bestehenden_knoten_erweitern
-  semantische_prüfung_erforderlich: false
-  hinweise:
-    - Kurzer Hinweis zur Weiterverarbeitung
+```json
+{
+  "registry_abgleich": {
+    "domäne": "m365_sharepoint",
+    "ergebnisse": [
+      {
+        "wissenselement": "Prägnanter Titel",
+        "status": "bestehender_treffer",
+        "vorhandener_knoten_id": "beispiel_knoten",
+        "begründung": "Warum der Treffer passt",
+        "empfohlene_folgeaktion": "bestehenden_knoten_erweitern"
+      }
+    ],
+    "semantische_prüfung_erforderlich": false,
+    "hinweise": [
+      "Kurzer Hinweis zur Weiterverarbeitung"
+    ]
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -53,12 +60,17 @@ Arbeite mit folgenden Regeln:
 - Lege den Schwerpunkt auf Wiederverwendung vor Neuerstellung.
 - Benenne Dublettengefahr ausdrücklich.
 - Empfehle eine semantische Prüfung nur dann, wenn echte Unschärfe oder Konfliktpotenzial vorliegt.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-wissenselemente: []
-domäne: m365_sharepoint
-registerauszug: {}
+```json
+{
+  "wissenselemente": [
+
+  ],
+  "domäne": "m365_sharepoint",
+  "registerauszug": {
+  }
+}
 ```

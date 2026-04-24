@@ -1,0 +1,41 @@
+{
+  "vorlage": {
+    "artefakt_id": "art_2026_0001",
+    "artefakt_typ": "screenshot",
+    "dateiname": "m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png",
+    "dateiname_schema_version": 1,
+    "speicherort_system": "synology_nas",
+    "speicherort_ref": "screenshots/m365_sharepoint/m365_sharepoint__berechtigungspruefung__task-0042__fehlerbild__teams-admin-center.png",
+    "domäne": "m365_sharepoint",
+    "kontext_id": "ctx_0001",
+    "kontext_slug": "berechtigungspruefung",
+    "bezug_ref": "tb_task_0042",
+    "schritt_slug": "fehlerbild",
+    "kurztitel": "Teams Admin Center Rollenansicht",
+    "kurzbeschreibung": "Screenshot der Rollen- und Berechtigungsansicht während der Prüfung eines Zugriffsproblems.",
+    "schlagworte": [
+      "domäne|m365_sharepoint",
+      "kontext|berechtigungspruefung",
+      "bezug|tb_task_0042",
+      "schritt|fehlerbild",
+      "typ|screenshot",
+      "system|teams_admin_center"
+    ],
+    "status": "metadatiert",
+    "validierungsstand": "unvalidiert",
+    "bezug_objekte": [
+      {
+        "typ": "task",
+        "ref": "thebrain/aufgabenregister.yml#tb_task_0042"
+      },
+      {
+        "typ": "knoten",
+        "ref": "domänen/m365_sharepoint/kanonische_knoten.yml#sharepoint_berechtigungslogik"
+      }
+    ],
+    "informationsblock_refs": [
+
+    ],
+    "notizen": "Extern gespeichertes Artefakt, das später in einen Informationsblock übernommen oder nur als Nachweis geführt werden kann."
+  }
+}

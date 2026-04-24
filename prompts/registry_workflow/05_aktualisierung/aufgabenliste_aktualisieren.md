@@ -4,7 +4,7 @@
 - Zweck: Aus Aufgabenregister und Protokollen eine übersichtliche Arbeitsliste für TheBrain-Aufgaben ableiten.
 - Wann verwenden: Wenn eine aktuelle Sicht auf offene, umsetzungsreife oder dublettenverdächtige Aufgaben benötigt wird.
 - Erwartete Eingabe: `thebrain/aufgabenregister.yml`, `thebrain/umsetzungsprotokoll.yml` und optional `thebrain/zuordnungsprüfungen.yml`.
-- Erwartete Ausgabe: Ein YAML-`aufgabenliste` mit offenen Aufgaben, Umsetzungsfällen und Prüfhilfen.
+- Erwartete Ausgabe: Ein JSON-`aufgabenliste` mit offenen Aufgaben, Umsetzungsfällen und Prüfhilfen.
 - Nächster Schritt: Operative Bearbeitung, Priorisierung oder manuelle TheBrain-Umsetzung
 
 ## Zweck
@@ -29,30 +29,48 @@ Erwartet werden:
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-aufgabenliste:
-  offene_aufgaben:
-    - task_ref: tb_task_1234
-      titel: Beispiel
-      status: neu
-  zur_umsetzung_in_thebrain:
-    - task_ref: tb_task_2345
-      titel: Beispiel
-      umsetzungsstatus_thebrain: zur_umsetzung
-  bereits_umgesetzt:
-    - task_ref: tb_task_3456
-      titel: Beispiel
-      umsetzungsstatus_thebrain: umgesetzt
-  bestätigungsbedürftig:
-    - task_ref: tb_task_4567
-      titel: Beispiel
-      hinweis: Umsetzung erfolgt, fachliche Bestätigung steht aus
-  potenzielle_dubletten:
-    - task_ref: tb_task_5678
-      bezug: tb_task_1111
-      hinweis: Teilweise Überschneidung prüfen
+```json
+{
+  "aufgabenliste": {
+    "offene_aufgaben": [
+      {
+        "task_ref": "tb_task_1234",
+        "titel": "Beispiel",
+        "status": "neu"
+      }
+    ],
+    "zur_umsetzung_in_thebrain": [
+      {
+        "task_ref": "tb_task_2345",
+        "titel": "Beispiel",
+        "umsetzungsstatus_thebrain": "zur_umsetzung"
+      }
+    ],
+    "bereits_umgesetzt": [
+      {
+        "task_ref": "tb_task_3456",
+        "titel": "Beispiel",
+        "umsetzungsstatus_thebrain": "umgesetzt"
+      }
+    ],
+    "bestätigungsbedürftig": [
+      {
+        "task_ref": "tb_task_4567",
+        "titel": "Beispiel",
+        "hinweis": "Umsetzung erfolgt, fachliche Bestätigung steht aus"
+      }
+    ],
+    "potenzielle_dubletten": [
+      {
+        "task_ref": "tb_task_5678",
+        "bezug": "tb_task_1111",
+        "hinweis": "Teilweise Überschneidung prüfen"
+      }
+    ]
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -64,12 +82,17 @@ Arbeite mit folgenden Regeln:
 - Nutze das Aufgabenregister als führende Aufgabenquelle.
 - Verwende das Umsetzungsprotokoll, um Statusübergänge und Bestätigungsbedarfe sauber einzuordnen.
 - Führe potenzielle Dubletten nur dann auf, wenn Prüfungen oder Registerdaten dafür einen belastbaren Hinweis geben.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-aufgabenregister: {}
-umsetzungsprotokoll: {}
-zuordnungsprüfungen: {}
+```json
+{
+  "aufgabenregister": {
+  },
+  "umsetzungsprotokoll": {
+  },
+  "zuordnungsprüfungen": {
+  }
+}
 ```

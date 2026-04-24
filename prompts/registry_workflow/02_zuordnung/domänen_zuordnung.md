@@ -4,7 +4,7 @@
 - Zweck: Extrahierte Wissenselemente einer fachlich führenden Domäne zuordnen.
 - Wann verwenden: Direkt nach der Chat-Extraktion und vor dem domänenspezifischen Registerabgleich.
 - Erwartete Eingabe: Strukturierter Chat-Extrakt und `global/domänenregister.yml`.
-- Erwartete Ausgabe: Ein YAML-`domänen_zuordnung` mit führender Domäne, Alternativen und Zuordnungssicherheit.
+- Erwartete Ausgabe: Ein JSON-`domänen_zuordnung` mit führender Domäne, Alternativen und Zuordnungssicherheit.
 - Nächster Schritt: `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
 
 ## Zweck
@@ -24,21 +24,30 @@ Erwartet wird ein strukturierter Chat-Extrakt sowie das aktuelle Domänenregiste
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-domänen_zuordnung:
-  führende_domäne: m365_sharepoint
-  sicherheit: hoch
-  begründung: Kurze fachliche Begründung
-  alternative_domänen:
-    - name: wissenssystem_thebrain
-      rolle: randständig
-      begründung: Warum diese Domäne nicht führend ist
-  domänenkandidat_erforderlich: false
-  betroffene_wissenselemente:
-    - titel: Prägnanter Titel
-      zuordnung: m365_sharepoint
+```json
+{
+  "domänen_zuordnung": {
+    "führende_domäne": "m365_sharepoint",
+    "sicherheit": "hoch",
+    "begründung": "Kurze fachliche Begründung",
+    "alternative_domänen": [
+      {
+        "name": "wissenssystem_thebrain",
+        "rolle": "randständig",
+        "begründung": "Warum diese Domäne nicht führend ist"
+      }
+    ],
+    "domänenkandidat_erforderlich": false,
+    "betroffene_wissenselemente": [
+      {
+        "titel": "Prägnanter Titel",
+        "zuordnung": "m365_sharepoint"
+      }
+    ]
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -50,11 +59,15 @@ Arbeite mit folgenden Regeln:
 - Bevorzuge eine führende Domäne, wenn der Schwerpunkt klar erkennbar ist.
 - Nutze alternative Domänen nur ergänzend und begründet.
 - Schlage nur dann einen Domänenkandidaten vor, wenn keine bestehende Domäne tragfähig passt.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-chat_extrakt: {}
-domänenregister: {}
+```json
+{
+  "chat_extrakt": {
+  },
+  "domänenregister": {
+  }
+}
 ```

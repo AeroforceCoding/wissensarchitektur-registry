@@ -4,7 +4,7 @@
 - Zweck: Neue TheBrain-Aufgaben oder abgeschlossene Fälle in das Aufgabenregister überführen.
 - Wann verwenden: Wenn ein THEBRAIN_TASK-Block oder eine sonstige TheBrain-relevante Aufgabe erstmals strukturiert erfasst werden soll.
 - Erwartete Eingabe: THEBRAIN_TASK-Block oder Aufgabenbeschreibung sowie Status- und Zielregister.
-- Erwartete Ausgabe: Ein YAML-`aufgabenregister_eintrag` für `thebrain/aufgabenregister.yml`.
+- Erwartete Ausgabe: Ein JSON-`aufgabenregister_eintrag` für `thebrain/aufgabenregister.yml`.
 - Nächster Schritt: `prompts/registry_workflow/06_thebrain/thebrain_task_prüfen.md`
 
 ## Zweck
@@ -31,30 +31,34 @@ Erwartet wird:
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-aufgabenregister_eintrag:
-  task_id: tb_task_1234
-  titel: Prägnanter Aufgabentitel
-  typ: thebrain_task
-  status: neu
-  target_brain: wissensarchitektur_hauptbrain
-  target_hauptast: Wissenssystem / TheBrain
-  target_unterast: Beispiel-Unterast
-  quelle_typ: Chat
-  quelle_ref: intake/chat_extrakte/beispiel.yml
-  zusammenfassung: Kurze fachliche Beschreibung der Aufgabe
-  auswirkung: Erwartete Wirkung auf Struktur, Ordnung oder Nachvollziehbarkeit
-  wiederholbar: false
-  struktur_update: true
-  neue_strukturknoten:
-    - Beispielknoten
-  duplikatprüfung_status: offen
-  umsetzungsstatus_thebrain: vorgeschlagen
-  erstellt_am: 2026-04-23
-  zuletzt_geändert: 2026-04-23
-  notizen: Kurze Zusatzhinweise
+```json
+{
+  "aufgabenregister_eintrag": {
+    "task_id": "tb_task_1234",
+    "titel": "Prägnanter Aufgabentitel",
+    "typ": "thebrain_task",
+    "status": "neu",
+    "target_brain": "wissensarchitektur_hauptbrain",
+    "target_hauptast": "Wissenssystem / TheBrain",
+    "target_unterast": "Beispiel-Unterast",
+    "quelle_typ": "Chat",
+    "quelle_ref": "intake/chat_extrakte/beispiel.json",
+    "zusammenfassung": "Kurze fachliche Beschreibung der Aufgabe",
+    "auswirkung": "Erwartete Wirkung auf Struktur, Ordnung oder Nachvollziehbarkeit",
+    "wiederholbar": false,
+    "struktur_update": true,
+    "neue_strukturknoten": [
+      "Beispielknoten"
+    ],
+    "duplikatprüfung_status": "offen",
+    "umsetzungsstatus_thebrain": "vorgeschlagen",
+    "erstellt_am": "2026-04-23",
+    "zuletzt_geändert": "2026-04-23",
+    "notizen": "Kurze Zusatzhinweise"
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -68,7 +72,7 @@ Arbeite mit folgenden Regeln:
 - Wähle `umsetzungsstatus_thebrain` aus den TheBrain-Statuswerten.
 - Nutze nur Ziel-Brains und Hauptäste, die zum Register passen oder eindeutig aus der Eingabe ableitbar sind.
 - Setze `struktur_update` nur dann auf `true`, wenn sich daraus neue oder veränderte Strukturknoten ableiten.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 

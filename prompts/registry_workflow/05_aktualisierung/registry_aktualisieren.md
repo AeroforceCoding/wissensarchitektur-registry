@@ -4,7 +4,7 @@
 - Zweck: Bestätigte Ergebnisse in konkrete Änderungen der Registry-Dateien übersetzen.
 - Wann verwenden: Nach abgeschlossenem Abgleich, optionaler semantischer Prüfung und gegebenenfalls Governance-Entscheidung.
 - Erwartete Eingabe: Bestätigte Ergebnisse, Ziel-Domäne und betroffene Registerdateien.
-- Erwartete Ausgabe: Ein YAML-`registry_aktualisierung` mit Dateiänderungen und Folgehinweisen.
+- Erwartete Ausgabe: Ein JSON-`registry_aktualisierung` mit Dateiänderungen und Folgehinweisen.
 - Nächster Schritt: `prompts/registry_workflow/06_thebrain/thebrain_update_vorbereiten.md`
 
 ## Zweck
@@ -24,21 +24,30 @@ Erwartet werden bestätigte Abgleichsergebnisse, gegebenenfalls semantische Bewe
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-registry_aktualisierung:
-  domäne: m365_sharepoint
-  dateiänderungen:
-    - datei: domänen/m365_sharepoint/kanonische_knoten.yml
-      aktion: ergänzen
-      inhalt: Neuer Knoten oder Ergänzung eines bestehenden Knotens
-    - datei: domänen/m365_sharepoint/verlaufsänderungen.yml
-      aktion: fortschreiben
-      inhalt: Dokumentation der vorgenommenen Änderung
-  thebrain_vorbereitung_erforderlich: true
-  hinweise:
-    - Änderungen erst nach bestätigter Freigabe schreiben
+```json
+{
+  "registry_aktualisierung": {
+    "domäne": "m365_sharepoint",
+    "dateiänderungen": [
+      {
+        "datei": "domänen/m365_sharepoint/kanonische_knoten.yml",
+        "aktion": "ergänzen",
+        "inhalt": "Neuer Knoten oder Ergänzung eines bestehenden Knotens"
+      },
+      {
+        "datei": "domänen/m365_sharepoint/verlaufsänderungen.yml",
+        "aktion": "fortschreiben",
+        "inhalt": "Dokumentation der vorgenommenen Änderung"
+      }
+    ],
+    "thebrain_vorbereitung_erforderlich": true,
+    "hinweise": [
+      "Änderungen erst nach bestätigter Freigabe schreiben"
+    ]
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -50,11 +59,14 @@ Arbeite mit folgenden Regeln:
 - Beschreibe nur bestätigte Änderungen.
 - Halte Verlaufs- und Logdateien synchron zur fachlichen Änderung.
 - Trenne Registry-Arbeit klar von späteren TheBrain-Umsetzungen.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-bestätigte_ergebnisse: {}
-ziel_domäne: m365_sharepoint
+```json
+{
+  "bestätigte_ergebnisse": {
+  },
+  "ziel_domäne": "m365_sharepoint"
+}
 ```

@@ -4,7 +4,7 @@
 - Zweck: Neue TheBrain-Aufgaben gegen bestehende Einträge prüfen und dedupliziert zuordnen.
 - Wann verwenden: Nach der Erfassung eines neuen TheBrain-Tasks und vor einer endgültigen Registerfortschreibung.
 - Erwartete Eingabe: Neuer Task, Aufgabenregister und optional bisherige Zuordnungsprüfungen.
-- Erwartete Ausgabe: Ein YAML-`task_prüfung` mit Ähnlichkeitsbewertung und Zuordnungsempfehlung.
+- Erwartete Ausgabe: Ein JSON-`task_prüfung` mit Ähnlichkeitsbewertung und Zuordnungsempfehlung.
 - Nächster Schritt: Aufgabenregister ergänzen, Zuordnungsprüfung dokumentieren oder Aufgabe verwerfen
 
 ## Zweck
@@ -29,22 +29,29 @@ Erwartet werden:
 
 ## Gewünschtes Ausgabeformat
 
-Die Antwort soll ausschließlich als gültiges YAML im folgenden Format erfolgen:
+Die Antwort soll ausschließlich als gültiges JSON im folgenden Format erfolgen:
 
-```yaml
-task_prüfung:
-  eingangs_task_ref: neuer_task_oder_extern
-  bewertung: ähnlich
-  bereits_vorhanden: false
-  ähnliche_einträge:
-    - task_ref: tb_task_0001
-      ähnlichkeitstyp: gleicher_kern_mehr_detail
-      begründung: Die bestehende Aufgabe deckt den Kern bereits ab, der neue Task ergänzt nur Details.
-      confidence: mittel
-  empfohlene_zuordnung:
-    aktion: bestehende_aufgabe_erweitern
-    ziel_task_ref: tb_task_0001
-    begründung: Neue Informationen passen als Ergänzung zum bestehenden Eintrag.
+```json
+{
+  "task_prüfung": {
+    "eingangs_task_ref": "neuer_task_oder_extern",
+    "bewertung": "ähnlich",
+    "bereits_vorhanden": false,
+    "ähnliche_einträge": [
+      {
+        "task_ref": "tb_task_0001",
+        "ähnlichkeitstyp": "gleicher_kern_mehr_detail",
+        "begründung": "Die bestehende Aufgabe deckt den Kern bereits ab, der neue Task ergänzt nur Details.",
+        "confidence": "mittel"
+      }
+    ],
+    "empfohlene_zuordnung": {
+      "aktion": "bestehende_aufgabe_erweitern",
+      "ziel_task_ref": "tb_task_0001",
+      "begründung": "Neue Informationen passen als Ergänzung zum bestehenden Eintrag."
+    }
+  }
+}
 ```
 
 ## Direkt verwendbarer Prompt
@@ -57,12 +64,17 @@ Arbeite mit folgenden Regeln:
 - Verwende als `ähnlichkeitstyp` nur sinnvolle Werte wie `gleiche_bedeutung`, `gleicher_kern_mehr_detail`, `ergänzend`, `teilweise_überschneidung`, `möglicher_doppelter_task` oder `neue_aufgabe`.
 - Markiere `bereits_vorhanden` nur dann mit `true`, wenn ein bestehender Eintrag den neuen Task inhaltlich bereits ausreichend abdeckt.
 - Formuliere die empfohlene Zuordnung als konkrete Folgeaktion.
-- Antworte ausschließlich im vorgegebenen YAML-Format.
+- Antworte ausschließlich im vorgegebenen JSON-Format.
 
 Eingabe:
 
-```yaml
-neuer_task: {}
-aufgabenregister: {}
-zuordnungsprüfungen: {}
+```json
+{
+  "neuer_task": {
+  },
+  "aufgabenregister": {
+  },
+  "zuordnungsprüfungen": {
+  }
+}
 ```

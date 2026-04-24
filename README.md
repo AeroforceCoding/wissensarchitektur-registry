@@ -38,6 +38,8 @@ Die globale Ebene enthält die allgemeinen Steuerungsregeln der Wissensarchitekt
 
 Die domänenspezifischen Bereiche enthalten dagegen die fachliche Ausprägung einzelner Themenräume. Dort liegen kanonische Knoten, domänenspezifische Beziehungen, semantische Zuordnungen, Quellen, Verlaufsänderungen, Klassifikationsentscheidungen und vorbereitete TheBrain-Updates. So bleibt die globale Steuerung stabil, während sich Fachdomänen unabhängig weiterentwickeln können.
 
+Für neue strukturierte Dateien gilt eine Formatlogik: YAML dient vor allem der menschlich lesbaren Steuerung, Konfiguration und Agentenregelung; JSON oder JSONL sollen für stabile maschinenlesbare Registry-Daten, Extraktionsergebnisse, Aufgabenobjekte und spätere Exporte bevorzugt werden. Die Regel ist in `agentensystem/regelwerk/formatlogik.md` dokumentiert und hebt bestehende YAML-Dateien nicht automatisch auf.
+
 Zwischen laufender Aufgabenbearbeitung und kanonischer Registry-Integration entsteht zusätzlich eine leichte Evidenz- und Kontextschicht. Dort werden Kontexte, Artefaktstatus und Vorlagen für validierte Informationsblöcke definiert, damit Screenshots, Bilddateien und andere Nachweise erst nach erfolgreicher Verdichtung in die eigentliche Wissensarchitektur einfließen.
 
 Ergänzend dazu existiert eine agentische Steuerungsschicht. Sie definiert, welche vorbereitenden Schritte der Agent autonom ausführen darf, welche Annahmen er offenlegen muss und in welchen Fällen der Anwender ausdrücklich bestätigen soll.

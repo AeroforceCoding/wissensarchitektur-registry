@@ -27,3 +27,5 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Strukturierung | Prompt-Bibliothek | Prompt-Bibliothek nach internem `registry_workflow` und extern verwendbarer `externe_anwendung` getrennt, Pfade aktualisiert und ergänzende Bereichs-READMEs angelegt. |
 | 2026-04-24 | Erweiterung | Eingangsschicht | Externen Prompt zur Erzeugung kompakter Chat-Übergabeblöcke ergänzt und interne Chat-Extraktion für Übergabeblöcke als Eingabe erweitert. |
 | 2026-04-24 | Erweiterung | Problemspur | Prompt und Vorlage zur parallelen Erfassung offener Probleme aus nicht abgeschlossenen Sessions ergänzt, inklusive Zweckdienlichkeitsprüfung vor Wissensabgleich oder Aufgabenableitung. |
+| 2026-04-24 | Architekturregel | Formatlogik | Formatentscheidung ergänzt: JSON oder JSONL für stabile maschinenlesbare Datenobjekte, YAML für Konfigurationen, Agentenregeln und steuernde Metadaten; bestehende YAML-Dateien bleiben bis zu einer Migrationsentscheidung gültig. |
+| 2026-04-24 | Formatumstellung | Prompt-Bibliothek und Vorlagen | Datenorientierte Prompt-Ausgaben von YAML auf JSON umgestellt und Vorlagen für maschinenverarbeitbare Objekte von `.yml` nach `.json` konvertiert. |
