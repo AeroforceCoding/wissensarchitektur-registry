@@ -5,7 +5,7 @@
 - Wann verwenden: Wenn ein THEBRAIN_TASK-Block oder eine sonstige TheBrain-relevante Aufgabe erstmals strukturiert erfasst werden soll.
 - Erwartete Eingabe: THEBRAIN_TASK-Block oder Aufgabenbeschreibung sowie Status- und Zielregister.
 - Erwartete Ausgabe: Ein YAML-`aufgabenregister_eintrag` für `thebrain/aufgabenregister.yml`.
-- Nächster Schritt: `prompts/06_thebrain/thebrain_task_prüfen.md`
+- Nächster Schritt: `prompts/registry_workflow/06_thebrain/thebrain_task_prüfen.md`
 
 ## Zweck
 

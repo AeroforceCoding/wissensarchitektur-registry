@@ -5,7 +5,7 @@
 - Wann verwenden: Zu Beginn eines Chats mit Wissensarbeitsbezug oder als Zusatzanweisung in fortgeschrittenen Chatverläufen, bevor Inhalte extrahiert und weiterverarbeitet werden sollen.
 - Erwartete Eingabe: Laufender oder geplanter Chatkontext mit fachlichen Erkenntnissen, Entscheidungen, offenen Punkten, Aufgaben oder Strukturhinweisen.
 - Erwartete Ausgabe: Ausgerichteter Chatverlauf, der Wissen, Entscheidungen, Unsicherheiten, Aufgaben und TheBrain-Hinweise klarer unterscheidbar macht.
-- Nächster Schritt: `prompts/01_eingang/chat_extraktion.md`
+- Nächster Schritt: `prompts/registry_workflow/01_eingang/chat_extraktion.md`
 
 ## Zweck
 
@@ -82,5 +82,5 @@ Behandle relevante Erkenntnisse so, dass sie später in die kanonische Wissensar
 
 - Für neue Chats kann die direkt verwendbare Anweisung vollständig am Anfang eingefügt werden.
 - Für bereits lange Chatverläufe reicht oft die Kurzfassung, wenn der fachliche Kontext im Chat schon vorhanden ist.
-- Vor einer tatsächlichen Übernahme in die Registry folgt weiterhin `prompts/01_eingang/chat_extraktion.md`.
+- Vor einer tatsächlichen Übernahme in die Registry folgt weiterhin `prompts/registry_workflow/01_eingang/chat_extraktion.md`.
 - Diese Anweisung ersetzt keine Domänen-Zuordnung, keinen Registry-Abgleich und keine TheBrain-Update-Vorbereitung.

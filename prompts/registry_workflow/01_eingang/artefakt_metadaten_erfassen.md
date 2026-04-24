@@ -5,7 +5,7 @@
 - Wann verwenden: Wenn ein Screenshot, Bildnachweis oder ähnliches Artefakt erstmals benannt, beschrieben und dem Repo-Kontext zugeordnet werden soll.
 - Erwartete Eingabe: Artefaktbeschreibung, optional Dateiverweis, Aufgabenkontext, Domänenregister, Kontextvokabular und Artefaktstatuswerte.
 - Erwartete Ausgabe: Ein YAML-`artefakt_eintrag` mit Dateiname, Kontext, Bezug und Status.
-- Nächster Schritt: `prompts/01_eingang/aufgabenabschluss_verdichten.md` oder Referenz als Evidenz belassen
+- Nächster Schritt: `prompts/registry_workflow/01_eingang/aufgabenabschluss_verdichten.md` oder Referenz als Evidenz belassen
 
 ## Zweck
 

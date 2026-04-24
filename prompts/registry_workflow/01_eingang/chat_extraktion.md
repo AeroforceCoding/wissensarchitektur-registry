@@ -5,7 +5,7 @@
 - Wann verwenden: Immer dann, wenn ein Chat oder Gesprächsausschnitt erstmals in die Wissensarchitektur aufgenommen werden soll.
 - Erwartete Eingabe: Ein Chatinhalt oder Gesprächsausschnitt mit optionalem Kontext.
 - Erwartete Ausgabe: Ein YAML-`chat_extrakt` mit Aussagen, Entitäten, Entscheidungen, offenen Punkten, Aufgaben- und TheBrain-Hinweisen.
-- Nächster Schritt: `prompts/02_zuordnung/domänen_zuordnung.md`
+- Nächster Schritt: `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`
 
 ## Kanonischer Prompttext
 

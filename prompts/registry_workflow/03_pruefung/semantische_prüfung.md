@@ -5,7 +5,7 @@
 - Wann verwenden: Wenn der Registry-Abgleich keine eindeutige Einordnung erlaubt oder Dublettengefahr besteht.
 - Erwartete Eingabe: Prüfgegenstand und fachlich ähnliche Registereinträge.
 - Erwartete Ausgabe: Ein YAML-`semantische_prüfung` mit Bewertung, Sicherheit und Folgeempfehlung.
-- Nächster Schritt: `prompts/04_entscheidung/governance_entscheidung.md` oder `prompts/05_aktualisierung/registry_aktualisieren.md`
+- Nächster Schritt: `prompts/registry_workflow/04_entscheidung/governance_entscheidung.md` oder `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
 

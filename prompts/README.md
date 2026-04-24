@@ -1,6 +1,6 @@
 # Prompt-Bibliothek
 
-Der Bereich `prompts/` ist die kanonische, versionierte Arbeitsbibliothek für operative und strukturierende Prompts der Wissensarchitektur-Registry. Hier liegen die verbindlichen Promptfassungen, auf die sich Verarbeitung, Prüfung, Governance, TheBrain-Vorbereitung und gezielte Repository-Erweiterungen stützen.
+Der Bereich `prompts/` ist die kanonische, versionierte Arbeitsbibliothek für operative und strukturierende Prompts der Wissensarchitektur-Registry. Hier liegen die verbindlichen Promptfassungen, auf die sich Verarbeitung, Prüfung, Governance, TheBrain-Vorbereitung und gezielte Anwendung außerhalb dieses Repositories stützen.
 
 ## Zweck des Prompt-Bereichs
 
@@ -12,37 +12,59 @@ Dieses Repository ist die Primärquelle für Promptversionen. Änderungen an Pro
 
 Obsidian kann später als Navigations-, Lese- oder Spiegelschicht dienen, ist aber nicht die führende Quelle für Promptstände.
 
-## Arbeitsphasen 01 bis 06
+## Grundstruktur
 
-### `01_eingang`
+Die Prompt-Bibliothek ist zuerst nach Verwendungsort getrennt:
+
+- `registry_workflow/`: Prompts, die innerhalb dieser Registry den kanonischen Verarbeitungsprozess steuern.
+- `externe_anwendung/`: Prompts, die in anderen Chats, anderen Repositories oder angrenzenden Arbeitskontexten verwendet werden können.
+
+Diese Trennung soll das Auffinden im Alltag erleichtern. Wer den internen Registry-Prozess fortführt, beginnt in `registry_workflow/`. Wer eine Anweisung zum Kopieren in einen anderen Chat oder ein anderes Repository sucht, beginnt in `externe_anwendung/`.
+
+## Registry-Workflow-Phasen 01 bis 06
+
+Innerhalb von `registry_workflow/` bleibt die fachliche Prozesslogik nach Phasen erhalten.
+
+### `registry_workflow/01_eingang`
 
 Prompts für die Aufnahme und Erststrukturierung neuer Inhalte, insbesondere die Chat-Extraktion, Artefakt-Metadaten und die Verdichtung abgeschlossener Aufgaben.
 
-### `02_zuordnung`
+### `registry_workflow/02_zuordnung`
 
 Prompts für die fachliche Verortung extrahierter Inhalte in bestehende Domänen.
 
-### `03_prüfung`
+### `registry_workflow/03_pruefung`
 
 Prompts für Registerabgleich, semantische Klärung und andere prüfende Zwischenschritte vor einer strukturellen Festlegung.
 
-### `04_entscheidung`
+### `registry_workflow/04_entscheidung`
 
 Prompts für Governance- und Strukturentscheidungen, wenn einfache Zuordnung oder Prüfung nicht ausreichen.
 
-### `05_aktualisierung`
+### `registry_workflow/05_aktualisierung`
 
-Prompts für konkrete Fortschreibung der Registry, abgeleitete operative Arbeitslisten und strukturierende Erweiterungen des Repositories.
+Prompts für konkrete Fortschreibung der Registry und abgeleitete operative Arbeitslisten.
 
-### `06_thebrain`
+### `registry_workflow/06_thebrain`
 
 Prompts für die TheBrain-spezifische Aufgabenlogik, Prüfung und Update-Vorbereitung.
+
+## Externe Anwendung
+
+### `externe_anwendung/chat_anweisungen`
+
+Prompts und Anweisungen, die in neue oder laufende Arbeitschats eingefügt werden können, damit diese Chats später besser in die Wissensarchitektur überführbar sind.
+
+### `externe_anwendung/repo_erweiterungen`
+
+Prompts, die dazu dienen, andere Repositories oder angrenzende Arbeitsräume nach einem definierten Muster zu erweitern.
 
 ## Wie neue Prompts ergänzt werden sollen
 
 Neue Prompts sollen immer:
 
 - einer klaren Arbeitsphase zugeordnet werden,
+- einem klaren Verwendungsort zugeordnet werden,
 - einen einheitlichen Kopfbereich mit Titel, Zweck, Verwendung, Ein- und Ausgabe enthalten,
 - in `prompt_index.md` nachgetragen werden,
 - möglichst an bestehende Register, Statuswerte und Workflows anschließen,
@@ -50,4 +72,4 @@ Neue Prompts sollen immer:
 
 ## Navigation
 
-Für die schnelle Übersicht dient `prompts/prompt_index.md`. Die eigentlichen kanonischen Inhalte liegen in den Phasenordnern und sind dort die maßgebliche Arbeitsfassung.
+Für die schnelle Übersicht dient `prompts/prompt_index.md`. Die eigentlichen kanonischen Inhalte liegen in den jeweiligen Verwendungsordnern und sind dort die maßgebliche Arbeitsfassung.

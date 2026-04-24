@@ -24,3 +24,4 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Erweiterung | Prompt-Bibliothek | Wiederverwendbaren Strukturprompt zur Erweiterung anderer Repositories um das aktuelle Agentensystem ergänzt und im Prompt-Index verankert. |
 | 2026-04-24 | Erweiterung | Prompt-Bibliothek | Initial- und Zusatzanweisung für Wissensarbeits-Chats ergänzt, damit neue und laufende Chats gezielt auf spätere Chat-Extraktion, Registry-Verarbeitung und TheBrain-Update-Vorbereitung ausgerichtet werden können. |
 | 2026-04-24 | Präzisierung | Agentisches Arbeiten | Regel ergänzt, dass sinnvolle Repository-Erweiterungen einen kurzen commitfähigen Beschreibungstext erhalten, der sich am Changelog orientiert. |
+| 2026-04-24 | Strukturierung | Prompt-Bibliothek | Prompt-Bibliothek nach internem `registry_workflow` und extern verwendbarer `externe_anwendung` getrennt, Pfade aktualisiert und ergänzende Bereichs-READMEs angelegt. |

@@ -5,7 +5,7 @@
 - Wann verwenden: Wenn Prüfung und Abgleich nicht ausreichen und eine belastbare Strukturentscheidung nötig ist.
 - Erwartete Eingabe: Änderungsvorschlag, Prüfergebnisse und betroffene Registerbereiche.
 - Erwartete Ausgabe: Ein YAML-`governance_entscheidung` mit Entscheidung, Auflagen und Wirksamkeit.
-- Nächster Schritt: `prompts/05_aktualisierung/registry_aktualisieren.md`
+- Nächster Schritt: `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
 

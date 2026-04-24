@@ -5,7 +5,7 @@
 - Wann verwenden: Nach der Domänen-Zuordnung, sobald eine Ziel-Domäne feststeht.
 - Erwartete Eingabe: Wissenselemente, Ziel-Domäne und relevante Domänendateien.
 - Erwartete Ausgabe: Ein YAML-`registry_abgleich` mit Trefferlage, Folgeaktionen und Prüfbedarf.
-- Nächster Schritt: `prompts/03_prüfung/semantische_prüfung.md` oder `prompts/05_aktualisierung/registry_aktualisieren.md`
+- Nächster Schritt: `prompts/registry_workflow/03_pruefung/semantische_prüfung.md` oder `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 
 ## Zweck
 

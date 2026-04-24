@@ -2,25 +2,25 @@
 
 Diese Datei beschreibt die praktische Reihenfolge der operativen Prompts für die tägliche Arbeit mit neuen Chatinhalten.
 
-Die kanonische Navigationsübersicht der Prompt-Bibliothek liegt in `prompts/prompt_index.md`. Die operative Arbeitsreihenfolge folgt den Phasenordnern unter `prompts/`.
+Die kanonische Navigationsübersicht der Prompt-Bibliothek liegt in `prompts/prompt_index.md`. Die operative Arbeitsreihenfolge folgt den Phasenordnern unter `prompts/registry_workflow/`. Extern verwendbare Chat- und Repo-Anweisungen liegen getrennt unter `prompts/externe_anwendung/`.
 
 ## Standardreihenfolge
 
-1. `prompts/01_eingang/chat_extraktion.md`
-2. `prompts/02_zuordnung/domänen_zuordnung.md`
-3. `prompts/03_prüfung/registry_abgleich.md`
-4. `prompts/03_prüfung/semantische_prüfung.md` nur bei Bedarf
-5. `prompts/04_entscheidung/governance_entscheidung.md` nur bei echter Strukturänderung
-6. `prompts/05_aktualisierung/registry_aktualisieren.md`
-7. `prompts/06_thebrain/thebrain_update_vorbereiten.md`
+1. `prompts/registry_workflow/01_eingang/chat_extraktion.md`
+2. `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`
+3. `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
+4. `prompts/registry_workflow/03_pruefung/semantische_prüfung.md` nur bei Bedarf
+5. `prompts/registry_workflow/04_entscheidung/governance_entscheidung.md` nur bei echter Strukturänderung
+6. `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
+7. `prompts/registry_workflow/06_thebrain/thebrain_update_vorbereiten.md`
 
 ## Alternativer Eingangspfad für aufgabenbasierte Erkenntnisse
 
 Wenn Wissen nicht aus einem Chat, sondern aus einer erfolgreich abgeschlossenen Aufgabe mit Screenshots, Bilddateien oder anderen Nachweisen entsteht, gilt vor dem regulären Workflow ein vorgeschalteter Eingangspfad:
 
-1. `prompts/01_eingang/artefakt_metadaten_erfassen.md`
-2. `prompts/01_eingang/aufgabenabschluss_verdichten.md`
-3. danach `prompts/02_zuordnung/domänen_zuordnung.md` oder direkt `prompts/03_prüfung/registry_abgleich.md`
+1. `prompts/registry_workflow/01_eingang/artefakt_metadaten_erfassen.md`
+2. `prompts/registry_workflow/01_eingang/aufgabenabschluss_verdichten.md`
+3. danach `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md` oder direkt `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
 
 ## Typische Anwendungsfälle
 

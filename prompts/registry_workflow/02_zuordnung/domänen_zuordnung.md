@@ -5,7 +5,7 @@
 - Wann verwenden: Direkt nach der Chat-Extraktion und vor dem domänenspezifischen Registerabgleich.
 - Erwartete Eingabe: Strukturierter Chat-Extrakt und `global/domänenregister.yml`.
 - Erwartete Ausgabe: Ein YAML-`domänen_zuordnung` mit führender Domäne, Alternativen und Zuordnungssicherheit.
-- Nächster Schritt: `prompts/03_prüfung/registry_abgleich.md`
+- Nächster Schritt: `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
 
 ## Zweck
 

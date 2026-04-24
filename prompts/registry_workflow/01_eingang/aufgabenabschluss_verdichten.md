@@ -5,7 +5,7 @@
 - Wann verwenden: Wenn eine Aufgabe fachlich abgeschlossen ist und aus Verlauf, Ergebnis und Nachweisen ein integrationsfähiger Wissensblock entstehen soll.
 - Erwartete Eingabe: Aufgabenbeschreibung, Abschlussstatus, Artefakt-Referenzen, bekannte Domänen- und Kontextbezüge.
 - Erwartete Ausgabe: Ein YAML-`informationsblock` mit Befunden, Interpretationen, Hypothesen und empfohlener Folgeaktion.
-- Nächster Schritt: `prompts/02_zuordnung/domänen_zuordnung.md` oder `prompts/03_prüfung/registry_abgleich.md`
+- Nächster Schritt: `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md` oder `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
 
 ## Zweck
 

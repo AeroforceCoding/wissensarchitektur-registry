@@ -44,24 +44,24 @@ Ergänzend dazu existiert eine agentische Steuerungsschicht. Sie definiert, welc
 
 ## Operative Prompt-Reihenfolge
 
-Die kanonische Prompt-Bibliothek liegt unter `prompts/`. Eine schnelle Übersicht bietet `prompts/prompt_index.md`. Die Prompts sind dort phasenbezogen organisiert und bilden folgende logische Verarbeitungskette:
+Die kanonische Prompt-Bibliothek liegt unter `prompts/`. Eine schnelle Übersicht bietet `prompts/prompt_index.md`. Intern genutzte Workflow-Prompts liegen unter `prompts/registry_workflow/`, extern verwendbare Chat- und Repo-Anweisungen unter `prompts/externe_anwendung/`. Die Registry-Workflow-Prompts bilden folgende logische Verarbeitungskette:
 
-1. `prompts/01_eingang/chat_extraktion.md`
+1. `prompts/registry_workflow/01_eingang/chat_extraktion.md`
    Extrahiert aus einem Chat die relevanten Wissenselemente, Aussagen, Entscheidungen, Prüfbedarfe und offenen Punkte.
-2. `prompts/02_zuordnung/domänen_zuordnung.md`
+2. `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`
    Ordnet die extrahierten Wissenselemente einer bestehenden Domäne oder einem begründeten neuen Domänenkandidaten zu.
-3. `prompts/03_prüfung/registry_abgleich.md`
+3. `prompts/registry_workflow/03_pruefung/registry_abgleich.md`
    Prüft innerhalb der Ziel-Domäne, ob bereits passende kanonische Knoten, Beziehungen oder Registereinträge existieren.
-4. `prompts/03_prüfung/semantische_prüfung.md`
+4. `prompts/registry_workflow/03_pruefung/semantische_prüfung.md`
    Wird nur dann genutzt, wenn Bedeutungsnähe, Mehrdeutigkeit, Dublettengefahr oder mögliche Widersprüche vorliegen.
-5. `prompts/04_entscheidung/governance_entscheidung.md`
+5. `prompts/registry_workflow/04_entscheidung/governance_entscheidung.md`
    Wird nur dann aufgerufen, wenn eine echte Strukturänderung, ein neuer Standard oder eine konfliktträchtige Einordnung entschieden werden muss.
-6. `prompts/05_aktualisierung/registry_aktualisieren.md`
+6. `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
    Überführt bestätigte Ergebnisse in konkrete Registry-Änderungen.
-7. `prompts/06_thebrain/thebrain_update_vorbereiten.md`
+7. `prompts/registry_workflow/06_thebrain/thebrain_update_vorbereiten.md`
    Formuliert daraus umsetzbare, aber noch getrennt nachverfolgbare Änderungen für TheBrain.
 
-Ergänzend dazu steuern `prompts/06_thebrain/thebrain_task_erfassen.md`, `prompts/06_thebrain/thebrain_task_prüfen.md` und `prompts/05_aktualisierung/aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
+Ergänzend dazu steuern `prompts/registry_workflow/06_thebrain/thebrain_task_erfassen.md`, `prompts/registry_workflow/06_thebrain/thebrain_task_prüfen.md` und `prompts/registry_workflow/05_aktualisierung/aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
 
 ## Nutzen des Repositories
 
