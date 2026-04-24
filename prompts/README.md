@@ -1,6 +1,6 @@
 # Prompt-Bibliothek
 
-Der Bereich `prompts/` ist die kanonische, versionierte Arbeitsbibliothek für operative Prompts der Wissensarchitektur-Registry. Hier liegen die verbindlichen Promptfassungen, auf die sich Verarbeitung, Prüfung, Governance und TheBrain-Vorbereitung stützen.
+Der Bereich `prompts/` ist die kanonische, versionierte Arbeitsbibliothek für operative und strukturierende Prompts der Wissensarchitektur-Registry. Hier liegen die verbindlichen Promptfassungen, auf die sich Verarbeitung, Prüfung, Governance, TheBrain-Vorbereitung und gezielte Repository-Erweiterungen stützen.
 
 ## Zweck des Prompt-Bereichs
 
@@ -32,7 +32,7 @@ Prompts für Governance- und Strukturentscheidungen, wenn einfache Zuordnung ode
 
 ### `05_aktualisierung`
 
-Prompts für konkrete Fortschreibung der Registry sowie für abgeleitete operative Arbeitslisten.
+Prompts für konkrete Fortschreibung der Registry, abgeleitete operative Arbeitslisten und strukturierende Erweiterungen des Repositories.
 
 ### `06_thebrain`
 
