@@ -26,6 +26,14 @@ Bestehende YAML-Register bleiben gültig, bis eine eigene Migrationsentscheidung
 
 Die strukturelle Rollenlogik ist in `agentensystem/regelwerk/repository_schichten.md` dokumentiert. Sie trennt Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation, damit spätere Ausbaustufen wie GitHub Actions, Docker Compose, Kubernetes, lokale LLMs, RAG-Systeme und mehrere Agenten ohne Formatbruch ergänzt werden können.
 
+## Agentenrollen
+
+Die grundlegenden Rollen eines späteren Multi-Agent-Systems sind in `agentensystem/regelwerk/agentenrollen.yml` maschinenlesbar beschrieben und in `agentensystem/rollen.md` erläutert. Die Rollen bilden Analyse, Architekturprüfung, Umsetzung, Prüfung, Dokumentation und Freigabe/Kontrolle ab.
+
+Die zugehörigen Übergabe- und Ergebnisformate sind in `agentensystem/regelwerk/agenten_uebergabeformate.yml` definiert. Sie beschreiben, welche Arbeitsobjekte zwischen Rollen weitergegeben werden sollen, ohne bereits eine technische Orchestrierung oder Laufzeitumgebung zu behaupten.
+
+Diese Rollenbeschreibung ist keine produktive Orchestrierung. Sie dient als strukturierte Grundlage für spätere Agentenprozesse und hält die Grenze zwischen Vorschlag, Umsetzung, Prüfung und menschlicher Freigabe explizit.
+
 ## Wichtige Grenze
 
 Bestätigte Erkenntnisse dürfen nicht mit Arbeitsannahmen vermischt werden. Persistente Gedächtnisdateien sind Hilfsstrukturen des Agenten und keine kanonische Primärwahrheit des Repositories.

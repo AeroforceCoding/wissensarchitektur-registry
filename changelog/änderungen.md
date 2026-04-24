@@ -30,3 +30,5 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Architekturregel | Formatlogik | Formatentscheidung ergänzt: JSON oder JSONL für stabile maschinenlesbare Datenobjekte, YAML für Konfigurationen, Agentenregeln und steuernde Metadaten; bestehende YAML-Dateien bleiben bis zu einer Migrationsentscheidung gültig. |
 | 2026-04-24 | Formatumstellung | Prompt-Bibliothek und Vorlagen | Datenorientierte Prompt-Ausgaben von YAML auf JSON umgestellt und Vorlagen für maschinenverarbeitbare Objekte von `.yml` nach `.json` konvertiert. |
 | 2026-04-24 | Architekturregel | Repository-Schichten | Rollenlogik für Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation ergänzt sowie vorbereitende Andockbereiche `automation/`, `runtime/` und `docs/` angelegt. |
+| 2026-04-24 | Erweiterung | Agentensystem | Maschinenlesbare Übersicht der sechs grundlegenden Agentenrollen ergänzt und Rollenlogik für spätere Multi-Agent-Orchestrierung dokumentiert. |
+| 2026-04-24 | Erweiterung | Agentensystem | Standardisierte Übergabe- und Ergebnisformate für die sechs Agentenrollen ergänzt und Zusammenspiel der Rollen im agentischen Ablauf dokumentiert. |

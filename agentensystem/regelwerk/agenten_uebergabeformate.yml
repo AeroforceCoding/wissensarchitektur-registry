@@ -1,0 +1,229 @@
+version: 1
+stand: "2026-04-24"
+status: inhaltlich_definiert
+zweck: >
+  Standardisierte Übergabe- und Ergebnisformate für die sechs grundlegenden
+  Agentenrollen der Wissensarchitektur-Registry. Diese Datei beschreibt
+  erwartete Objektformen, aber keine produktive Laufzeit-Orchestrierung.
+grundregeln:
+  - Jede Übergabe benennt Quelle, Zielrolle, Auslöser, Evidenz und offene Punkte.
+  - Rollenoutputs sind Arbeitsobjekte und ersetzen keine menschliche Freigabe.
+  - Strukturwirksame oder schwer revidierbare Änderungen benötigen eine explizite Prüfung.
+  - Kanonische Registry-Daten entstehen erst nach dem vorgesehenen Registry-Workflow.
+  - Diese Definition ist YAML, weil sie steuernde Agentenlogik beschreibt.
+gemeinsame_felder:
+  handoff_id:
+    typ: string
+    pflicht: true
+    beschreibung: Eindeutige Kennung des Übergabeobjekts.
+  erzeugt_am:
+    typ: string
+    pflicht: true
+    beschreibung: Datum oder Zeitstempel der Erstellung.
+  quellrolle:
+    typ: string
+    pflicht: true
+    beschreibung: Agentenrolle, die das Objekt erzeugt.
+  zielrolle:
+    typ: string
+    pflicht: true
+    beschreibung: Agentenrolle, die das Objekt weiterverarbeiten soll.
+  bezug:
+    typ: object
+    pflicht: true
+    beschreibung: Betroffene Dateien, Prompts, Register, Aufgaben oder Chatkontexte.
+  evidenz:
+    typ: array
+    pflicht: true
+    beschreibung: Repo-Stellen, Nachweise oder explizite Kontextquellen.
+  status:
+    typ: string
+    pflicht: true
+    beschreibung: Bearbeitungs- oder Prüfstatus des Übergabeobjekts.
+  offene_punkte:
+    typ: array
+    pflicht: true
+    beschreibung: Noch nicht geklärte Fragen, Risiken oder Folgeprüfungen.
+  menschliche_pruefung_noetig:
+    typ: boolean
+    pflicht: true
+    beschreibung: Markiert, ob vor Weiterwirkung menschliche Prüfung notwendig ist.
+formate:
+  analyse_ergebnis:
+    erzeugende_rolle: analyse_agent
+    standard_zielrollen:
+      - architektur_agent
+      - freigabe_kontroll_agent
+    statuswerte:
+      - draft
+      - ready_for_architecture_review
+      - needs_clarification
+    pflichtfelder:
+      - findings
+      - reifegradbewertungen
+      - statusspannungen
+      - inkonsistenzen
+      - offene_punkte
+      - empfohlene_folgepruefung
+    feldbeschreibung:
+      findings: Strukturierte Beobachtungen mit Befund, Evidenz und Auswirkung.
+      reifegradbewertungen: Einschätzung nach der Reifegradlogik des Agentensystems.
+      statusspannungen: Unterschiede zwischen behauptetem und beobachtbarem Zustand.
+      inkonsistenzen: Widersprüche, Lücken oder unklare Systemstellen.
+      empfohlene_folgepruefung: Vorschlag, welche Rolle oder Prüfung als Nächstes sinnvoll ist.
+
+  architektur_ergebnis:
+    erzeugende_rolle: architektur_agent
+    standard_zielrollen:
+      - umsetzungs_agent
+      - freigabe_kontroll_agent
+    statuswerte:
+      - draft
+      - implementation_candidate
+      - needs_human_review
+      - blocked
+    pflichtfelder:
+      - architektur_bewertung
+      - betroffene_schichten
+      - betroffene_regeln
+      - empfohlene_aenderungsart
+      - umsetzungsempfehlung
+      - governance_bedarf
+      - risiken
+    feldbeschreibung:
+      architektur_bewertung: Einschätzung, ob Vorschlag oder Zustand zur Zielarchitektur passt.
+      betroffene_schichten: Bezug zu Repository-Schichten, Workflowphasen oder Zielsystemen.
+      betroffene_regeln: Relevante Regeln aus Regelwerk, Formatlogik oder Bestätigungsregeln.
+      empfohlene_aenderungsart: Einordnung nach `agentensystem/regelwerk/aenderungsarten.md`.
+      umsetzungsempfehlung: Konkreter Vorschlag für den erlaubten nächsten Umsetzungsschritt.
+      governance_bedarf: Hinweis, ob eine Governance- oder menschliche Entscheidung nötig ist.
+      risiken: Mögliche Architekturbrüche, Dopplungen oder Folgewirkungen.
+
+  umsetzung_ergebnis:
+    erzeugende_rolle: umsetzungs_agent
+    standard_zielrollen:
+      - pruef_agent
+      - dokumentations_agent
+    statuswerte:
+      - implemented_draft
+      - partially_implemented
+      - blocked
+    pflichtfelder:
+      - umgesetzte_aenderungen
+      - betroffene_dateien
+      - nicht_umgesetzte_punkte
+      - annahmen
+      - pruefbedarf
+      - changelog_hinweis
+      - commit_beschreibung
+    feldbeschreibung:
+      umgesetzte_aenderungen: Kurze Liste der tatsächlich geänderten Inhalte.
+      betroffene_dateien: Dateien, die angelegt oder geändert wurden.
+      nicht_umgesetzte_punkte: Bewusst ausgelassene oder blockierte Punkte.
+      annahmen: Annahmen, auf deren Grundlage die Änderung erfolgte.
+      pruefbedarf: Konkrete Hinweise für den Prüf-Agenten.
+      changelog_hinweis: Vorschlag oder Hinweis für Änderungsdokumentation.
+      commit_beschreibung: Kurzer Text für Commit und Push.
+
+  pruefung_ergebnis:
+    erzeugende_rolle: pruef_agent
+    standard_zielrollen:
+      - dokumentations_agent
+      - freigabe_kontroll_agent
+    statuswerte:
+      - valid
+      - warning
+      - failed
+    pflichtfelder:
+      - pruefgegenstand
+      - durchgefuehrte_pruefungen
+      - status_validierung
+      - findings
+      - korrekturhinweise
+      - restunsicherheit
+      - freigabeempfehlung
+    feldbeschreibung:
+      pruefgegenstand: Dateien, Objekte oder Verweise, die geprüft wurden.
+      durchgefuehrte_pruefungen: Validierungen, Konsistenzprüfungen oder manuelle Checks.
+      status_validierung: Gesamtstatus `valid`, `warning` oder `failed`.
+      findings: Gefundene Probleme oder Bestätigungen.
+      korrekturhinweise: Empfohlene Korrekturen vor Weitergabe.
+      restunsicherheit: Noch nicht belegbare Annahmen oder nicht geprüfte Bereiche.
+      freigabeempfehlung: Empfehlung für die Kontrollrolle.
+
+  dokumentation_ergebnis:
+    erzeugende_rolle: dokumentations_agent
+    standard_zielrollen:
+      - freigabe_kontroll_agent
+    statuswerte:
+      - documented
+      - documentation_warning
+      - needs_context
+    pflichtfelder:
+      - dokumentierte_aenderungen
+      - betroffene_dokumentation
+      - changelog_eintrag
+      - commit_beschreibung
+      - fakten
+      - entscheidungen
+      - offene_punkte
+    feldbeschreibung:
+      dokumentierte_aenderungen: Was in Dokumentation oder Changelog nachvollziehbar gemacht wurde.
+      betroffene_dokumentation: README-, Architektur-, Rollen- oder Changelog-Dateien.
+      changelog_eintrag: Kurzer Änderungslogtext.
+      commit_beschreibung: Kurzer Text für Commit und Push.
+      fakten: Belegte Änderungen oder Zustände.
+      entscheidungen: Explizit getroffene oder nur vorbereitete Entscheidungen.
+      offene_punkte: Noch nicht entschiedene oder nicht umgesetzte Punkte.
+
+  freigabe_kontroll_ergebnis:
+    erzeugende_rolle: freigabe_kontroll_agent
+    standard_zielrollen:
+      - umsetzungs_agent
+      - analyse_agent
+      - architektur_agent
+    statuswerte:
+      - approved_for_review
+      - needs_human_review
+      - blocked
+    pflichtfelder:
+      - review_status
+      - begruendung
+      - gepruefte_risiken
+      - scope_bewertung
+      - menschliche_rueckfrage
+      - auflagen
+      - naechste_rolle
+    feldbeschreibung:
+      review_status: Freigabeempfehlung ohne Ersatz einer menschlichen Entscheidung.
+      begruendung: Warum der Status vergeben wurde.
+      gepruefte_risiken: Bewertete Risiken, Scope-Grenzen oder Bestätigungsregeln.
+      scope_bewertung: Einschätzung, ob der vorgeschlagene Scope eingehalten wird.
+      menschliche_rueckfrage: Rückfrage, falls menschliche Entscheidung nötig ist.
+      auflagen: Bedingungen vor Umsetzung oder Weiterverarbeitung.
+      naechste_rolle: Rolle, die nach Klärung oder Freigabe sinnvoll anschließt.
+interaktionsregeln:
+  - von: analyse_agent
+    nach: architektur_agent
+    format: analyse_ergebnis
+    zweck: Findings architektonisch einordnen und nächste Strukturwirkung prüfen.
+  - von: architektur_agent
+    nach: umsetzungs_agent
+    format: architektur_ergebnis
+    zweck: Freigegebene oder risikoarme Architektur-Empfehlung technisch umsetzen.
+  - von: umsetzungs_agent
+    nach: pruef_agent
+    format: umsetzung_ergebnis
+    zweck: Änderungen strukturell, syntaktisch und fachlich prüfen.
+  - von: pruef_agent
+    nach: dokumentations_agent
+    format: pruefung_ergebnis
+    zweck: Nur geprüfte Ergebnisse nachvollziehbar dokumentieren.
+  - von: dokumentations_agent
+    nach: freigabe_kontroll_agent
+    format: dokumentation_ergebnis
+    zweck: Dokumentierte Änderung auf Review-Bedarf, Scope und Freigabegrenzen prüfen.
+  - von: freigabe_kontroll_agent
+    nach: umsetzungs_agent
+    format: freigabe_kontroll_ergebnis
+    zweck: Auflagen, Blockaden oder reviewfähige nächste Umsetzungsschritte zurückgeben.

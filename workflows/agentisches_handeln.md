@@ -81,9 +81,28 @@ Screenshots, Bilddateien und andere Artefakte gelten zunächst als Evidenz. Erst
 6. Bei Strukturwirkung Bestätigung einholen
 7. Erst danach Registry oder TheBrain vorbereiten
 
+## Zusammenspiel Mehrerer Agentenrollen
+
+Für eine spätere arbeitsteilige Agentenlogik gelten die Rollen aus `agentensystem/regelwerk/agentenrollen.yml` und die Übergabeformate aus `agentensystem/regelwerk/agenten_uebergabeformate.yml`.
+
+Die Rollen sollen nicht parallel dieselbe Verantwortung ausführen. Stattdessen erzeugt jede Rolle ein begrenztes Arbeitsobjekt für die nächste Rolle:
+
+```text
+Analyse-Agent
+→ Architektur-Agent
+→ Umsetzungs-Agent
+→ Prüf-Agent
+→ Dokumentations-Agent
+→ Freigabe-/Kontroll-Agent
+```
+
+Diese Reihenfolge bleibt eine fachliche Systemlogik. Sie erzeugt keine Behauptung, dass bereits ein dauerhaftes Multi-Agent-System, eine Queue, ein API-Server oder eine Kubernetes-Orchestrierung existiert.
+
 ## Verweise
 
 - `global/agentische_funktionen.yml`
 - `global/bestätigungsregeln.yml`
 - `global/kontext_vokabular.yml`
 - `global/artefakt_statuswerte.yml`
+- `agentensystem/regelwerk/agentenrollen.yml`
+- `agentensystem/regelwerk/agenten_uebergabeformate.yml`
