@@ -1,19 +1,21 @@
 # Prompt: Chat-Extraktion
 
 - Titel: Chat-Extraktion
-- Zweck: Neue Chatinhalte in einen strukturierten Wissensextrakt für die weitere Registry-Verarbeitung überführen.
-- Wann verwenden: Immer dann, wenn ein Chat oder Gesprächsausschnitt erstmals in die Wissensarchitektur aufgenommen werden soll.
-- Erwartete Eingabe: Ein Chatinhalt oder Gesprächsausschnitt mit optionalem Kontext.
+- Zweck: Neue Chatinhalte oder externe Übergabeblöcke in einen strukturierten Wissensextrakt für die weitere Registry-Verarbeitung überführen.
+- Wann verwenden: Immer dann, wenn ein Chat, Gesprächsausschnitt oder ein extern erzeugter Übergabeblock erstmals in die Wissensarchitektur aufgenommen werden soll.
+- Erwartete Eingabe: Ein Chatinhalt, Gesprächsausschnitt oder YAML-`wissensarchitektur_uebergabe` mit optionalem Kontext.
 - Erwartete Ausgabe: Ein YAML-`chat_extrakt` mit Aussagen, Entitäten, Entscheidungen, offenen Punkten, Aufgaben- und TheBrain-Hinweisen.
 - Nächster Schritt: `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`
 
 ## Kanonischer Prompttext
 
 ```text
-Analysiere den folgenden Chatinhalt und überführe ihn in einen strukturierten Wissensextrakt für die Weiterverarbeitung innerhalb der Wissensarchitektur-Registry.
+Analysiere den folgenden Chatinhalt oder Übergabeblock und überführe ihn in einen strukturierten Wissensextrakt für die Weiterverarbeitung innerhalb der Wissensarchitektur-Registry.
 
 Ziel:
 Der Chat soll nicht nur zusammengefasst, sondern in klar unterscheidbare Wissenselemente zerlegt werden, damit anschließend Domänenzuordnung, Registry-Abgleich, semantische Prüfung, Governance-Entscheidung und TheBrain-Update-Vorbereitung möglich werden.
+
+Wenn die Eingabe bereits als YAML-`wissensarchitektur_uebergabe` vorliegt, behandle diesen Block als verdichteten Ausschnitt eines längeren externen Chats. Übernimm seine Inhalte nicht ungeprüft als Registry-Wahrheit, sondern wandle sie in den kanonischen `chat_extrakt` um und kennzeichne Unsicherheiten weiterhin ausdrücklich.
 
 Wichtige Regeln:
 - Antworte auf Deutsch.
@@ -22,6 +24,7 @@ Wichtige Regeln:
 - Wenn etwas unklar ist, kennzeichne es als unklar statt es zu glätten.
 - Fasse nicht nur zusammen, sondern extrahiere strukturierte Einheiten.
 - Formuliere so, dass die Ausgabe später in YAML-Dateien oder Prüfprozessen weiterverwendet werden kann.
+- Unterscheide bei Übergabeblöcken zwischen dem extern berichteten Chatstand und tatsächlich bestätigten Registry- oder TheBrain-Änderungen.
 
 Analysiere den Chat nach folgenden Kategorien:
 
@@ -134,6 +137,6 @@ chat_extrakt:
     hauptnutzen: ""
     logische_folgeschritte: []
 
-Hier ist der zu analysierende Chatinhalt:
-[CHAT HIER EINFÜGEN]
+Hier ist der zu analysierende Chatinhalt oder Übergabeblock:
+[CHAT ODER ÜBERGABEBLOCK HIER EINFÜGEN]
 ```

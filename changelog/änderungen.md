@@ -25,3 +25,4 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Erweiterung | Prompt-Bibliothek | Initial- und Zusatzanweisung für Wissensarbeits-Chats ergänzt, damit neue und laufende Chats gezielt auf spätere Chat-Extraktion, Registry-Verarbeitung und TheBrain-Update-Vorbereitung ausgerichtet werden können. |
 | 2026-04-24 | Präzisierung | Agentisches Arbeiten | Regel ergänzt, dass sinnvolle Repository-Erweiterungen einen kurzen commitfähigen Beschreibungstext erhalten, der sich am Changelog orientiert. |
 | 2026-04-24 | Strukturierung | Prompt-Bibliothek | Prompt-Bibliothek nach internem `registry_workflow` und extern verwendbarer `externe_anwendung` getrennt, Pfade aktualisiert und ergänzende Bereichs-READMEs angelegt. |
+| 2026-04-24 | Erweiterung | Eingangsschicht | Externen Prompt zur Erzeugung kompakter Chat-Übergabeblöcke ergänzt und interne Chat-Extraktion für Übergabeblöcke als Eingabe erweitert. |

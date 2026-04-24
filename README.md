@@ -63,6 +63,8 @@ Die kanonische Prompt-Bibliothek liegt unter `prompts/`. Eine schnelle Übersich
 
 Ergänzend dazu steuern `prompts/registry_workflow/06_thebrain/thebrain_task_erfassen.md`, `prompts/registry_workflow/06_thebrain/thebrain_task_prüfen.md` und `prompts/registry_workflow/05_aktualisierung/aufgabenliste_aktualisieren.md` die operative Erfassung, Prüfung und Nachverfolgung einzelner TheBrain-Aufgaben.
 
+Für lange oder fortgeschrittene Chats außerhalb dieses Repositories kann vorgeschaltet `prompts/externe_anwendung/01_eingang/chat_uebergabeblock_erzeugen.md` verwendet werden. Dieser externe Prompt erzeugt einen kompakten Übergabeblock, der danach mit der internen Chat-Extraktion in einen kanonischen `chat_extrakt` überführt wird.
+
 ## Nutzen des Repositories
 
 Der Nutzen dieser Registry liegt in drei Kernwirkungen:

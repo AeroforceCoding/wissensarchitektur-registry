@@ -14,6 +14,15 @@ Die kanonische Navigationsübersicht der Prompt-Bibliothek liegt in `prompts/pro
 6. `prompts/registry_workflow/05_aktualisierung/registry_aktualisieren.md`
 7. `prompts/registry_workflow/06_thebrain/thebrain_update_vorbereiten.md`
 
+## Externer Eingangspfad für lange laufende Chats
+
+Wenn ein Chat außerhalb dieses Repositories zu umfangreich ist, um ihn vollständig in die Chat-Extraktion zu kopieren, wird zuerst im externen Chat ein Übergabeblock erzeugt:
+
+1. `prompts/externe_anwendung/01_eingang/chat_uebergabeblock_erzeugen.md`
+2. danach `prompts/registry_workflow/01_eingang/chat_extraktion.md`
+
+Der Übergabeblock ersetzt keine Registry-Entscheidung. Er ist nur eine kompakte Eingabe für die kanonische Chat-Extraktion.
+
 ## Alternativer Eingangspfad für aufgabenbasierte Erkenntnisse
 
 Wenn Wissen nicht aus einem Chat, sondern aus einer erfolgreich abgeschlossenen Aufgabe mit Screenshots, Bilddateien oder anderen Nachweisen entsteht, gilt vor dem regulären Workflow ein vorgeschalteter Eingangspfad:

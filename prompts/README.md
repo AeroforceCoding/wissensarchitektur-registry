@@ -51,9 +51,9 @@ Prompts für die TheBrain-spezifische Aufgabenlogik, Prüfung und Update-Vorbere
 
 ## Externe Anwendung
 
-### `externe_anwendung/chat_anweisungen`
+### `externe_anwendung/01_eingang`
 
-Prompts und Anweisungen, die in neue oder laufende Arbeitschats eingefügt werden können, damit diese Chats später besser in die Wissensarchitektur überführbar sind.
+Prompts und Anweisungen für die externe Vorbereitung der Eingangsschicht. Sie werden in neuen, laufenden oder langen Arbeitschats verwendet, damit diese Chats später besser in die Wissensarchitektur überführbar sind oder einen kompakten Übergabeblock für die interne Chat-Extraktion erzeugen.
 
 ### `externe_anwendung/repo_erweiterungen`
 

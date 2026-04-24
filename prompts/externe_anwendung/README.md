@@ -2,9 +2,9 @@
 
 Dieser Bereich enthält Prompts und Anweisungen, die außerhalb des unmittelbaren Registry-Workflows verwendet werden können.
 
-## `chat_anweisungen`
+## `01_eingang`
 
-Anweisungen für neue oder bereits laufende Arbeitschats. Sie helfen dabei, Erkenntnisse so zu führen, dass sie später per Chat-Extraktion in die Registry überführt werden können.
+Prompts für die externe Eingangsschicht. Sie werden in neuen, laufenden oder sehr umfangreichen Chats verwendet, um Erkenntnisse auf spätere Registry-Verarbeitung auszurichten oder einen kompakten Übergabeblock zu erzeugen, der anschließend im Registry-Workflow weiterverarbeitet werden kann.
 
 ## `repo_erweiterungen`
 
