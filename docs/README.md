@@ -20,6 +20,8 @@ Hier können später unter anderem entstehen:
 
 - `docs/anwenderanleitung_aktueller_systemstand.md`
   Beschreibung: Anwenderorientierte Anleitung zum aktuellen Systemstand, inklusive Handlungsanlässen, Freigabepunkten und praktischer Checkliste.
+- `docs/einrichtungsstand_und_gesicherte_erkenntnisse.md`
+  Beschreibung: Dokumentiert die aus dem aktuellen Repo-Zustand gesicherten Erkenntnisse zur bisherigen Einrichtung, unabhängig von nicht mehr verfügbaren Chatverläufen.
 - `docs/systemsimulation_und_anwenderhandlungen.md`
   Beschreibung: Simulation eines Registry-Eintrags entlang des aktuellen Workflows, inklusive Situationen, in denen Anwenderhandlungen erforderlich sind.
 
