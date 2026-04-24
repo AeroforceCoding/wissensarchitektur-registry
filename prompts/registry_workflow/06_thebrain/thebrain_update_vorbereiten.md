@@ -2,6 +2,7 @@
 
 - Titel: TheBrain-Update vorbereiten
 - Zweck: Bestätigte Registry-Änderungen in konkrete, getrennt nachverfolgbare TheBrain-Updates überführen.
+- Handlung: TheBrain vorbereiten (`thebrain_vorbereiten`)
 - Wann verwenden: Nach der Registry-Aktualisierung, wenn aus bestätigten Ergebnissen operative TheBrain-Änderungen folgen.
 - Erwartete Eingabe: Registry-Änderungen, Ziel-Domäne und TheBrain-Zielkontext.
 - Erwartete Ausgabe: Ein JSON-`thebrain_update_vorbereitung` mit Update-Liste und Umsetzungsnotizen.

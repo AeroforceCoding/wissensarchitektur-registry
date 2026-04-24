@@ -2,6 +2,7 @@
 
 - Titel: Registry-Abgleich
 - Zweck: Neue Wissenselemente gegen bestehende Domänenregister prüfen und Dubletten vermeiden.
+- Handlung: Wissen prüfen (`wissen_pruefen`)
 - Wann verwenden: Nach der Domänen-Zuordnung, sobald eine Ziel-Domäne feststeht.
 - Erwartete Eingabe: Wissenselemente, Ziel-Domäne und relevante Domänendateien.
 - Erwartete Ausgabe: Ein JSON-`registry_abgleich` mit Trefferlage, Folgeaktionen und Prüfbedarf.

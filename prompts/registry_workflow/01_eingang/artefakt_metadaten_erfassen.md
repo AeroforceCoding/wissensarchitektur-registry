@@ -2,6 +2,7 @@
 
 - Titel: Artefakt-Metadaten erfassen
 - Zweck: Einen Screenshot oder eine Bilddatei aus einer laufenden oder abgeschlossenen Aufgabe in einen referenzierbaren Artefaktdatensatz überführen.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Wenn ein Screenshot, Bildnachweis oder ähnliches Artefakt erstmals benannt, beschrieben und dem Repo-Kontext zugeordnet werden soll.
 - Erwartete Eingabe: Artefaktbeschreibung, optional Dateiverweis, Aufgabenkontext, Domänenregister, Kontextvokabular und Artefaktstatuswerte.
 - Erwartete Ausgabe: Ein JSON-`artefakt_eintrag` mit Dateiname, Kontext, Bezug und Status.

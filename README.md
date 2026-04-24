@@ -42,6 +42,8 @@ Für neue strukturierte Dateien gilt eine Formatlogik: YAML dient vor allem der 
 
 Ergänzend dazu beschreibt `agentensystem/regelwerk/architekturschichten.md` die strukturelle Rollenlogik zwischen Repository-Inhalten und Gesamtarchitektur. Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation sollen unterscheidbar bleiben. Die Bereiche `automation/`, `runtime/` und `docs/` sind vorbereitete Andockpunkte für spätere Ausbaustufen, enthalten aber noch keine produktive Automatisierung oder Laufzeitdefinition.
 
+Für die Benennung und Auffindbarkeit gilt ergänzend ein Flussmodell aus Eingabe, Verarbeitung, Funktionen und Ausgabe. Dadurch soll erkennbar bleiben, ob ein Bereich eingehende oder vorläufige Daten sammelt, Verarbeitungsschritte steuert, wiederverwendbare Funktionen definiert oder bestätigte beziehungsweise entnehmbare Ergebnisse bereitstellt.
+
 Zwischen laufender Aufgabenbearbeitung und kanonischer Registry-Integration entsteht zusätzlich eine leichte Evidenz- und Kontextschicht. Dort werden Kontexte, Artefaktstatus und Vorlagen für validierte Informationsblöcke definiert, damit Screenshots, Bilddateien und andere Nachweise erst nach erfolgreicher Verdichtung in die eigentliche Wissensarchitektur einfließen.
 
 Ergänzend dazu existiert eine agentische Steuerungsschicht. Sie definiert, welche vorbereitenden Schritte der Agent autonom ausführen darf, welche Annahmen er offenlegen muss und in welchen Fällen der Anwender ausdrücklich bestätigen soll.
@@ -82,3 +84,5 @@ Der Nutzen dieser Registry liegt in drei Kernwirkungen:
 Neue Inhalte sollten zuerst als strukturierte Extrakte oder Kandidaten erfasst, dann domänenspezifisch geprüft und erst nach bestätigter Einordnung in Register oder vorbereitete TheBrain-Updates übernommen werden. Dadurch bleibt die Wissensarchitektur lernfähig, aber kontrolliert.
 
 Für aufgabenbasierte Erkenntnisse gilt ergänzend: Rohartefakte und Nachweise werden zunächst benannt, kontextualisiert und bei Bedarf zu einem validierten Informationsblock verdichtet. Erst dieser Block wird anschließend in die reguläre Workflow-Kette der Registry überführt.
+
+Für freie Wissensrohstoffe wie Notizen, Einfälle, Erinnerungen, Lernergebnisse, Reflexionen, Zitate oder externe Dateien gibt es zusätzlich einen Eingangspfad zur Transformation in Informationsblöcke. Diese Blöcke dienen als prüfbare Zwischenform, bevor eine Domäne, ein zuständiges Repository oder eine spätere Zielsystemverarbeitung festgelegt wird.

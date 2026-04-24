@@ -2,6 +2,7 @@
 
 - Titel: Aufgabenabschluss verdichten
 - Zweck: Einen erfolgreich abgeschlossenen Arbeitsverlauf mit Evidenz zu einem validierten Informationsblock zusammenführen.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Wenn eine Aufgabe fachlich abgeschlossen ist und aus Verlauf, Ergebnis und Nachweisen ein integrationsfähiger Wissensblock entstehen soll.
 - Erwartete Eingabe: Aufgabenbeschreibung, Abschlussstatus, Artefakt-Referenzen, bekannte Domänen- und Kontextbezüge.
 - Erwartete Ausgabe: Ein JSON-`informationsblock` mit Befunden, Interpretationen, Hypothesen und empfohlener Folgeaktion.

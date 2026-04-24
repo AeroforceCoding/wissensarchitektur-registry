@@ -2,6 +2,7 @@
 
 - Titel: Session-Problemspur erfassen
 - Zweck: Nach einer nicht abgeschlossenen oder problembehafteten Session offene Probleme, Blockaden und Prüfbedarfe strukturiert erfassen, ohne sie automatisch als gesichertes Wissen oder Aufgabe zu behandeln.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Wenn eine Aufgabe in einem Chat, Agentenlauf oder Repo-Kontext nicht abgeschlossen wurde und die entstandenen Probleme für spätere Prüfung, Wissensabgleich oder Aufgabenableitung festgehalten werden sollen.
 - Erwartete Eingabe: Beschreibung der nicht abgeschlossenen Session, Ziel der Aufgabe, beobachtete Blockaden, Fehlversuche, relevante Dateien, Hypothesen und offene Fragen.
 - Erwartete Ausgabe: Ein JSON-`problemspur` mit Problemkern, Kontext, Evidenz, offenen Punkten, Zweckdienlichkeitsprüfung und empfohlenem Folgepfad.

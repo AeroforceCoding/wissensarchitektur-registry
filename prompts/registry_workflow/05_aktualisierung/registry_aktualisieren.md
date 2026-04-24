@@ -2,6 +2,7 @@
 
 - Titel: Registry aktualisieren
 - Zweck: Bestätigte Ergebnisse in konkrete Änderungen der Registry-Dateien übersetzen.
+- Handlung: Registry aktualisieren (`registry_aktualisieren`)
 - Wann verwenden: Nach abgeschlossenem Abgleich, optionaler semantischer Prüfung und gegebenenfalls Governance-Entscheidung.
 - Erwartete Eingabe: Bestätigte Ergebnisse, Ziel-Domäne und betroffene Registerdateien.
 - Erwartete Ausgabe: Ein JSON-`registry_aktualisierung` mit Dateiänderungen und Folgehinweisen.

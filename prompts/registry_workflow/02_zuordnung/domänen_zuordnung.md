@@ -2,6 +2,7 @@
 
 - Titel: Domänen-Zuordnung
 - Zweck: Extrahierte Wissenselemente einer fachlich führenden Domäne zuordnen.
+- Handlung: Domäne zuordnen (`domaene_zuordnen`)
 - Wann verwenden: Direkt nach der Chat-Extraktion und vor dem domänenspezifischen Registerabgleich.
 - Erwartete Eingabe: Strukturierter Chat-Extrakt und `global/domänenregister.yml`.
 - Erwartete Ausgabe: Ein JSON-`domänen_zuordnung` mit führender Domäne, Alternativen und Zuordnungssicherheit.

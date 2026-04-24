@@ -2,6 +2,7 @@
 
 - Titel: THEBRAIN_TASK erfassen
 - Zweck: Neue TheBrain-Aufgaben oder abgeschlossene Fälle in das Aufgabenregister überführen.
+- Handlung: TheBrain vorbereiten (`thebrain_vorbereiten`)
 - Wann verwenden: Wenn ein THEBRAIN_TASK-Block oder eine sonstige TheBrain-relevante Aufgabe erstmals strukturiert erfasst werden soll.
 - Erwartete Eingabe: THEBRAIN_TASK-Block oder Aufgabenbeschreibung sowie Status- und Zielregister.
 - Erwartete Ausgabe: Ein JSON-`aufgabenregister_eintrag` für `thebrain/aufgabenregister.yml`.

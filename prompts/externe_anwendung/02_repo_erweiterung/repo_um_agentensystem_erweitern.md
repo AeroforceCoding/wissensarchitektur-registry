@@ -2,6 +2,7 @@
 
 - Titel: Repository um Agentensystem erweitern
 - Zweck: Ein bestehendes Repository um eine repo-verankerte Agentenschicht für Analyse, Arbeitsstandssicherung und methodische Steuerung ergänzen.
+- Handlung: Repository-Erweiterung vorbereiten (`repo_erweiterung_vorbereiten`)
 - Wann verwenden: Wenn ein neues oder bestehendes Repository ein leichtgewichtiges, persistentes Agentensystem für Codex erhalten soll, ohne die fachliche Primärarchitektur zu ersetzen.
 - Erwartete Eingabe: Bestehende Repository-Struktur, fachlicher Kontext des Repositories, gewünschter Umfang der Agentenschicht und vorhandene Konventionen.
 - Erwartete Ausgabe: Angelegte oder ergänzte Agentenstruktur mit `AGENTS.md`, Skills, `agentensystem/` und einem strukturierten Änderungsbericht.

@@ -2,6 +2,7 @@
 
 - Titel: Chat-Extraktion
 - Zweck: Neue Chatinhalte oder externe Übergabeblöcke in einen strukturierten Wissensextrakt für die weitere Registry-Verarbeitung überführen.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Immer dann, wenn ein Chat, Gesprächsausschnitt oder ein extern erzeugter Übergabeblock erstmals in die Wissensarchitektur aufgenommen werden soll.
 - Erwartete Eingabe: Ein Chatinhalt, Gesprächsausschnitt oder JSON-`wissensarchitektur_uebergabe` mit optionalem Kontext.
 - Erwartete Ausgabe: Ein JSON-`chat_extrakt` mit Aussagen, Entitäten, Entscheidungen, offenen Punkten, Aufgaben- und TheBrain-Hinweisen.

@@ -36,3 +36,6 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Dokumentation | Anwenderführung | Anwenderorientierte Anleitung zum aktuellen Systemstand ergänzt und als Grundlage für ein Word-Dokument vorbereitet. |
 | 2026-04-24 | Dokumentation | Einrichtung | Gesicherte Erkenntnisse aus dem aktuellen Einrichtungsstand des Repositories dokumentiert, um verlorene Chatkontexte nicht zur einzigen Quelle der Entstehungsgeschichte zu machen. |
 | 2026-04-24 | Präzisierung | Agentensystem | `repository_schichten.md` in `architekturschichten.md` umbenannt, damit die Datei klarer die Verbindung zwischen Repo-Inhalt und Gesamtarchitektur beschreibt. |
+| 2026-04-24 | Strukturierung | Prompt-Bibliothek | Handlungsregister für Prompts ergänzt, Prompt-Index um Handlungsspalte erweitert und externe Repo-Erweiterung als eigene Handlung `repo_erweiterung_vorbereiten` einsortiert. |
+| 2026-04-24 | Architekturregel | Benennungslogik | Flussmodell aus Eingabe, Verarbeitung, Funktionen und Ausgabe als zusätzliche Orientierung für Bereichs- und Kontextbenennungen ergänzt. |
+| 2026-04-24 | Erweiterung | Eingangsschicht | Prompt zur Transformation freier Wissensrohstoffe wie Notizen, Einfälle, Reflexionen, Lernergebnisse, Zitate und externe Dateien in Informationsblöcke ergänzt. |

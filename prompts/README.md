@@ -21,13 +21,15 @@ Die Prompt-Bibliothek ist zuerst nach Verwendungsort getrennt:
 
 Diese Trennung soll das Auffinden im Alltag erleichtern. Wer den internen Registry-Prozess fortführt, beginnt in `registry_workflow/`. Wer eine Anweisung zum Kopieren in einen anderen Chat oder ein anderes Repository sucht, beginnt in `externe_anwendung/`.
 
+Zusätzlich erhält jeder Prompt eine zuordenbare Handlung. Das Handlungsregister liegt in `prompts/handlungsregister.yml`. Es ergänzt die Ordnerstruktur, damit Prompts auch über praktische Tätigkeiten wie `Eingang vorbereiten`, `Repository-Erweiterung vorbereiten`, `Wissen prüfen` oder `TheBrain vorbereiten` auffindbar sind.
+
 ## Registry-Workflow-Phasen 01 bis 06
 
 Innerhalb von `registry_workflow/` bleibt die fachliche Prozesslogik nach Phasen erhalten.
 
 ### `registry_workflow/01_eingang`
 
-Prompts für die Aufnahme und Erststrukturierung neuer Inhalte, insbesondere die Chat-Extraktion, Artefakt-Metadaten, die Verdichtung abgeschlossener Aufgaben und die parallele Erfassung offener Problemspuren aus nicht abgeschlossenen Sessions.
+Prompts für die Aufnahme und Erststrukturierung neuer Inhalte, insbesondere die Chat-Extraktion, freie Wissensnotizen, Artefakt-Metadaten, die Verdichtung abgeschlossener Aufgaben und die parallele Erfassung offener Problemspuren aus nicht abgeschlossenen Sessions.
 
 ### `registry_workflow/02_zuordnung`
 
@@ -55,15 +57,16 @@ Prompts für die TheBrain-spezifische Aufgabenlogik, Prüfung und Update-Vorbere
 
 Prompts und Anweisungen für die externe Vorbereitung der Eingangsschicht. Sie werden in neuen, laufenden oder langen Arbeitschats verwendet, damit diese Chats später besser in die Wissensarchitektur überführbar sind oder einen kompakten Übergabeblock für die interne Chat-Extraktion erzeugen.
 
-### `externe_anwendung/repo_erweiterungen`
+### `externe_anwendung/02_repo_erweiterung`
 
-Prompts, die dazu dienen, andere Repositories oder angrenzende Arbeitsräume nach einem definierten Muster zu erweitern.
+Prompts für die Handlung `Repository-Erweiterung vorbereiten`. Sie dienen dazu, andere Repositories oder angrenzende Arbeitsräume nach einem definierten Muster zu erweitern.
 
 ## Wie neue Prompts ergänzt werden sollen
 
 Neue Prompts sollen immer:
 
 - einer klaren Arbeitsphase zugeordnet werden,
+- einer klaren Handlung aus `prompts/handlungsregister.yml` zugeordnet werden oder bei Bedarf eine neue Handlung dort begründen,
 - einem klaren Verwendungsort zugeordnet werden,
 - einen einheitlichen Kopfbereich mit Titel, Zweck, Verwendung, Ein- und Ausgabe enthalten,
 - in `prompt_index.md` nachgetragen werden,

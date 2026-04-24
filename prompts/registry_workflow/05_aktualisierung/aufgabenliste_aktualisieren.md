@@ -2,6 +2,7 @@
 
 - Titel: Aufgabenliste aktualisieren
 - Zweck: Aus Aufgabenregister und Protokollen eine übersichtliche Arbeitsliste für TheBrain-Aufgaben ableiten.
+- Handlung: Registry aktualisieren (`registry_aktualisieren`)
 - Wann verwenden: Wenn eine aktuelle Sicht auf offene, umsetzungsreife oder dublettenverdächtige Aufgaben benötigt wird.
 - Erwartete Eingabe: `thebrain/aufgabenregister.yml`, `thebrain/umsetzungsprotokoll.yml` und optional `thebrain/zuordnungsprüfungen.yml`.
 - Erwartete Ausgabe: Ein JSON-`aufgabenliste` mit offenen Aufgaben, Umsetzungsfällen und Prüfhilfen.

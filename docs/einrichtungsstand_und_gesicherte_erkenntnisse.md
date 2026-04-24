@@ -151,6 +151,8 @@ Dokumentationsfähige Erkenntnis:
 
 Die Struktur ist bewusst so vorbereitet, dass GitHub Actions, Docker Compose, Kubernetes, lokale LLMs, RAG-Systeme und mehrere Agenten später ergänzt werden können, ohne jetzt schon implementiert zu sein.
 
+Ergänzend ist ein Flussmodell aus Eingabe, Verarbeitung, Funktionen und Ausgabe als Orientierungslogik sinnvoll. Es hilft dabei, neue Bereiche nicht nur nach Dateityp, sondern auch nach ihrer Rolle im Arbeitsfluss zu benennen und aufzufinden.
+
 ### 9. Python Ist Als Bevorzugte Automatisierungssprache Vorgesehen
 
 Für spätere Automatisierung wird Python als Standardsprache bevorzugt. JavaScript oder TypeScript bleibt ergänzend sinnvoll, wenn Weboberflächen, Browserintegration oder Node-nahe Zielsysteme entstehen.

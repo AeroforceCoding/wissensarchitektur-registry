@@ -1,0 +1,81 @@
+version: 1
+stand: "2026-04-24"
+status: inhaltlich_definiert
+zweck: >
+  Maschinenlesbares Register der Handlungen, denen Prompts in der
+  Prompt-Bibliothek zugeordnet werden können. Das Register erleichtert das
+  Auffinden nach praktischer Handlung statt nur nach Speicherort oder Phase.
+grundsatz: >
+  Jeder Prompt soll mindestens einer Handlung zugeordnet sein. Neue
+  Handlungen dürfen ergänzt werden, wenn ein neuer Arbeitskontext entsteht
+  und keine vorhandene Handlung den Zweck ausreichend beschreibt.
+handlungsfelder:
+  - id: eingang_vorbereiten
+    name: Eingang vorbereiten
+    beschreibung: >
+      Inhalte, Chats, Notizen, Einfälle, Artefakte oder Aufgabenstände so
+      vorbereiten, dass sie später in die Registry-Verarbeitung oder eine
+      passende Repo-Zuordnung überführt werden können.
+    typische_promptbereiche:
+      - prompts/externe_anwendung/01_eingang
+      - prompts/registry_workflow/01_eingang
+    status: inhaltlich_definiert
+
+  - id: repo_erweiterung_vorbereiten
+    name: Repository-Erweiterung vorbereiten
+    beschreibung: >
+      Andere Repositories oder Arbeitsräume nach einem definierten Muster um
+      eine agentische Struktur oder angrenzende Systembestandteile erweitern.
+    typische_promptbereiche:
+      - prompts/externe_anwendung/02_repo_erweiterung
+    status: inhaltlich_definiert
+
+  - id: domaene_zuordnen
+    name: Domäne zuordnen
+    beschreibung: >
+      Extrahierte Wissenselemente einer bestehenden Domäne oder einem
+      Domänenkandidaten zuordnen.
+    typische_promptbereiche:
+      - prompts/registry_workflow/02_zuordnung
+    status: inhaltlich_definiert
+
+  - id: wissen_pruefen
+    name: Wissen prüfen
+    beschreibung: >
+      Neue Wissenselemente gegen bestehende Register, semantische Nähe,
+      Dublettengefahr und Widersprüche prüfen.
+    typische_promptbereiche:
+      - prompts/registry_workflow/03_pruefung
+    status: inhaltlich_definiert
+
+  - id: struktur_entscheiden
+    name: Struktur entscheiden
+    beschreibung: >
+      Strukturrelevante Vorschläge, Konflikte, Standards oder Governance-Fragen
+      bewusst entscheiden oder zur Entscheidung vorbereiten.
+    typische_promptbereiche:
+      - prompts/registry_workflow/04_entscheidung
+    status: inhaltlich_definiert
+
+  - id: registry_aktualisieren
+    name: Registry aktualisieren
+    beschreibung: >
+      Bestätigte Ergebnisse in konkrete Registry-Änderungen, Arbeitslisten oder
+      nachverfolgbare Fortschreibungen überführen.
+    typische_promptbereiche:
+      - prompts/registry_workflow/05_aktualisierung
+    status: inhaltlich_definiert
+
+  - id: thebrain_vorbereiten
+    name: TheBrain vorbereiten
+    beschreibung: >
+      Bestätigte Registry-Änderungen oder Aufgaben in nachverfolgbare
+      TheBrain-Prüfungen, Aufgaben oder Update-Vorbereitungen überführen.
+    typische_promptbereiche:
+      - prompts/registry_workflow/06_thebrain
+    status: inhaltlich_definiert
+erweiterungsregel:
+  - Neue Handlungen sollen als fachliche Tätigkeit formuliert werden, nicht nur als technischer Ordnername.
+  - Eine Handlung darf mehrere Prompts enthalten, wenn diese denselben praktischen Arbeitskontext unterstützen.
+  - Ein Prompt darf mehreren Handlungen zugeordnet werden, wenn er als Brücke zwischen Kontexten dient.
+  - Der Speicherort darf weiterhin nach Verwendungsbereich und Prozessphase sortiert sein; die Handlung ergänzt diese Navigation.

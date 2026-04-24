@@ -2,6 +2,8 @@
 
 Dieses Verzeichnis sammelt Eingänge und Kandidaten, bevor bestätigte Inhalte in die eigentlichen Register übernommen werden. Es dient damit als kontrollierte Vorstufe zwischen Rohmaterial und kanonischer Wissensstruktur.
 
+Im Flussmodell der Wissensarchitektur ist `intake/` der Bereich für Eingabe und Zwischenstände. Der englische Name bleibt vorerst bestehen, weil er im technischen Umfeld etabliert ist; fachlich bedeutet er hier Eingang, Aufnahme und Kandidatenablage.
+
 Für aufgabenbasierte Arbeitsverläufe bedeutet das außerdem: Screenshots, Bilddateien und andere Nachweise gelten zunächst als Evidenz und nicht automatisch als Registry-Wissen. Erst nach erfolgreichem Aufgabenabschluss und Verdichtung in einen validierten Informationsblock werden daraus integrationsfähige Inhalte.
 
 ## `chat_extrakte/`

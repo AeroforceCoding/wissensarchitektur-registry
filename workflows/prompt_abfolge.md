@@ -44,6 +44,18 @@ Wenn eine Session, Aufgabe oder Untersuchung nicht abgeschlossen wurde, soll das
 
 Dieser Pfad ist nicht blockierend. Er dient dazu, offene Probleme sichtbar und später prüfbar zu machen, ohne erfolgreiche Ergebnisse oder abgeschlossene Wissensblöcke zu überlagern.
 
+## Eingangspfad für freie Wissensrohstoffe
+
+Wenn Wissen nicht aus einem vollständigen Chat oder einer abgeschlossenen Aufgabe stammt, sondern aus Notizen, Einfällen, Erinnerungen, Lernergebnissen, Reflexionen, Zitaten, Word-Dateien, Bilddateien oder anderen Wissensartefakten, kann daraus ein Informationsblock vorbereitet werden:
+
+1. `prompts/registry_workflow/01_eingang/wissensnotiz_transformieren.md`
+2. danach abhängig vom Ergebnis:
+   - `prompts/registry_workflow/02_zuordnung/domänen_zuordnung.md`,
+   - `prompts/registry_workflow/01_eingang/artefakt_metadaten_erfassen.md`,
+   - oder eine spätere Repo-Zuordnungsprüfung, wenn das Material nicht in dieses Repository gehört.
+
+Dieser Pfad erzeugt keinen kanonischen Registry-Eintrag. Er transformiert freie Wissensrohstoffe in einen prüfbaren Informationsblock.
+
 ## Typische Anwendungsfälle
 
 ### Neuer Chat
@@ -57,6 +69,10 @@ Wenn ein Arbeitsverlauf erfolgreich abgeschlossen wurde und Screenshots oder Bil
 ### Nicht abgeschlossene Session
 
 Wenn eine Aufgabe nicht abgeschlossen wurde, wird kein Informationsblock für einen erfolgreichen Abschluss erzeugt. Stattdessen kann eine Problemspur erfasst werden, die Blockaden, Fehlversuche, Hypothesen und Zweckdienlichkeit einer späteren Lösung dokumentiert.
+
+### Freie Wissensnotiz Oder Reflexion
+
+Wenn ein Einfall, eine Erinnerung, ein Lernergebnis, eine Reflexion oder ein Zitat relevant erscheint, wird zuerst ein Informationsblock vorbereitet. Danach wird geprüft, welche Domäne oder welches Repository zuständig ist und ob die Information als gesichertes Wissen, Reflexionshinweis, Quelle oder offener Punkt weitergeführt werden soll.
 
 ### Unklarer thematischer Bezug
 

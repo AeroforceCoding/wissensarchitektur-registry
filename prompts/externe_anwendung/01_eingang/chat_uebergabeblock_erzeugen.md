@@ -2,6 +2,7 @@
 
 - Titel: Chat-Übergabeblock erzeugen
 - Zweck: Einen langen oder fortgeschrittenen Arbeitschat in einen kompakten, übergabefähigen Block für die spätere Registry-Verarbeitung verdichten.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Wenn der vollständige Chatverlauf zu umfangreich ist, um ihn direkt in die Chat-Extraktion zu kopieren.
 - Erwartete Eingabe: Laufender Chatkontext, Abschlussmarker oder Aufforderung des Anwenders, relevante Erkenntnisse für die Wissensarchitektur zu verdichten.
 - Erwartete Ausgabe: Ein JSON-`wissensarchitektur_uebergabe` als kompakter Übergabeblock.

@@ -23,6 +23,15 @@ Wenn diese Rollen verschwimmen, wird das Repository später schwer migrierbar, s
 
 ## Schichtenmodell
 
+Das Schichtenmodell beschreibt die Art einer Ablage oder Datei. Ergänzend dazu gilt ein Flussmodell, das beschreibt, an welcher Stelle eines Arbeitsverlaufs ein Bereich typischerweise steht:
+
+- Eingabe: Rohmaterial, Übergaben, Extrakte, Kandidaten und noch nicht bestätigte Zwischenstände.
+- Verarbeitung: Prompts, Workflows, Prüfungen, Zuordnungen, Entscheidungen und Aktualisierungsschritte.
+- Funktionen: Regeln, Handlungen, Agentenrollen, Statuslogik, Formatlogik und wiederverwendbare Steuerungslogik.
+- Ausgabe: bestätigte Registerdaten, vorbereitete Zielsystemänderungen, Dokumentation, Exporte und später abrufbare Wissensstände.
+
+Diese Begriffe sind kein zusätzlicher Zwang für Ordnernamen. Sie dienen als Orientierungsmodell, damit neue Bereiche intuitiv auffindbar bleiben: Eingehendes Material gehört in Eingabe- oder Kandidatenbereiche, Arbeitslogik in Verarbeitung oder Funktionen, bestätigte oder entnehmbare Ergebnisse in Ausgabe- oder Registerbereiche.
+
 ### Registry-Daten
 
 Zweck: Stabile, maschinenlesbare Wissensobjekte und geprüfte Datenstände.
@@ -218,3 +227,12 @@ Vor dem Anlegen einer neuen Datei ist zu entscheiden:
 4. Führt sie Verarbeitung aus? Dann Automatisierung, bevorzugt Python.
 5. Beschreibt sie technische Ausführung? Dann Laufzeitumgebung, bevorzugt YAML plus Markdown.
 6. Erklärt sie Konzepte oder Entscheidungen? Dann Dokumentation, bevorzugt Markdown.
+
+Zusätzlich ist zu prüfen, welche Flussrolle die Datei hat:
+
+1. Eingabe: Wird hier etwas aufgenommen, zwischengespeichert oder als Kandidat geführt?
+2. Verarbeitung: Wird hier etwas geprüft, zugeordnet, entschieden oder umgeformt?
+3. Funktion: Definiert die Datei eine wiederverwendbare Regel, Rolle, Handlung oder Fähigkeit?
+4. Ausgabe: Ist die Datei ein bestätigtes Ergebnis, eine Zielsystemvorbereitung, eine Dokumentation oder ein abrufbarer Wissensstand?
+
+Wenn Schicht und Flussrolle auseinanderfallen, soll die Benennung oder Dokumentation diese Doppelfunktion erklären.

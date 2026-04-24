@@ -2,6 +2,8 @@
 
 Dieses Verzeichnis bündelt Prüf- und Entscheidungsdokumente, die vor oder während einer strukturellen Weiterentwicklung der Wissensarchitektur entstehen. Reviews machen fachliche Bewertungen, Konflikte und Freigaben nachvollziehbar.
 
+Im Flussmodell der Wissensarchitektur ist `reviews/` der Bereich für Prüfung, Kontrolle und Freigabevorbereitung. Der englische Name bleibt vorerst bestehen, weil er in Git- und Entwicklungsprozessen etabliert ist; fachlich entspricht er einem Prüfungs- und Kontrollbereich.
+
 ## `domänen_prüfungen/`
 
 Hier werden Prüfungen zur fachlichen Domänenzuordnung, zur Eignung bestehender Domänen und zur Notwendigkeit neuer Domänen dokumentiert.

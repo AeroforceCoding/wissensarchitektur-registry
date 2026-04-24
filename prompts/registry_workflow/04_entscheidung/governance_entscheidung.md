@@ -2,6 +2,7 @@
 
 - Titel: Governance-Entscheidung
 - Zweck: Strukturrelevante Änderungen, Standards und Konfliktlagen verbindlich entscheiden.
+- Handlung: Struktur entscheiden (`struktur_entscheiden`)
 - Wann verwenden: Wenn Prüfung und Abgleich nicht ausreichen und eine belastbare Strukturentscheidung nötig ist.
 - Erwartete Eingabe: Änderungsvorschlag, Prüfergebnisse und betroffene Registerbereiche.
 - Erwartete Ausgabe: Ein JSON-`governance_entscheidung` mit Entscheidung, Auflagen und Wirksamkeit.

@@ -2,6 +2,7 @@
 
 - Titel: THEBRAIN_TASK prüfen
 - Zweck: Neue TheBrain-Aufgaben gegen bestehende Einträge prüfen und dedupliziert zuordnen.
+- Handlung: TheBrain vorbereiten (`thebrain_vorbereiten`)
 - Wann verwenden: Nach der Erfassung eines neuen TheBrain-Tasks und vor einer endgültigen Registerfortschreibung.
 - Erwartete Eingabe: Neuer Task, Aufgabenregister und optional bisherige Zuordnungsprüfungen.
 - Erwartete Ausgabe: Ein JSON-`task_prüfung` mit Ähnlichkeitsbewertung und Zuordnungsempfehlung.

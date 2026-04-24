@@ -2,6 +2,7 @@
 
 - Titel: Semantische Prüfung
 - Zweck: Bedeutungsnähe, Abgrenzung und mögliche Konflikte zwischen Wissenselementen klären.
+- Handlung: Wissen prüfen (`wissen_pruefen`)
 - Wann verwenden: Wenn der Registry-Abgleich keine eindeutige Einordnung erlaubt oder Dublettengefahr besteht.
 - Erwartete Eingabe: Prüfgegenstand und fachlich ähnliche Registereinträge.
 - Erwartete Ausgabe: Ein JSON-`semantische_prüfung` mit Bewertung, Sicherheit und Folgeempfehlung.

@@ -2,6 +2,7 @@
 
 - Titel: Chat-Wissensarbeit Initial- und Zusatzanweisung
 - Zweck: Einen neuen oder bereits laufenden Chat so ausrichten, dass relevante Inhalte später gezielt per Chat-Extraktion in die Wissensarchitektur-Registry überführt werden können.
+- Handlung: Eingang vorbereiten (`eingang_vorbereiten`)
 - Wann verwenden: Zu Beginn eines Chats mit Wissensarbeitsbezug oder als Zusatzanweisung in fortgeschrittenen Chatverläufen, bevor Inhalte extrahiert und weiterverarbeitet werden sollen.
 - Erwartete Eingabe: Laufender oder geplanter Chatkontext mit fachlichen Erkenntnissen, Entscheidungen, offenen Punkten, Aufgaben oder Strukturhinweisen.
 - Erwartete Ausgabe: Ausgerichteter Chatverlauf, der Wissen, Entscheidungen, Unsicherheiten, Aufgaben und TheBrain-Hinweise klarer unterscheidbar macht.
