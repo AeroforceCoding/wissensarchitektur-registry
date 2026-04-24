@@ -22,6 +22,10 @@ Für neue strukturierte Artefakte gilt die Formatentscheidung aus `agentensystem
 
 Bestehende YAML-Register bleiben gültig, bis eine eigene Migrationsentscheidung getroffen wurde. Die Formatlogik dient zunächst der Benennungsklarheit und der Orientierung für neue Registry-Daten, Exporte und agentische Verarbeitung.
 
+## Repository-Schichten
+
+Die strukturelle Rollenlogik ist in `agentensystem/regelwerk/repository_schichten.md` dokumentiert. Sie trennt Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation, damit spätere Ausbaustufen wie GitHub Actions, Docker Compose, Kubernetes, lokale LLMs, RAG-Systeme und mehrere Agenten ohne Formatbruch ergänzt werden können.
+
 ## Wichtige Grenze
 
 Bestätigte Erkenntnisse dürfen nicht mit Arbeitsannahmen vermischt werden. Persistente Gedächtnisdateien sind Hilfsstrukturen des Agenten und keine kanonische Primärwahrheit des Repositories.

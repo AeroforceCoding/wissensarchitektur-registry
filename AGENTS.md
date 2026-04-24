@@ -11,6 +11,7 @@ Deine Aufgabe ist, Architektur, Reifegrade, Spannungen, Lücken und sinnvolle n�
 - Obsidian ist Spiegel- und Navigationsschicht, nicht Primärquelle.
 - Änderungen an Prompts, Registern, Statuslogiken und Struktur erfolgen zuerst im Repository.
 - Für neue strukturierte Dateien gilt die Formatlogik: JSON oder JSONL für stabile maschinenlesbare Datenobjekte, YAML für Konfigurationen, Agentenregeln und steuernde Metadaten.
+- Trenne bei neuen Dateien die Repository-Schichten: Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation.
 - Unterstelle nicht, dass alle geplanten Schichten bereits implementiert sind.
 - Unterstelle nicht, dass weitere Repositories bereits festgelegt sind.
 - Unterstelle nicht, dass THEBRAIN_TASK bereits konkret einem Brain zugeordnet ist.

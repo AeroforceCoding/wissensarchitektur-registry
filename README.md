@@ -40,6 +40,8 @@ Die domänenspezifischen Bereiche enthalten dagegen die fachliche Ausprägung ei
 
 Für neue strukturierte Dateien gilt eine Formatlogik: YAML dient vor allem der menschlich lesbaren Steuerung, Konfiguration und Agentenregelung; JSON oder JSONL sollen für stabile maschinenlesbare Registry-Daten, Extraktionsergebnisse, Aufgabenobjekte und spätere Exporte bevorzugt werden. Die Regel ist in `agentensystem/regelwerk/formatlogik.md` dokumentiert und hebt bestehende YAML-Dateien nicht automatisch auf.
 
+Ergänzend dazu beschreibt `agentensystem/regelwerk/repository_schichten.md` die strukturelle Rollenlogik des Repositories. Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation sollen unterscheidbar bleiben. Die Bereiche `automation/`, `runtime/` und `docs/` sind vorbereitete Andockpunkte für spätere Ausbaustufen, enthalten aber noch keine produktive Automatisierung oder Laufzeitdefinition.
+
 Zwischen laufender Aufgabenbearbeitung und kanonischer Registry-Integration entsteht zusätzlich eine leichte Evidenz- und Kontextschicht. Dort werden Kontexte, Artefaktstatus und Vorlagen für validierte Informationsblöcke definiert, damit Screenshots, Bilddateien und andere Nachweise erst nach erfolgreicher Verdichtung in die eigentliche Wissensarchitektur einfließen.
 
 Ergänzend dazu existiert eine agentische Steuerungsschicht. Sie definiert, welche vorbereitenden Schritte der Agent autonom ausführen darf, welche Annahmen er offenlegen muss und in welchen Fällen der Anwender ausdrücklich bestätigen soll.
