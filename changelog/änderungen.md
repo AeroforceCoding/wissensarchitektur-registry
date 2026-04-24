@@ -33,3 +33,4 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Erweiterung | Agentensystem | Maschinenlesbare Übersicht der sechs grundlegenden Agentenrollen ergänzt und Rollenlogik für spätere Multi-Agent-Orchestrierung dokumentiert. |
 | 2026-04-24 | Erweiterung | Agentensystem | Standardisierte Übergabe- und Ergebnisformate für die sechs Agentenrollen ergänzt und Zusammenspiel der Rollen im agentischen Ablauf dokumentiert. |
 | 2026-04-24 | Erweiterung | Anwenderführung | Systemsimulation eines Registry-Eintrags ergänzt, Situationen für notwendige Anwenderhandlungen maschinenlesbar dokumentiert und JSON-Vorlage für Anwenderhandlungsereignisse angelegt. |
+| 2026-04-24 | Dokumentation | Anwenderführung | Anwenderorientierte Anleitung zum aktuellen Systemstand ergänzt und als Grundlage für ein Word-Dokument vorbereitet. |

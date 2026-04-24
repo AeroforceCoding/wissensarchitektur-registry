@@ -18,6 +18,8 @@ Hier können später unter anderem entstehen:
 
 ## Aktuelle Dokumente
 
+- `docs/anwenderanleitung_aktueller_systemstand.md`
+  Beschreibung: Anwenderorientierte Anleitung zum aktuellen Systemstand, inklusive Handlungsanlässen, Freigabepunkten und praktischer Checkliste.
 - `docs/systemsimulation_und_anwenderhandlungen.md`
   Beschreibung: Simulation eines Registry-Eintrags entlang des aktuellen Workflows, inklusive Situationen, in denen Anwenderhandlungen erforderlich sind.
 
