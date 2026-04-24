@@ -16,6 +16,11 @@ Hier können später unter anderem entstehen:
 - Mehr-Agenten-Konzepte,
 - menschlich lesbare Systemübersichten.
 
+## Aktuelle Dokumente
+
+- `docs/systemsimulation_und_anwenderhandlungen.md`
+  Beschreibung: Simulation eines Registry-Eintrags entlang des aktuellen Workflows, inklusive Situationen, in denen Anwenderhandlungen erforderlich sind.
+
 ## Formatregel
 
 Dokumentation wird bevorzugt als Markdown gepflegt. Sie erklärt Daten, Regeln, Prompts, Automatisierung und Laufzeitumgebung, ersetzt diese aber nicht.

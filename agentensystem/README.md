@@ -34,6 +34,10 @@ Die zugehörigen Übergabe- und Ergebnisformate sind in `agentensystem/regelwerk
 
 Diese Rollenbeschreibung ist keine produktive Orchestrierung. Sie dient als strukturierte Grundlage für spätere Agentenprozesse und hält die Grenze zwischen Vorschlag, Umsetzung, Prüfung und menschlicher Freigabe explizit.
 
+## Anwenderhandlungen
+
+Die Situationen, in denen der Anwender nach aktuellem Stand aktiv handeln, entscheiden oder Evidenz nachreichen muss, sind in `agentensystem/regelwerk/anwenderhandlungen.yml` definiert. Die lesbare Gesamtsimulation dazu liegt in `docs/systemsimulation_und_anwenderhandlungen.md`.
+
 ## Wichtige Grenze
 
 Bestätigte Erkenntnisse dürfen nicht mit Arbeitsannahmen vermischt werden. Persistente Gedächtnisdateien sind Hilfsstrukturen des Agenten und keine kanonische Primärwahrheit des Repositories.

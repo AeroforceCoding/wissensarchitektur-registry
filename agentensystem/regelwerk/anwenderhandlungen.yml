@@ -1,0 +1,170 @@
+version: 1
+stand: "2026-04-24"
+status: inhaltlich_definiert
+zweck: >
+  Definition der Situationen, in denen nach aktuellem Stand der
+  Wissensarchitektur-Registry eine Handlung oder Entscheidung des Anwenders
+  erforderlich ist. Diese Datei dient der späteren Dokumentation und Analyse
+  menschlicher Eingriffe im Zusammenspiel mit Agentenrollen.
+grundsatz: >
+  Der Agent kann Einordnung, Analyse, Entwurf, Prüfung und Dokumentation
+  vorbereiten. Menschliche Handlung ist erforderlich, wenn Evidenz,
+  Strukturwirkung, externe Zielsysteme oder kanonische Freigabe betroffen sind.
+handlungsarten:
+  - id: input_bereitstellen
+    name: Eingang bereitstellen
+    beschreibung: >
+      Der Anwender liefert Chatinhalt, Übergabeblock, Artefakt, Aufgabenstand
+      oder Problemkontext als Ausgangspunkt der Verarbeitung.
+    typische_ausloeser:
+      - neuer Chat soll extrahiert werden
+      - langer externer Chat benötigt Übergabeblock
+      - abgeschlossene Aufgabe soll verdichtet werden
+      - nicht abgeschlossene Session soll als Problemspur erhalten bleiben
+    agentische_vorarbeit:
+      - passenden Eingangspfad vorschlagen
+      - benötigte Eingabeform benennen
+      - Unsicherheiten markieren
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - ausloeser
+        - bereitgestellter_input
+        - gewaehlter_eingangspfad
+        - offene_punkte
+
+  - id: richtung_bestaetigen
+    name: Workflow-Richtung bestätigen
+    beschreibung: >
+      Der Anwender bestätigt den nächsten Verarbeitungspfad, wenn mehrere
+      plausible Wege unterschiedliche Folgen hätten.
+    typische_ausloeser:
+      - Domänenzuordnung ist unsicher
+      - Erfolgsworkflow und Problemspur sind beide plausibel
+      - semantische Prüfung oder Governance ist optional, aber folgenreich
+    agentische_vorarbeit:
+      - führende Option und Alternativen darstellen
+      - Risiko und Folgewirkung benennen
+      - Empfehlung formulieren
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - entscheidungsfrage
+        - gewaehlte_option
+        - abgelehnte_optionen
+        - begruendung
+
+  - id: strukturwirkung_freigeben
+    name: Strukturwirkung freigeben
+    beschreibung: >
+      Der Anwender entscheidet, ob eine Änderung an kanonischen Strukturen,
+      Domänen, Registern, Standards oder Namenslogiken wirksam werden darf.
+    typische_ausloeser:
+      - neue kanonische Struktur
+      - neue Domäne
+      - Zusammenführung oder Ersetzung bestehender Einträge
+      - Governance-Entscheidung mit Folgewirkung
+    agentische_vorarbeit:
+      - Änderungsvorschlag erzeugen
+      - betroffene Dateien und Folgen benennen
+      - Review- oder Blockierungsstatus empfehlen
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - strukturfrage
+        - entscheidung
+        - auflagen
+        - begruendung
+        - betroffene_bereiche
+
+  - id: externe_umsetzung_bestaetigen
+    name: Externe Umsetzung bestätigen
+    beschreibung: >
+      Der Anwender bestätigt oder führt Handlungen außerhalb der Registry aus,
+      insbesondere in TheBrain, Dateisystemen oder späteren Zielsystemen.
+    typische_ausloeser:
+      - TheBrain-Update ist vorbereitet
+      - externe Datei soll umbenannt oder verschoben werden
+      - Zielsystemänderung ist nur manuell umsetzbar
+    agentische_vorarbeit:
+      - Update-Liste vorbereiten
+      - Zielkontext und Status trennen
+      - manuelle Prüfpunkte benennen
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - zielsystem
+        - vorbereitete_aktion
+        - tatsaechlich_ausgefuehrte_aktion
+        - umsetzungsstatus
+        - nachweis
+
+  - id: evidenz_nachreichen
+    name: Evidenz nachreichen oder klären
+    beschreibung: >
+      Der Anwender ergänzt fehlende Nachweise, Screenshots, Datei- oder
+      Chatstellen, wenn ein Ergebnis nicht belastbar genug ist.
+    typische_ausloeser:
+      - Aufgabenerfolg ist unklar
+      - Quellenlage ist widersprüchlich
+      - Problemspur enthält prüfbare offene Punkte
+    agentische_vorarbeit:
+      - fehlende Evidenz konkret benennen
+      - möglichen Prüfort vorschlagen
+      - weitere Verarbeitung blockieren oder begrenzen
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - fehlende_evidenz
+        - nachgereichte_evidenz
+        - auswirkung_auf_status
+        - verbleibende_unsicherheit
+
+  - id: nichtverfolgung_bestaetigen
+    name: Bewusste Nichtverfolgung bestätigen
+    beschreibung: >
+      Der Anwender entscheidet, dass ein offenes Problem, ein Kandidat oder
+      eine mögliche Folgeaufgabe aktuell nicht weiter verfolgt wird.
+    typische_ausloeser:
+      - Problemlösung ist nicht zweckdienlich
+      - Aufwand übersteigt Nutzen
+      - Thema ist außerhalb des aktuellen Registry-Zwecks
+    agentische_vorarbeit:
+      - Zweckdienlichkeit bewerten
+      - Risiko bei Nichtbearbeitung benennen
+      - spätere Wiedervorlage vorschlagen
+    dokumentation:
+      pflichtfelder:
+        - handlung_id
+        - datum
+        - gegenstand
+        - grund_der_nichtverfolgung
+        - risiko
+        - wiedervorlage
+protokollformat:
+  bevorzugtes_format: jsonl
+  begruendung: >
+    Anwenderhandlungen sind fortlaufende Ereignisse. JSONL eignet sich für
+    spätere Auswertung, Filterung, RAG-Indexierung und Übergabe an Zielsysteme.
+  beispiel_objekttyp: anwenderhandlung
+  mindestfelder:
+    - handlung_id
+    - zeitpunkt
+    - handlungsart
+    - ausloeser
+    - entscheidung_oder_aktion
+    - betroffene_dateien_oder_systeme
+    - begruendung
+    - folgestatus
+    - nachweis
+    - offene_punkte
+thebrain_hinweis: >
+  Für TheBrain kann aus dokumentierten Anwenderhandlungen eine Navigationssicht
+  entstehen, etwa nach Entscheidung, Freigabe, Problemklärung, externer
+  Umsetzung oder bewusster Nichtverfolgung. TheBrain bleibt dabei Ziel- und
+  Navigationsschicht, nicht Primärquelle.

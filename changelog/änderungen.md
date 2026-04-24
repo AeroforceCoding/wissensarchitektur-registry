@@ -32,3 +32,4 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Architekturregel | Repository-Schichten | Rollenlogik für Registry-Daten, Konfiguration, Prompts, Automatisierung, Laufzeitumgebung und Dokumentation ergänzt sowie vorbereitende Andockbereiche `automation/`, `runtime/` und `docs/` angelegt. |
 | 2026-04-24 | Erweiterung | Agentensystem | Maschinenlesbare Übersicht der sechs grundlegenden Agentenrollen ergänzt und Rollenlogik für spätere Multi-Agent-Orchestrierung dokumentiert. |
 | 2026-04-24 | Erweiterung | Agentensystem | Standardisierte Übergabe- und Ergebnisformate für die sechs Agentenrollen ergänzt und Zusammenspiel der Rollen im agentischen Ablauf dokumentiert. |
+| 2026-04-24 | Erweiterung | Anwenderführung | Systemsimulation eines Registry-Eintrags ergänzt, Situationen für notwendige Anwenderhandlungen maschinenlesbar dokumentiert und JSON-Vorlage für Anwenderhandlungsereignisse angelegt. |

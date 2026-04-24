@@ -1,0 +1,19 @@
+{
+  "anwenderhandlung": {
+    "handlung_id": "ah_2026_0001",
+    "zeitpunkt": "2026-04-24T00:00:00+02:00",
+    "handlungsart": "input_bereitstellen | richtung_bestaetigen | strukturwirkung_freigeben | externe_umsetzung_bestaetigen | evidenz_nachreichen | nichtverfolgung_bestaetigen",
+    "ausloeser": "",
+    "entscheidung_oder_aktion": "",
+    "betroffene_dateien_oder_systeme": [],
+    "begruendung": "",
+    "folgestatus": "",
+    "nachweis": [],
+    "offene_punkte": [],
+    "agentischer_kontext": {
+      "vorherige_rolle": "",
+      "naechste_rolle": "",
+      "bezogenes_uebergabeformat": ""
+    }
+  }
+}
