@@ -35,3 +35,4 @@ Jeder Eintrag enthält:
 | 2026-04-24 | Erweiterung | Anwenderführung | Systemsimulation eines Registry-Eintrags ergänzt, Situationen für notwendige Anwenderhandlungen maschinenlesbar dokumentiert und JSON-Vorlage für Anwenderhandlungsereignisse angelegt. |
 | 2026-04-24 | Dokumentation | Anwenderführung | Anwenderorientierte Anleitung zum aktuellen Systemstand ergänzt und als Grundlage für ein Word-Dokument vorbereitet. |
 | 2026-04-24 | Dokumentation | Einrichtung | Gesicherte Erkenntnisse aus dem aktuellen Einrichtungsstand des Repositories dokumentiert, um verlorene Chatkontexte nicht zur einzigen Quelle der Entstehungsgeschichte zu machen. |
+| 2026-04-24 | Präzisierung | Agentensystem | `repository_schichten.md` in `architekturschichten.md` umbenannt, damit die Datei klarer die Verbindung zwischen Repo-Inhalt und Gesamtarchitektur beschreibt. |

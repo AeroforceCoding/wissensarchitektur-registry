@@ -132,7 +132,7 @@ Dokumentationsfähige Erkenntnis:
 
 Das Repository soll nicht durch beliebige Formatmischung wachsen. Die Formatentscheidung ist eine Architekturregel für spätere Automatisierung, Validierung und Exporte.
 
-### 8. Repository-Schichten Sind Bereits Definiert
+### 8. Architekturschichten Sind Bereits Definiert
 
 Das Repo unterscheidet zwischen:
 
@@ -145,7 +145,7 @@ Das Repo unterscheidet zwischen:
 
 Beleg im Repo:
 
-- `agentensystem/regelwerk/repository_schichten.md`
+- `agentensystem/regelwerk/architekturschichten.md`
 
 Dokumentationsfähige Erkenntnis:
 
@@ -157,7 +157,7 @@ Für spätere Automatisierung wird Python als Standardsprache bevorzugt. JavaScr
 
 Beleg im Repo:
 
-- `agentensystem/regelwerk/repository_schichten.md`
+- `agentensystem/regelwerk/architekturschichten.md`
 
 Dokumentationsfähige Erkenntnis:
 

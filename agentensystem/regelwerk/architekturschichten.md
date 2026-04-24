@@ -1,10 +1,10 @@
-# Repository-Schichten
+# Architekturschichten
 
 ## Zweck
 
-Diese Datei beschreibt die strukturelle Rollenlogik der Wissensarchitektur-Registry. Ziel ist, Wissen, Regeln, Prompts, Konfiguration, Automatisierung, Laufzeitumgebung und Dokumentation so zu trennen, dass spätere Ausbaustufen mit GitHub Actions, Docker Compose, Kubernetes, lokalen LLMs, RAG-Systemen und mehreren Agenten ohne Formatbruch ergänzt werden können.
+Diese Datei beschreibt die Architekturschichten, über die Inhalte im Repository mit der größeren Wissensarchitektur verbunden werden. Ziel ist, Wissen, Regeln, Prompts, Konfiguration, Automatisierung, Laufzeitumgebung und Dokumentation so zu trennen, dass spätere Ausbaustufen mit GitHub Actions, Docker Compose, Kubernetes, lokalen LLMs, RAG-Systemen und mehreren Agenten ohne Formatbruch ergänzt werden können.
 
-Diese Regel implementiert keine Automatisierung und keine Laufzeitumgebung. Sie legt nur fest, wo solche Bestandteile später hingehören und welche Formate dafür vorgesehen sind.
+Diese Regel implementiert keine Automatisierung und keine Laufzeitumgebung. Sie legt nur fest, welche Rolle die jeweiligen Schichten im Repository und in der anschließenden Gesamtarchitektur haben und welche Formate dafür vorgesehen sind.
 
 ## Grundproblem
 

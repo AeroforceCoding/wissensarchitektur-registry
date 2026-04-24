@@ -92,7 +92,7 @@ formate:
       - risiken
     feldbeschreibung:
       architektur_bewertung: Einschätzung, ob Vorschlag oder Zustand zur Zielarchitektur passt.
-      betroffene_schichten: Bezug zu Repository-Schichten, Workflowphasen oder Zielsystemen.
+      betroffene_schichten: Bezug zu Architekturschichten, Workflowphasen oder Zielsystemen.
       betroffene_regeln: Relevante Regeln aus Regelwerk, Formatlogik oder Bestätigungsregeln.
       empfohlene_aenderungsart: Einordnung nach `agentensystem/regelwerk/aenderungsarten.md`.
       umsetzungsempfehlung: Konkreter Vorschlag für den erlaubten nächsten Umsetzungsschritt.

@@ -98,7 +98,7 @@ rollen:
       - operative Laufzeitfähigkeit behaupten
     inputs:
       - analyse_finding
-      - repository_schichten
+      - architekturschichten
       - formatlogik
       - domänenregister
       - klassifikationsregeln
@@ -201,7 +201,7 @@ rollen:
       - dateiänderung
       - rollenübersicht
       - formatlogik
-      - repository_schichten
+      - architekturschichten
       - betroffene_prompts
       - betroffene_register
     outputs:
