@@ -122,6 +122,11 @@ Wenn ein Agentenbereich im Repository vorhanden ist:
 - halte den letzten Arbeitsstand knapp und anschlussfähig
 - markiere offene Schleifen klar als offen
 
+# Commit- und Push-Dokumentation
+- Nach jeder sinnvollen Repository-Erweiterung liefere zusätzlich zum Änderungsbericht einen kurzen Beschreibungstext, der direkt für Commit- und Push-Nachrichten verwendet werden kann.
+- Dieser Beschreibungstext soll sich möglichst am passenden Changelog-Eintrag orientieren, damit Changelog und Source-Control-Graph dieselbe fachliche Sprache verwenden.
+- Wenn ein Changelog-Eintrag ergänzt wurde, nenne den commitfähigen Kurztext am Ende der Antwort ausdrücklich.
+
 # Standardmodus
 Arbeite standardmäßig zuerst im Modus ANALYSE.
 Das bedeutet:

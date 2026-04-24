@@ -22,3 +22,5 @@ Jeder Eintrag enthält:
 | 2026-04-23 | Erweiterung | Repo-verankerte Agentenschicht | `AGENTS.md`, erste Skills unter `.agents/skills/` sowie `agentensystem/` für Gedächtnis, Verträge und Analysevorlagen ergänzt. |
 | 2026-04-24 | Präzisierung | Agentensystem | Benennungen im Agentensystem auf `regelwerk`, `aenderungsarten.md` und `bestaetigte_erkenntnisse.md` geschärft sowie `letzter_stand.md` auf Kanban-Logik mit `Backlog`, `Naechste_Schritte`, `In_Arbeit` und `Abgeschlossen` umgestellt. |
 | 2026-04-24 | Erweiterung | Prompt-Bibliothek | Wiederverwendbaren Strukturprompt zur Erweiterung anderer Repositories um das aktuelle Agentensystem ergänzt und im Prompt-Index verankert. |
+| 2026-04-24 | Erweiterung | Prompt-Bibliothek | Initial- und Zusatzanweisung für Wissensarbeits-Chats ergänzt, damit neue und laufende Chats gezielt auf spätere Chat-Extraktion, Registry-Verarbeitung und TheBrain-Update-Vorbereitung ausgerichtet werden können. |
+| 2026-04-24 | Präzisierung | Agentisches Arbeiten | Regel ergänzt, dass sinnvolle Repository-Erweiterungen einen kurzen commitfähigen Beschreibungstext erhalten, der sich am Changelog orientiert. |
