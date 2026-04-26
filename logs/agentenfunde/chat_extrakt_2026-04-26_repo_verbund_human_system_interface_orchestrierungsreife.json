@@ -1,0 +1,274 @@
+{
+  "chat_extrakt": {
+    "metadaten": {
+      "titel": "Repo-Verbund, Human-System-Interface und Orchestrierungsreife",
+      "schwerpunkt": "Vier-Repo-Verbund mit manueller Übergabe, Sicherheitsgrenzen, Human-System-Interface und nicht freigegebener Synchronisierungs-/Orchestrierungsschicht",
+      "zeitlicher_kontext": "2026-04-26",
+      "systeme_und_werkzeuge": [
+        "wissensarchitektur-registry",
+        "action-intelligence-registry",
+        "it-infrastruktur-registry",
+        "human-system-interface-registry",
+        "TheBrain",
+        "Obsidian",
+        "GitHub",
+        "Docker",
+        "RAG",
+        "REX"
+      ]
+    },
+    "kernaussagen": [
+      {
+        "statement_id": "stmt_001",
+        "typ": "fakt",
+        "inhalt": "Es wird ein Vier-Repo-Verbund aus wissensarchitektur-registry, action-intelligence-registry, it-infrastruktur-registry und human-system-interface-registry beschrieben.",
+        "confidence": "hoch",
+        "quelle_abschnitt": "gesicherte_befunde"
+      },
+      {
+        "statement_id": "stmt_002",
+        "typ": "entscheidung",
+        "inhalt": "Die wissensarchitektur-registry bleibt kanonische Primärquelle für Wissensarchitektur, Wissenselemente, Konzepte, Quellen, semantische Beziehungen, Registry-Regeln und Governance-Erkenntnisse.",
+        "confidence": "hoch",
+        "quelle_abschnitt": "gesicherte_befunde"
+      },
+      {
+        "statement_id": "stmt_003",
+        "typ": "entscheidung",
+        "inhalt": "Die aktive Orchestrierungsstufe bleibt manuelle Übergabe im Pilotbetrieb.",
+        "confidence": "hoch",
+        "quelle_abschnitt": "entscheidungen"
+      },
+      {
+        "statement_id": "stmt_004",
+        "typ": "entscheidung",
+        "inhalt": "Technische Synchronisierung, Docker-Orchestrierung, automatische Commits, automatischer Push und Remote-Zugriff werden aktuell nicht gebaut.",
+        "confidence": "hoch",
+        "quelle_abschnitt": "entscheidungen"
+      },
+      {
+        "statement_id": "stmt_005",
+        "typ": "interpretation",
+        "inhalt": "Die human-system-interface-registry fungiert als Meta-Schicht des Verbunds, aber nicht als neue Wahrheitsquelle für Fachinhalte.",
+        "confidence": "hoch",
+        "quelle_abschnitt": "interpretationen"
+      },
+      {
+        "statement_id": "stmt_006",
+        "typ": "hypothese",
+        "inhalt": "Eine spätere lokale, rein lesende Multi-Repo-Abfrage könnte der erste sinnvolle technische Ausbauschritt sein, wenn Sicherheits- und Freigaberegeln ausreichend geklärt sind.",
+        "confidence": "mittel",
+        "quelle_abschnitt": "hypothesen"
+      }
+    ],
+    "entitäten_und_objekte": [
+      {
+        "entity_id": "ent_001",
+        "name": "wissensarchitektur-registry",
+        "typ": "Repository",
+        "kurze_beschreibung": "Kanonische Primärquelle für Wissensarchitektur und Governance-Erkenntnisse."
+      },
+      {
+        "entity_id": "ent_002",
+        "name": "action-intelligence-registry",
+        "typ": "Repository",
+        "kurze_beschreibung": "Operative Primärquelle für Aufgaben, Projekte, nächste Handlungen, Zeitlogik und Exporte."
+      },
+      {
+        "entity_id": "ent_003",
+        "name": "it-infrastruktur-registry",
+        "typ": "Repository",
+        "kurze_beschreibung": "Lokale technische Primärquelle mit höherer Sicherheitsstufe."
+      },
+      {
+        "entity_id": "ent_004",
+        "name": "human-system-interface-registry",
+        "typ": "Repository",
+        "kurze_beschreibung": "Menschnahe Interface- und Orchestrierungsschicht für Repo-Verbund, Übergaben, Sicherheitsgrenzen und spätere Multi-Repo-Abfragen."
+      },
+      {
+        "entity_id": "ent_005",
+        "name": "Synchronisierungs- und Orchestrierungsschicht",
+        "typ": "Architekturschicht",
+        "kurze_beschreibung": "Aktuell nicht freigegebene technische Ausbaustufe; maximal später als lokale, rein lesende Multi-Repo-Abfrage denkbar."
+      }
+    ],
+    "entscheidungen": [
+      {
+        "decision_id": "dec_001",
+        "inhalt": "Der technische Name human-system-interface-registry wurde als passend für die menschennahe Interface- und Orchestrierungsschicht gewählt.",
+        "status": "getroffen",
+        "begründung": "Der Name beschreibt Nähe zu Mensch und Sprachmodell sowie die dokumentierende Orchestrierungsrolle."
+      },
+      {
+        "decision_id": "dec_002",
+        "inhalt": "Die human-system-interface-registry soll keine Fachinhalte anderer Repositories kopieren.",
+        "status": "getroffen",
+        "begründung": "Sie soll Rollen, Schnittstellen, Sicherheitsgrenzen und Zielbilder dokumentieren, aber keine Wissensdatenbank werden."
+      },
+      {
+        "decision_id": "dec_003",
+        "inhalt": "Die aktive Orchestrierungsstufe bleibt manuelle_uebergabe im Pilotbetrieb.",
+        "status": "getroffen",
+        "begründung": "Technische Stufen sind laut IT-Reifegradanalyse nicht ausreichend freigegeben."
+      },
+      {
+        "decision_id": "dec_004",
+        "inhalt": "Technische Synchronisierung, Docker-Orchestrierung, automatische Commits, automatischer Push und Remote-Zugriff werden aktuell nicht gebaut.",
+        "status": "getroffen",
+        "begründung": "Schutzklassenmodell, Freigaberegeln, Backup/Restore, Logs, Push-Regeln und Remote-Zugriff sind noch nicht belastbar geklärt."
+      },
+      {
+        "decision_id": "dec_005",
+        "inhalt": "Der IT-Reifegradbefund wird in anderen Repos nur abstrahiert verarbeitet.",
+        "status": "getroffen",
+        "begründung": "Das it-infrastruktur-registry hat eine höhere Sicherheitsstufe."
+      }
+    ],
+    "offene_punkte": [
+      {
+        "open_id": "open_001",
+        "inhalt": "Schutzklassenmodell kanonisch freigeben.",
+        "warum_offen": "Das Schutzklassenmodell ist initial definiert, aber noch nicht vollständig freigegeben.",
+        "empfohlener_nächster_schritt": "Im it-infrastruktur-registry eine Schutzklassen-Freigabeprüfung vorbereiten."
+      },
+      {
+        "open_id": "open_002",
+        "inhalt": "Regel für Dateien mit gemischten Schutzklassen definieren.",
+        "warum_offen": "Unklar ist, ob bei gemischten Dateien stets die höchste enthaltene Schutzklasse für die gesamte Datei gilt.",
+        "empfohlener_nächster_schritt": "Als Governance-Regel im IT-Repo und abstrahiert in der human-system-interface-registry dokumentieren."
+      },
+      {
+        "open_id": "open_003",
+        "inhalt": "Repo-Freigabematrix erstellen.",
+        "warum_offen": "Je Repo und Inhaltsart muss geklärt werden, ob lokal, privat, öffentlich oder ausgeschlossen gilt.",
+        "empfohlener_nächster_schritt": "In der human-system-interface-registry als Meta-Matrix vorbereiten."
+      },
+      {
+        "open_id": "open_004",
+        "inhalt": "Log- und Auditformat für manuelle und spätere halbautomatische Aktionen definieren.",
+        "warum_offen": "Für spätere Automatisierung muss nachvollziehbar sein, wer oder was Analyse, Vorschlag, Freigabe, Umsetzung, Commit und Push ausgelöst hat.",
+        "empfohlener_nächster_schritt": "In der human-system-interface-registry ein abstraktes Auditmuster entwickeln."
+      }
+    ],
+    "aufgabenhinweise": [
+      {
+        "task_hint_id": "task_001",
+        "titel": "Voraussetzungen fuer lokale Multi-Repo-Abfrage klaeren",
+        "beschreibung": "Schutzklassenfreigabe, Regel für gemischte Dateien, Repo-Freigabematrix, Backup-/Restore-Minimum, Log-/Auditformat und erlaubte Read-only-Pfade dokumentarisch vorbereiten.",
+        "aufgabentyp": "dokumentation",
+        "status_hinweis": "geplant",
+        "confidence": "hoch"
+      },
+      {
+        "task_hint_id": "task_002",
+        "titel": "Repo-Freigabematrix erstellen",
+        "beschreibung": "Für jedes Repo und jede Inhaltsart klären, ob lokal, privat auf GitHub, öffentlich oder ausgeschlossen gilt.",
+        "aufgabentyp": "entscheidung",
+        "status_hinweis": "neu",
+        "confidence": "hoch"
+      },
+      {
+        "task_hint_id": "task_003",
+        "titel": "Schutzklassenmodell kanonisch freigeben",
+        "beschreibung": "Das bestehende Schutzklassenmodell prüfen, offene Fragen klären und eine kanonische Freigabeentscheidung dokumentieren.",
+        "aufgabentyp": "prüfung",
+        "status_hinweis": "neu",
+        "confidence": "hoch"
+      }
+    ],
+    "thebrain_hinweise": [
+      {
+        "thebrain_hint_id": "tb_001",
+        "titel": "Repo-Verbund als Systemknoten",
+        "mögliche_einordnung": "Möglicher TheBrain-Knoten für den Vier-Repo-Verbund.",
+        "begründung": "Die Struktur ist systemübergreifend relevant.",
+        "confidence": "mittel"
+      },
+      {
+        "thebrain_hint_id": "tb_002",
+        "titel": "Human-System-Interface als Orchestrierungsschicht",
+        "mögliche_einordnung": "Möglicher TheBrain-Knoten für die menschennahe Schnittstelle zwischen Anwender, Sprachmodell, Agenten und Repositories.",
+        "begründung": "Das Konzept wurde im Repo-Verbund klar definiert.",
+        "confidence": "mittel"
+      },
+      {
+        "thebrain_hint_id": "tb_003",
+        "titel": "Orchestrierungsreife: nicht bauen, nur vorbereiten",
+        "mögliche_einordnung": "Möglicher Entscheidungs- oder Governance-Knoten.",
+        "begründung": "Die Reifegradentscheidung ist eine zentrale Governance-Erkenntnis.",
+        "confidence": "mittel"
+      }
+    ],
+    "domänenhinweise": [
+      {
+        "domäne": "wissenssystem_thebrain",
+        "begründung": "TheBrain wird als Ziel- und Navigationsschicht erwähnt; konkrete Umsetzung ist nicht bestätigt.",
+        "confidence": "mittel"
+      },
+      {
+        "domäne": "repo_verbund_orchestrierung",
+        "begründung": "Der Chat behandelt primär Repo-Verbund, Schnittstellen, Übergaben und Orchestrierungsreife. Diese Domäne ist nur Kandidat, da sie nicht in der bekannten Domänenliste enthalten ist.",
+        "confidence": "hoch"
+      },
+      {
+        "domäne": "it_infrastruktur_governance",
+        "begründung": "IT-Infrastruktur, Schutzklassen und Sicherheitsgrenzen sind zentral. Diese Domäne ist nur Kandidat.",
+        "confidence": "hoch"
+      },
+      {
+        "domäne": "agentische_wissensarchitektur",
+        "begründung": "Der Chat behandelt Agentenrollen, manuelle Übergabe, Multi-Repo-Abfragen und Sprachmodell-gestützte Orchestrierung. Diese Domäne ist nur Kandidat.",
+        "confidence": "mittel"
+      }
+    ],
+    "artefakte_und_nachweise": [
+      {
+        "artifact_id": "art_001",
+        "typ": "Repository",
+        "bezeichnung": "human-system-interface-registry",
+        "rolle_im_chat": "Meta- und Orchestrierungsschicht für den Repo-Verbund."
+      },
+      {
+        "artifact_id": "art_002",
+        "typ": "Repository",
+        "bezeichnung": "wissensarchitektur-registry",
+        "rolle_im_chat": "Kanonische Primärquelle für Wissensarchitektur und Empfängerin abstrakter Governance-Erkenntnis."
+      },
+      {
+        "artifact_id": "art_003",
+        "typ": "Repository",
+        "bezeichnung": "action-intelligence-registry",
+        "rolle_im_chat": "Operative Primärquelle und Empfängerin abstrahierter Vorbereitungsaufgaben."
+      },
+      {
+        "artifact_id": "art_004",
+        "typ": "Repository",
+        "bezeichnung": "it-infrastruktur-registry",
+        "rolle_im_chat": "Lokale technische Primärquelle und Quelle der Reifegradanalyse."
+      },
+      {
+        "artifact_id": "art_005",
+        "typ": "Regelwerksdatei",
+        "bezeichnung": "agentensystem/regelwerk/repository_schnittstellen.md",
+        "rolle_im_chat": "Dokumentiert Schnittstellen zwischen Repositories und Abgrenzungen der Primärquellen."
+      },
+      {
+        "artifact_id": "art_006",
+        "typ": "Regelwerksdatei",
+        "bezeichnung": "agentensystem/regelwerk/manuelle_repo_uebergabe.md",
+        "rolle_im_chat": "Regelt manuelle Übergaben, Statuskette, kollegiale Ansprache und Grenzen."
+      }
+    ],
+    "gesamteinordnung": {
+      "kurzbeschreibung": "Der Übergabeblock beschreibt den aktuellen Stand eines Vier-Repo-Verbunds mit klar getrennten Primärrollen, manueller Übergabe als aktiver Pilotstufe und nicht freigegebener technischer Synchronisierung.",
+      "hauptnutzen": "Der Chat liefert eine abstrahierte Governance- und Architekturgrundlage, um Human-System-Interface, IT-Sicherheitsgrenzen, manuelle Repo-Übergaben und spätere Multi-Repo-Abfragen sauber voneinander zu trennen.",
+      "logische_folgeschritte": [
+        "Domänenzuordnung durchführen und neue Domänenkandidaten ausdrücklich als Kandidaten behandeln.",
+        "Registry-Abgleich gegen vorhandene Schnittstellen- und Übergaberegeln durchführen.",
+        "Prüfen, ob die Governance-Erkenntnis zur nicht freigegebenen Synchronisierung in eine stabile Registry-Struktur überführt werden soll.",
+        "Keine Automatisierung, Synchronisierung, Docker-Orchestrierung oder technische Verbindung ableiten."
+      ]
+    }
+  }
+}
