@@ -39,6 +39,53 @@ Fuer die Schnittstelle gelten diese Regeln:
 - Agentengedaechtnis bleibt methodischer Arbeitskontext, nicht kanonische Wahrheit.
 - Zielsysteme und Spiegel wie TheBrain, Obsidian, OmniFocus, Kalender oder GitHub-Spiegelungen sind keine Ersatz-Primaerquellen.
 
+## Schnittstelle zur it-infrastruktur-registry
+
+Die `it-infrastruktur-registry` ist lokale technische Primaerquelle fuer IT-Infrastruktur. Sie hat eine andere Sicherheitsstufe als die `wissensarchitektur-registry`.
+
+Die `wissensarchitektur-registry` darf nur abstrahierte, freigegebene und nicht-sensitive Wissensanteile aus dem IT-Infrastruktur-Repo aufnehmen.
+
+Fuer die Schnittstelle gelten diese Regeln:
+
+- Die `wissensarchitektur-registry` darf keine konkreten technischen Infrastrukturdetails kanonisieren.
+- Die `wissensarchitektur-registry` darf den technischen Ist-Zustand des IT-Infrastruktur-Repos nicht ersetzen.
+- Sicherheitsgrenzen des IT-Infrastruktur-Repos haben Vorrang vor Wissensaufnahme.
+- Sensible Infrastrukturdetails duerfen nicht unkontrolliert in andere Repositories uebertragen werden.
+- Eine Uebernahme in die Wissensregistry setzt bewusste Freigabe und Abstraktion durch den Anwender voraus.
+- Das IT-Infrastruktur-Repo bleibt fuer lokale Infrastrukturentscheidungen, technische Konfigurationen und sicherheitsrelevante Details zustaendig.
+
+### Zulaessige Wissensuebernahmen aus IT-Infrastruktur
+
+Aus der `it-infrastruktur-registry` duerfen in die `wissensarchitektur-registry` nur nicht-sensitive, abstrahierte und freigegebene Inhalte uebernommen werden.
+
+Zulaessig sind insbesondere:
+
+- allgemeine Architekturprinzipien,
+- abstrakte Sicherheitsprinzipien,
+- nicht-sensitive Governance-Erkenntnisse,
+- Begriffe oder Modelle,
+- abstrakte Zusammenhaenge zwischen Infrastruktur und Wissensarchitektur,
+- nicht-sensitive Lernnotizen,
+- generische Erkenntnisse zu lokaler Wissensinfrastruktur,
+- allgemeine Muster fuer lokale Repos, Agentensysteme oder spaetere RAG-/REX-Schichten.
+
+Nicht uebernommen werden duerfen:
+
+- Zugangsdaten,
+- Tokens,
+- Passwoerter,
+- private Schluessel,
+- interne IP-Adressen,
+- vollstaendige VLAN-Plaene,
+- Firewall-Regeln,
+- Portfreigaben,
+- VPN-Konfigurationen,
+- sensible NAS-Pfade,
+- Benutzer- und Rechtekonzepte mit echten Details,
+- Angriffsflachen,
+- Sicherheitsluecken im Detail,
+- konkrete Netzwerk- oder Expositionsinformationen.
+
 ## Minimales Referenzmodell
 
 Fuer Verweise von operativen Aufgaben auf Wissenselemente reicht zunaechst ein schlankes Referenzmodell. Dieses Modell ist ein Beispiel fuer eine moegliche Struktur, kein produktives Schema und keine Automatisierung.

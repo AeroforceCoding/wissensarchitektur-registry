@@ -2,9 +2,9 @@
 
 ## Zweck
 
-Diese Datei dokumentiert Regeln fuer manuelle Repo-Uebergaben zwischen der `wissensarchitektur-registry` und der `action-intelligence-registry`.
+Diese Datei dokumentiert Regeln fuer manuelle Repo-Uebergaben zwischen der `wissensarchitektur-registry` und anderen Repositories, insbesondere der `action-intelligence-registry` und der `it-infrastruktur-registry`.
 
-Ziel ist, dass der Agent erkennen kann, wann ein Wissensbefund, eine Architekturspannung oder eine Governance-Erkenntnis als operative Folgeaufgabe an die `action-intelligence-registry` uebergeben werden sollte, ohne diese Uebergabe automatisch auszufuehren.
+Ziel ist, dass der Agent erkennen kann, wann ein Wissensbefund, eine Architekturspannung oder eine Governance-Erkenntnis als operative Folgeaufgabe an die `action-intelligence-registry` oder als abstrahierte Rueckgabe an die `it-infrastruktur-registry` uebergeben werden sollte, ohne diese Uebergabe automatisch auszufuehren.
 
 Der Anwender bleibt vorerst die manuelle Uebertragungsschicht.
 
@@ -96,6 +96,41 @@ Eine Uebergabe an die `action-intelligence-registry` soll vorgeschlagen werden, 
 - Eine Governance-Entscheidung muss vorbereitet oder umgesetzt werden.
 - Ein TheBrain- oder Obsidian-Update soll als Aufgabe verfolgt werden.
 - Eine veraltete oder widerspruechliche Wissenslage erfordert eine Pruefung.
+
+## Rueckgabe an it-infrastruktur-registry
+
+Eine Rueckgabe an die `it-infrastruktur-registry` soll vorgeschlagen werden, wenn eine Wissens-, Architektur- oder Governance-Erkenntnis lokale technische Infrastrukturfolgen haben kann.
+
+Das IT-Infrastruktur-Repo bleibt dabei die lokale technische Primaerquelle. Die Rueckgabe darf keine sensiblen Details enthalten, sondern nur abstrahierte Hinweise, die der Anwender bewusst pruefen und manuell uebertragen kann.
+
+Eine Rueckgabe soll insbesondere vorgeschlagen werden, wenn:
+
+- eine Wissensentscheidung lokale Infrastrukturfolgen hat,
+- eine Governance-Regel technische Umsetzung im IT-Infrastruktur-Repo erfordert,
+- eine Wissensarchitekturentscheidung eine lokale Repo-, Backup-, Verschluesselungs- oder Zugriffsfrage ausloest,
+- eine abstrakte Erkenntnis im IT-Infrastruktur-Repo als technische Entscheidung geprueft werden sollte,
+- ein TheBrain-, Obsidian-, RAG- oder Agentensystem-Konzept technische Voraussetzungen im IT-Infrastruktur-Repo betrifft.
+
+Die Rueckgabe ist immer nur ein Vorschlag. Der Agent darf nicht behaupten, dass die Rueckgabe erfolgt, verarbeitet, committed oder gepusht wurde, solange der Anwender dies nicht bestaetigt hat.
+
+Beispiel:
+
+```yaml
+repo_rueckgabe:
+  quelle_repo: "wissensarchitektur-registry"
+  ziel_repo: "it-infrastruktur-registry"
+  rueckgabetyp: "infrastrukturfolge_pruefen"
+  sicherheitsstatus: "abstrahiert"
+  ausloeser:
+    wissenselement_id: null
+    pfad: "OFFEN"
+  rueckmeldung:
+    titel: "OFFEN"
+    beschreibung: "Eine abstrakte Wissens- oder Governance-Entscheidung koennte lokale Infrastrukturfolgen haben. Bitte im IT-Infrastruktur-Repo pruefen, ob daraus eine technische Entscheidung oder Aufgabe entsteht."
+  status: "vorschlag"
+  anwenderaktion_erforderlich: true
+  automatische_uebertragung: false
+```
 
 ## Keine Uebergabe erforderlich
 
