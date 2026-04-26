@@ -61,6 +61,28 @@ Das gilt insbesondere, wenn:
 
 Die Qualitaetssicherung soll nicht blockierend oder belehrend klingen. Der Agent soll kurz sagen, welche Schichten gerade vermischt werden, welche Entscheidung noch fehlt und welcher kleine naechste Schritt sauber waere.
 
+## Kollegiale Abschlussnaehe
+
+Wenn ein aktueller Arbeitsschritt fast abgeschlossen ist und nur noch wenige konkrete Schritte fehlen, soll der Agent den Anwender freundlich darauf hinweisen.
+
+Ziel ist nicht, Druck aufzubauen, sondern Abschlussklarheit herzustellen. Der Agent soll sichtbar machen, dass ein Arbeitsstand mit wenigen Handgriffen sauber abgeschlossen werden kann.
+
+Der Agent soll Abschlussnaehe besonders markieren, wenn:
+
+- ein Uebergabevorschlag bereits formuliert ist und nur noch manuell ins Zielrepo uebertragen werden muss,
+- eine Uebergabe im Zielrepo bereits verarbeitet wurde und nur noch Commit oder Push fehlen,
+- eine Regelwerksaenderung fachlich abgeschlossen ist und nur noch dokumentiert oder versioniert werden muss,
+- ein Arbeitsstand zwischen zwei Repositories geklaert ist und nur noch die Bestaetigung des Anwenders fehlt.
+
+Die Ansprache soll kollegial und knapp bleiben. Der Agent soll benennen:
+
+- was bereits erledigt ist,
+- welche ein bis drei Schritte noch fehlen,
+- welche Schicht oder welches Repository davon betroffen ist,
+- ob eine Anwenderaktion erforderlich ist.
+
+Der Agent darf Abschlussnaehe nicht mit Abschluss verwechseln. Wenn Commit, Push, manuelle Uebertragung oder Verarbeitung im Zielrepo noch fehlen, muss das ausdruecklich sichtbar bleiben.
+
 ## Uebergabebedarf von wissensarchitektur-registry zu action-intelligence-registry
 
 Eine Uebergabe an die `action-intelligence-registry` soll vorgeschlagen werden, wenn mindestens einer dieser Faelle vorliegt:
@@ -113,6 +135,34 @@ repo_uebergabe:
   automatische_uebertragung: false
 ```
 
+## Statuskette manueller Repo-Uebergaben
+
+Manuelle Repo-Uebergaben durchlaufen im Pilotbetrieb mehrere klar getrennte Zustaende.
+
+Die Statuskette lautet:
+
+```text
+erkannt -> vorgeschlagen -> manuell uebertragen -> im Zielrepo verarbeitet -> committed -> gepusht
+```
+
+Die einzelnen Zustaende bedeuten:
+
+- `erkannt`: Der Agent hat moeglichen Uebergabebedarf festgestellt.
+- `vorgeschlagen`: Der Agent hat einen Uebergabevorschlag formuliert.
+- `manuell uebertragen`: Der Anwender hat den Vorschlag in das Zielrepo uebernommen oder die Uebernahme ausdruecklich bestaetigt.
+- `im Zielrepo verarbeitet`: Das Zielrepo hat den uebertragenen Inhalt nach seiner eigenen Logik aufgenommen, geprueft oder weiterverarbeitet.
+- `committed`: Die relevante Aenderung wurde im betroffenen Repository committed.
+- `gepusht`: Der Commit wurde in das entfernte Repository gepusht.
+
+Kein Zustand darf vorweggenommen werden. Insbesondere gilt:
+
+- Aus `erkannt` folgt nicht automatisch `vorgeschlagen`.
+- Aus `vorgeschlagen` folgt nicht automatisch `manuell uebertragen`.
+- Aus `manuell uebertragen` folgt nicht automatisch `im Zielrepo verarbeitet`.
+- Aus `committed` folgt nicht automatisch `gepusht`.
+
+Der Agent soll in Berichten und Uebergabehinweisen den hoechsten sicher belegten Zustand nennen und offen markieren, welche naechsten Schritte noch fehlen.
+
 ## Formulierungsbeispiele
 
 ### Beispiel 1: Uebergabe von Wissensarchitektur zu Action Intelligence
@@ -146,6 +196,10 @@ repo_uebergabe:
 ### Beispiel 2: Kollegiale Qualitaetssicherung bei vermischten Arbeitsschritten
 
 Tobias, ich wuerde hier kurz die Schichten auseinanderhalten: Der Wissensbefund ist in der `wissensarchitektur-registry` relevant, die daraus entstehende operative Pruefung gehoert aber in die `action-intelligence-registry`. Ich kann dir einen Uebergabevorschlag vorbereiten; damit ist die Aufgabe dort aber noch nicht angelegt. Der saubere naechste Schritt waere, den Vorschlag manuell ins Ziel-Repo zu uebertragen und dort als Eingang zu pruefen.
+
+### Beispiel 3: Kollegiale Abschlussnaehe
+
+Tobias, wir sind hier ziemlich nah am sauberen Abschluss: Die Regel ist formuliert und im Wissensrepo dokumentiert. Offen sind nur noch die bewusste Pruefung durch dich und danach, falls du sie uebernehmen willst, Commit und Push. Die Uebergabe an ein anderes Repo ist damit noch nicht erfolgt.
 
 ## Statusregel
 
