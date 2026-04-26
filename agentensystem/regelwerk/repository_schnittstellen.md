@@ -86,6 +86,58 @@ Nicht uebernommen werden duerfen:
 - Sicherheitsluecken im Detail,
 - konkrete Netzwerk- oder Expositionsinformationen.
 
+## Schnittstelle zur human-system-interface-registry
+
+Die `human-system-interface-registry` ist menschnahe Interface- und Orchestrierungsschicht fuer den Repo-Verbund. Sie dokumentiert Rollen, Schnittstellen, Sicherheitsgrenzen, Uebergaben, Orchestrierungsstufen, spaetere Multi-Repo-Abfragen und konsolidierte Antwortlogik.
+
+Sie ist keine Wissensdatenbank, kein Aufgabenmanager, keine IT-Dokumentation und keine technische Synchronisationsinstanz.
+
+Fuer die Schnittstelle gelten diese Regeln:
+
+- Die `human-system-interface-registry` ersetzt nicht die `wissensarchitektur-registry`.
+- Sie darf keine Wissenskanonisierung uebernehmen.
+- Sie darf keine Wissenselemente als kanonisch setzen.
+- Die `wissensarchitektur-registry` bleibt Primaerquelle fuer Wissenselemente, Konzepte, Quellen, semantische Beziehungen und Governance-Entscheidungen.
+- Uebergaben von oder zur `human-system-interface-registry` bleiben manuell und anwendergeprueft.
+- Die `human-system-interface-registry` darf Orchestrierungsstufen beschreiben, aber keine Automatisierung oder Synchronisation als vorhanden behaupten, solange diese nicht freigegeben und implementiert ist.
+
+## Abstrahierte Governance-Erkenntnis: Synchronisierungsschicht nicht freigegeben
+
+Status: vorlaeufige, nicht-sensitive Governance-/Architekturerkenntnis aus dem `it-infrastruktur-registry`.
+
+Kernaussage:
+
+Die IT-Reifegradanalyse ergibt, dass automatische Synchronisierung, Docker-Orchestrierung, automatische Commits, automatischer Push und Remote-Zugriff aktuell nicht freigegeben sind. Fuer den Repo-Verbund bleibt manuelle Uebergabe die aktive Pilotstufe.
+
+Eine lokale, rein lesende Multi-Repo-Abfrage ist nur als spaetere Zielstufe denkbar und erfordert vorher Schutzklassenfreigabe, Freigabematrix, Backup-/Restore-Minimum, Log-/Auditformat, Read-only-Pfadbegrenzung und Sicherheitskonzept.
+
+Folgende Punkte sind aktuell nicht freigegeben:
+
+- Docker-Orchestrierung fuer Repo-Synchronisation,
+- automatische Synchronisation,
+- automatische Commits,
+- automatischer Push,
+- schreibende lokale Aenderungen durch Dienste,
+- Zugriff von unterwegs auf eine Orchestrierungsschicht.
+
+Maximal als spaetere Zielstufe denkbar:
+
+- lokale, rein lesende Multi-Repo-Abfrage,
+- eng begrenzte Pfade,
+- keine Schreibrechte,
+- kein Commit,
+- kein Push,
+- keine externe Erreichbarkeit,
+- keine Ausgabe sensibler Details.
+
+Reifegradbewertung:
+
+- Artefakt: Synchronisierungs- und Orchestrierungsschicht im Repo-Verbund.
+- Reifestufe: `strukturell_vorgesehen`.
+- Begruendung: Die Idee ist als spaetere Zielstufe benannt und mit Schutzbedingungen versehen, aber nicht freigegeben, nicht umgesetzt und nicht operativ nutzbar.
+- Unsicherheit: gering fuer den aktuellen Nicht-Freigabestatus; mittel fuer konkrete spaetere Ausgestaltung, weil diese bewusst offen bleibt.
+- Naechster sinnvoller Entwicklungsschritt: nicht bauen, nur vorbereiten; bei Bedarf Schutzklassen, Freigabematrix, Audit-/Logformat und Read-only-Grenzen als abstrakte Anforderungen klaeren.
+
 ## Minimales Referenzmodell
 
 Fuer Verweise von operativen Aufgaben auf Wissenselemente reicht zunaechst ein schlankes Referenzmodell. Dieses Modell ist ein Beispiel fuer eine moegliche Struktur, kein produktives Schema und keine Automatisierung.

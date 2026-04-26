@@ -2,9 +2,9 @@
 
 ## Zweck
 
-Diese Datei dokumentiert Regeln fuer manuelle Repo-Uebergaben zwischen der `wissensarchitektur-registry` und anderen Repositories, insbesondere der `action-intelligence-registry` und der `it-infrastruktur-registry`.
+Diese Datei dokumentiert Regeln fuer manuelle Repo-Uebergaben zwischen der `wissensarchitektur-registry` und anderen Repositories, insbesondere der `action-intelligence-registry`, der `it-infrastruktur-registry` und der `human-system-interface-registry`.
 
-Ziel ist, dass der Agent erkennen kann, wann ein Wissensbefund, eine Architekturspannung oder eine Governance-Erkenntnis als operative Folgeaufgabe an die `action-intelligence-registry` oder als abstrahierte Rueckgabe an die `it-infrastruktur-registry` uebergeben werden sollte, ohne diese Uebergabe automatisch auszufuehren.
+Ziel ist, dass der Agent erkennen kann, wann ein Wissensbefund, eine Architekturspannung oder eine Governance-Erkenntnis als operative Folgeaufgabe an die `action-intelligence-registry`, als abstrahierte Rueckgabe an die `it-infrastruktur-registry` oder als Verbund-/Schnittstellenhinweis an die `human-system-interface-registry` uebergeben werden sollte, ohne diese Uebergabe automatisch auszufuehren.
 
 Der Anwender bleibt vorerst die manuelle Uebertragungsschicht.
 
@@ -131,6 +131,29 @@ repo_rueckgabe:
   anwenderaktion_erforderlich: true
   automatische_uebertragung: false
 ```
+
+## Uebergabe an human-system-interface-registry
+
+Eine Uebergabe an die `human-system-interface-registry` soll vorgeschlagen werden, wenn eine Erkenntnis nicht primaer einzelnes Wissen, operative Aufgabe oder technische Infrastrukturentscheidung ist, sondern den Repo-Verbund, Schnittstellen oder Orchestrierungslogik betrifft.
+
+Die `human-system-interface-registry` bleibt dabei menschnahe Interface- und Orchestrierungsschicht. Sie uebernimmt keine Wissenskanonisierung und richtet keine technische Synchronisation ein.
+
+Eine Uebergabe soll insbesondere vorgeschlagen werden, wenn:
+
+- ein neuer Repo-Verbund-Status entsteht,
+- eine Orchestrierungsstufe aktualisiert werden sollte,
+- eine Schnittstellenregel zwischen Repos relevant wird,
+- eine Multi-Repo-Abfrage als Muster dokumentiert werden sollte,
+- eine konsolidierte Antwortlogik betroffen ist,
+- Sicherheitsgrenzen im Verbund aktualisiert werden sollten.
+
+Keine Uebergabe an die `human-system-interface-registry` ist erforderlich, wenn:
+
+- es nur um ein einzelnes Wissenselement geht,
+- kein Verbund-, Schnittstellen- oder Orchestrierungsbezug besteht,
+- der Inhalt besser ausschliesslich im Wissenskanon verbleibt.
+
+Auch hier gilt: Die Uebergabe ist nur ein Vorschlag. Der Anwender bleibt manuelle Pruef-, Freigabe- und Uebertragungsschicht.
 
 ## Keine Uebergabe erforderlich
 
